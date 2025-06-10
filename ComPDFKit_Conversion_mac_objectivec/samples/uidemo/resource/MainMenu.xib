@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nib SYSTEM "file://localhost/System/Library/DTDs/IB3/IBNibDeclarations.dtd">
+<nib version="3.0">
+    <objects>
+        <object class="NSCustomObject" id="-2">
+            <className>AppDelegate</className>
+        </object>
+        <object class="NSWindow" id="1">
+            <rect key="frame" x="200" y="200" width="600" height="400"/>
+            <title>ComPDFKit PDF</title>
+            <view key="contentView">
+                <subviews>
+                </subviews>
+            </view>
+        </object>
+        <object class="ViewController" id="2"/>
+    </objects>
+</nib>

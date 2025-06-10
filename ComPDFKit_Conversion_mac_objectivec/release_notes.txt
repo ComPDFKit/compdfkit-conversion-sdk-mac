@@ -1,0 +1,47 @@
+ComPDFKit Conversion SDK v3.0.0 Release Date: 06 June 2025
+=============================================================
+
+New Features
+----------------------------------
+**Support converting PDF to Markdown format**
+  - Supports table conversion.
+
+Enhancements
+----------------------------------
+**PDF to Word:**
+- Transitioned from a main push frame layout to a mixed flow layout (frame and flow), significantly enhancing the editability of Word documents while nearly 100% preserving the original PDF layout for most documents.
+- Added support for Catalogue, Ordered List, and Unordered List objects. When they are detected and successfully recognized, the layout of the generated Word document will be significantly improved.
+- Introduced support for header and footer functionality. When headers and footers are detected, the corresponding content (text, images) is accurately converted into the Word document.
+- Now supports inserting images within tables.
+- Added support for rotating text.
+
+**PDF to Excel:**
+- Significantly improved table readability.
+- Now supports applying different text styles within cells.
+- Added support for inserting images into tables.
+- Enhanced the accuracy of text alignment within table cells.
+- Fixed issues related to table order errors.
+
+**PDF to PowerPoint:**
+- Supports converting tables.
+- Supports converting ordered lists.
+
+**PDF to HTML:**
+- Added support for flow mode.
+
+**PDF to Image:**
+- Supports TIFF format.
+- Added options to configure color modes (color, black & white, grayscale).
+- Introduced a new Path enhancement option that improves the display of Path elements in PDF documents (increasing path width and color saturation).
+
+**PDF to Text:**
+- Added support for preserving table styles.
+
+**PDF to RTF:**
+- Supports table conversion.
+
+**PDF to JSON:**
+- New feature: includes text content attributes and page number fields.
+
+**PDF to Searchable PDF:**
+- Added support for converting TIFF format images to PDF.

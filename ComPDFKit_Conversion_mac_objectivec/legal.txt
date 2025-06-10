@@ -1,0 +1,544 @@
+Legal Notices:
+-----------------------------------------------------------------------------
+
+Copyright (C)2003 - 2023 Foxit Software. All rights reserved.
+
+The Software is protected by law, including but not limited to the 
+copyright laws of the United States and other countries, and by 
+international treaty provisions. This License confers no title or 
+ownership in the Software and should not be construed as a sale of 
+any rights in the Software. The Software is licensed and not sold. 
+Except as expressly stated herein, this Agreement does not grant 
+You any intellectual property rights in the Software. All rights not 
+expressly granted are reserved by Foxit and its licensors.
+
+This Software is furnished pursuant to a written license agreement and
+may be used, copied, distributed, and stored only in accordance with
+the terms of such license and with the inclusion of the above copyright
+notice. This Software and information or any other copies thereof may
+not be provided or otherwise made available to any other person.
+ 
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OR CONDITION OF ANY KIND,
+EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE IMPLIED 
+WARRANTIES OR CONDITIONS OF DESIGN, MERCHANTIBILITY, DURABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND THE WARRANTY AGAINST INFRINGEMENT. THE ENTIRE 
+RISK AS TO THE QUALITY AND PERFORMACE OF THE SOFTWARE IS BORNE BY THE USER.
+
+IN NO EVENT WILL Foxit's AGGREGATE LIABILITY WITH RESPECT TO ANY AND ALL 
+CLAIMS AT ANY AND ALL TIMES ARISING FROM OR RELATED TO THE SOFTWARE, IN 
+CONTRACT, TORT (INCLUDING NEGLIGENCE OR BREACH OF ANY DUTY) OR OTHERWISE 
+EXCEED THE CONSIDERATION PAID TO FOXIT, IF ANY, FOR A LICENSE TO THE 
+SOFTWARE. IN NO EVENT WILL FOXIT BE LIABLE FOR ANY CONSEQUENTIAL, INDIRECT, 
+SPECIAL, PUNITIVE, EXEMPLARY OR INCIDENTAL DAMAGES, LOSS OF GOODWILL OR 
+BUSINESS PROFITS, EVEN IF FOXIT HAS BEEN ADVISED OF THE POSSIBILITY OF ANY
+SUCH LOSS OR DAMAGES. THE FOREGOING LIMITATION OF LIABILITY AND EXCLUSION 
+OF CERTAIN DAMAGES WILL APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW 
+REGARDLESS OF THE SUCCESS OR EFFECTIVENESS OF OTHER REMEDIES. 
+
+-----------------------------------------------------------------------------
+
+THIRD PARTY 
+Your use of some third party materials included in the product may be subject to 
+other terms and conditions,portions include software under the following terms:
+
+-----------------------------------------------------------------------------
+
+Anti-Grain  Geometry - Version  2.3
+Copyright (C) 2002-2005  Maxim  Shemanarev 
+(http://www.antigrain.com). 
+
+Permission to copy, use, modify, sell and distribute this software is granted provided 
+this copyright notice appears in all copies. This software is provided "as is" without 
+express or implied warranty, and with no claim as to its suitability for any purpose.
+
+-----------------------------------------------------------------------------
+
+FreeType2(2.10.4), Copyright 1996-2002, 2006 David Turner, Robert Wilhelm, and Werner Lemberg.
+(http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/FTL.TXT)
+
+Permission to use, copy, modify, distribute, and sell this software and its documentation 
+for any  purpose is hereby  granted without fee, providedthat  (i)  the above copyright 
+notices  and  this  permission  notice  appear  inall  copies  of  the  software  and  related 
+documentation, and (ii) the names of Sam Leffler and Silicon Graphics may not be used 
+in any advertising or publicity relating to the software without the specific, prior written
+permission of Sam Leffler and Silicon Graphics.
+
+THE SOFTWARE IS PROVIDED "AS-IS" AND WITHOUT WARRANTY OF ANY 
+KIND,  EXPRESS,  IMPLIED  OR  OTHERWISE,  INCLUDING  WITHOUT 
+LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A 
+PARTICULAR PURPOSE.  
+IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR 
+ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF
+ANY KIND,OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF 
+USE, DATA OR PROFITS,WHETHER OR NOT ADVISED OF THE POSSIBILITY 
+OF DAMAGE, AND ON ANY THEORY OF LIABILITY, ARISING OUT OF OR IN 
+CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+-----------------------------------------------------------------------------
+
+ZLib - v1.2.11
+Copyright (C) 1995-2017 Jean-loup Gailly and Mark Adler
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+
+  Jean-loup Gailly        Mark Adler
+  jloup@gzip.org          madler@alumni.caltech.edu
+
+-----------------------------------------------------------------------------
+
+Little CMS(2.9), Copyright (c) 1998-2010 Marti Maria Saguer.(2.0)
+(http://www.littlecms.com/)
+
+-----------------------------------------------------------------------------
+
+PNG(1.6.34), Copyright (C) 1998-2009 Glenn Randers-Pehrson. (1.2.35/1.2.45)
+libpng license
+http://libpng.org/pub/png/libpng.html
+
+-----------------------------------------------------------------------------
+
+LibTIFF(4.0.9)
+
+Copyright (c) 1988-1997 Sam Leffler
+Copyright (c) 1991-1997 Silicon Graphics, Inc.
+
+Permission to use, copy, modify, distribute, and sell this software and 
+its documentation for any purpose is hereby granted without fee, provided
+that (i) the above copyright notices and this permission notice appear in
+all copies of the software and related documentation, and (ii) the names of
+Sam Leffler and Silicon Graphics may not be used in any advertising or
+publicity relating to the software without the specific, prior written
+permission of Sam Leffler and Silicon Graphics.
+
+THE SOFTWARE IS PROVIDED "AS-IS" AND WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY 
+WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.  
+
+IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR
+ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND,
+OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF 
+LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE 
+OF THIS SOFTWARE.
+
+-----------------------------------------------------------------------------
+
+libjpeg-turbo(1.5.3) ,Copyright (C)2011 D. R. Commander. All Rights Reserved.
+ 
+Permission to copy, use, modify, sell and distribute this software is granted provided 
+this copyright notice appears in all copies. This software is provided "as is" without 
+express or im-plied warranty, and with no claim as to its suitability for any purpose. 
+
+-----------------------------------------------------------------------------
+
+jbig2enc(0.27)(0.27)
+Copyright (C) 2006 Google Inc. 
+Licensed under the Apache License
+
+-----------------------------------------------------------------------------
+ 
+Leptonlib(1.63)
+Copyright (C) 2001 Leptonica.  All rights reserved.
+This software is distributed in the hope that it will be
+useful, but with NO WARRANTY OF ANY KIND.
+No author or distributor accepts responsibility to anyone for the
+consequences of using this software, or for whether it serves any
+particular purpose or works at all, unless he or she says so in
+writing.  Everyone is granted permission to copy, modify and
+redistribute this source code, for commercial or non-commercial
+purposes, with the following restrictions: (1) the origin of this
+source code must not be misrepresented; (2) modified versions must
+be plainly marked as such; and (3) this notice may not be removed
+or altered from any source or modified source distribution.
+
+-----------------------------------------------------------------------------
+
+Fontforge(20120731-b)     (20120731-b)
+Copyright (C) 2000-2012 by George Williams
+
+revised BSD license
+http://www.fontforge.org/
+http://fontforge.github.io/en-US/
+
+-----------------------------------------------------------------------------
+
+sfntly
+Copyright 2010-2011 Google Inc. All Rights Reserved.
+
+-----------------------------------------------------------------------------
+
+ucdn  
+Copyright (C) 2012 Grigori Goronzy <greg@kinoho.net>
+
+-----------------------------------------------------------------------------
+
+Clipper 
+Copyright : Angus Johnson 2010-2017
+
+-----------------------------------------------------------------------------
+
+obmalloc.c
+Copyright(c) 2001-2021 Python Software Foundation; All Rights Reserved
+
+-----------------------------------------------------------------------------
+
+boost 1.56
+Copyright Beman Dawes, Daniel Frey, David Abrahams, 2003-2004.
+
+Copyright Rene Rivera 2004-2005.
+
+Distributed under the Boost Software License, Version 1.0.
+(See accompanying file LICENSE_1_0.txt or copy at
+https://www.boost.org/LICENSE_1_0.txt)
+
+-----------------------------------------------------------------------------
+
+TOMLParser
+Copyright (c) 2016 Toru Niina
+
+-----------------------------------------------------------------------------
+
+LLVM 8.0.0
+Copyright (c) 2003-2019 University of Illinois at Urbana-Champaign.
+
+-----------------------------------------------------------------------------
+
+CURL
+
+COPYRIGHT AND PERMISSION NOTICE
+
+Copyright (c) 1996 - 2018, Daniel Stenberg, daniel@haxx.se, and many contributors, see the THANKS file.
+
+All rights reserved.
+
+Permission to use, copy, modify, and distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder.
+
+-----------------------------------------------------------------------------
+
+JSON(1.9.5)
+
+Copyright 2007-2011 Baptiste Lepilleur and The JsonCpp Authors
+Copyright (C) 2016 InfoTeCS JSC. All rights reserved.
+Distributed under MIT license, or public domain if desired and recognized in your jurisdiction.
+
+-----------------------------------------------------------------------------
+
+spring-boot-starter-data-redis-1.5.18.RELEASE.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+Pivotal Software, Inc.
+
+-----------------------------------------------------------------------------
+
+spring-data-redis-1.8.17.RELEASE.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+jedis-2.9.0.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+spring-boot-starter-data-mongodb-1.5.18.RELEASE.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+Pivotal Software, Inc.
+
+-----------------------------------------------------------------------------
+
+spring-data-mongodb-1.10.17.RELEASE.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+mongodb-driver-3.8.2.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+mongodb-driver-core-3.8.2.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+bson-3.8.2.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+httpclient-4.5.6.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+httpmime-4.5.6.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+fastjson-2.0.21.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+Alibaba Group
+
+-----------------------------------------------------------------------------
+
+fastjson2-2.0.21.jar
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+Alibaba Group
+
+-----------------------------------------------------------------------------
+
+fastjson2-extension-2.0.21.jar
+
+Apache 2.0
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+Alibaba Group
+
+-----------------------------------------------------------------------------
+
+opentelemetry-api-1.21.0.jar	
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-api-logs-1.21.0-alpha.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-context-1.21.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-exporter-common-1.21.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-exporter-otlp-1.21.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-exporter-otlp-common-1.21.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-sdk-1.21.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-sdk-common-1.21.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-sdk-extension-autoconfigure-1.21.0-alpha.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-sdk-extension-autoconfigure-spi-1.21.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-sdk-logs-1.21.0-alpha.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-sdk-metrics-1.21.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-sdk-trace-1.21.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentelemetry-semconv-1.21.0-alpha.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentracing-api-0.33.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentracing-noop-0.33.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentracing-tracerresolver-0.1.8.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+opentracing-util-0.33.0.jar	
+
+Apache 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+-----------------------------------------------------------------------------
+
+pytorch(1.5.1+cpu)
+
+Copyright (c) 2016-     Facebook, Inc            (Adam Paszke)
+Copyright (c) 2014-     Facebook, Inc            (Soumith Chintala)
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the names of Facebook, Deepmind Technologies, NYU, NEC Laboratories America and IDIAP Research Institute nor the names of its contributors may be used to endorse or promote products derived from this software without    specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL 
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) 
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-----------------------------------------------------------------------------
+
+opencv-contrib-python 4.5.5.64 
+
+Apache License 2.0
+The Apache Software License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+Copyright (C) 2000-2015, Intel Corporation, all rights reserved.
+Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.
+Copyright (C) 2009-2015, NVIDIA Corporation, all rights reserved.
+Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
+Copyright (C) 2015, OpenCV Foundation, all rights reserved.
+Copyright (C) 2015, Itseez Inc., all rights reserved.
+Third party copyrights are property of their respective owners.
+
+-----------------------------------------------------------------------------
