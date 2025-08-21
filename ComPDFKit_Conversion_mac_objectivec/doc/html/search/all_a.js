@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['pagelayoutmode_0',['pageLayoutMode',['../interface_convert_options.html#a44b69b11aab54beb4016370ad2fb8217',1,'ConvertOptions::pageLayoutMode'],['../interface_word_options.html#a8c6b0704f9876233907e24870d724f90',1,'WordOptions::pageLayoutMode'],['../interface_excel_options.html#a660e0bffa6b5e7b5af8073cea2395eb4',1,'ExcelOptions::pageLayoutMode'],['../interface_html_options.html#aeb578b7034b6709016ed8c544568e15c',1,'HtmlOptions::pageLayoutMode']]],
-  ['pageranges_1',['pageRanges',['../interface_convert_options.html#a9f1acac27b19a2bbfebe7090b341381e',1,'ConvertOptions::pageRanges'],['../interface_word_options.html#af3334b01329d8f531aff024b2e4d250c',1,'WordOptions::pageRanges'],['../interface_excel_options.html#adb52e3dd1c728886ce8d78c879384230',1,'ExcelOptions::pageRanges'],['../interface_ppt_options.html#a61a0134840229c4fc00eef066f07bb0a',1,'PptOptions::pageRanges'],['../interface_html_options.html#af070ef4ca494bb5145c0bc38828cb113',1,'HtmlOptions::pageRanges'],['../interface_rtf_options.html#a03944ef3960476787e9c1298c800a05f',1,'RtfOptions::pageRanges'],['../interface_image_options.html#a165ae5fa43cb5aed24735d31cfb3c9c4',1,'ImageOptions::pageRanges'],['../interface_txt_options.html#a1a8a21cf3d583bc7804f13d1c1c798ec',1,'TxtOptions::pageRanges'],['../interface_json_options.html#a47f2c55d3688efd998279dae1894aab9',1,'JsonOptions::pageRanges'],['../interface_searchable_pdf_options.html#a7b984d809e266dabd387549ed5c8f85f',1,'SearchablePdfOptions::pageRanges'],['../interface_markdown_options.html#ae8f5384b830dbfa0c7736b9286f1b45f',1,'MarkdownOptions::pageRanges']]],
-  ['pathenhance_2',['PathEnhance',['../interface_image_options.html#ac1ef1c3b147bb05a00880814fbb690f7',1,'ImageOptions']]],
-  ['pptoptions_3',['PptOptions',['../interface_ppt_options.html',1,'']]]
+  ['heightofrows_0',['heightOfRows',['../interface_c_t_a_b_result.html#a5c6cf943c2bc5a9dfec538406e93504a',1,'CTABResult']]],
+  ['horizonlines_1',['horizonLines',['../interface_c_t_a_b_result.html#ac19d0122213c74d19f6cb525ac17faa1',1,'CTABResult']]],
+  ['htmloptions_2',['HtmlOptions',['../interface_html_options.html',1,'']]],
+  ['htmlpageoption_3',['htmlPageOption',['../interface_convert_options.html#a85c5c56aa29918624882cb38924aa27e',1,'ConvertOptions::htmlPageOption'],['../interface_html_options.html#a0de02473ddd5b16b27e6bf5f33de5511',1,'HtmlOptions::htmlPageOption']]],
+  ['htmlstr_4',['htmlStr',['../interface_c_t_a_b_result.html#ae19c8248cbfe492d608bf493fa8a1723',1,'CTABResult']]]
 ];

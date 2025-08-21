@@ -206,9 +206,12 @@
     self.imageTypePopUp = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(400, 30, 160, 24)];
     [self.imageTypePopUp addItemWithTitle:@"JPG"];
     [self.imageTypePopUp addItemWithTitle:@"JPEG"];
+    [self.imageTypePopUp addItemWithTitle:@"JPEG2000"];
     [self.imageTypePopUp addItemWithTitle:@"PNG"];
     [self.imageTypePopUp addItemWithTitle:@"BMP"];
     [self.imageTypePopUp addItemWithTitle:@"TIFF"];
+    [self.imageTypePopUp addItemWithTitle:@"TGA"];
+    [self.imageTypePopUp addItemWithTitle:@"GIF"];
     
     NSTextField *scalingLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(20, 30, 100, 20)];
     [scalingLabel setBezeled:NO];
@@ -274,9 +277,7 @@
     [self appendLogMessage:@"Initializing SDK..."];
     
     @try {
-        NSInteger licenseResult = [LibraryManager licenseVerify:@"Pp60eH7/N9zSmJ9xTVVfYN3uKqW9HS2Vhhn7+LwHS3SbUtAsPQ84pJsMmqYu978Jz1TqrN8RjUp2ulRhGBHQ/aDBpwlkB0HUE75qz1ShXH0jr08yUkYl8XYnpmUG5OCPO7EjaPg0rukCDhRBfIPhi8TzeRLRDMoxNQXoceZL6nyKWW8lJ3ojqZ4380w+BRbCLVJc0zwjLlEFyKCRlEE0NBIBfYhmkoFyvpkbdMrMTDDtxJWTjAnTWUNORbub1BNcBTsZtSSJM5PaOltHcRmfXlaEjWIkrbX4WB/Szcjl2yVLkqHIK/4EBg8VP/BEmOJjkvNiKWSaY4aJ84vTgITBnK8kD+Q9C95FZo3W7DLPF5KHAYEs2RF7Z9toqEufbP3GkrSF8rrxDKX4enQyBHWqvLoHJxrWJG5/gzw4n+Iq587xlhKlaQWpSC71NmpYZS0Vkt5212I0f8MrprqSa2YdKs/4Wu10G7037suVOaNLq7oe1jpq/rY86x/3DCADjT8SEbQQ9Xg4/3r+aORj1MId+0gVusE/Tqjcp3dmNqQj/Ph0jJj9jGp7Z4V/0TqXDvJitafo14hiD8c+XZHmibaf0mSc1iVtuHBhZTFhkup+L6Qgh7kq7soeyX4bU2tS9R8/jF7i0/jKom3qTkre1u0IGRqKi/fNKu/e5CeMvqysL8EPO/pADHF3Jh+dAhOW0mnbj0AS+u6O6+BW4LrMR7cuVaekwwQvAr6a7Jt34MeZafigJYGkKbPZ1JJFMu1zbWRryFlTWilteBjIVCBY2NZalNy23wNRqyp7wrBUC7V7CW89KBUo0LkjrL4ZBCUfIBBAG/B1tCmblU/dMaf/0iiTsuubqZ7NNd50kLpVVQKy2BqM6sQqacODSuEteLvrE2lS"];
-        
-        [self appendLogMessage:[NSString stringWithFormat:@"License verification result: %@", licenseResult==0 ? @"Success" : @"Failure"]];
+
         
         NSArray *possibleResourcePaths = @[
             [[NSBundle mainBundle] resourcePath],
@@ -306,7 +307,14 @@
             [self appendLogMessage:@"WARNING: Could not find a valid resource path! SDK may not function correctly."];
             resourcePath = @"../../../resource";
         }
-        
+        NSString* licenseFilePath = [resourcePath stringByAppendingPathComponent:@"license/license.xml"];
+        if (![fileManager fileExistsAtPath:licenseFilePath]) {
+            [self appendLogMessage:@"WARNING: License file not found! Some features may be limited."];
+        } else {
+            [self appendLogMessage:@"License file found, proceeding with initialization."];
+        }
+        NSInteger licenseResult = [LibraryManager licenseVerify:licenseFilePath];
+        [self appendLogMessage:[NSString stringWithFormat:@"License verification result: %@", licenseResult==0 ? @"Success" : @"Failure"]];
         [LibraryManager initialize:resourcePath];
         [self appendLogMessage:@"SDK initialization completed"];
 
@@ -701,16 +709,6 @@
     panel.canChooseDirectories = YES;
     panel.allowsMultipleSelection = NO;
     
-    if (@available(macOS 11.0, *)) {
-        UTType *pdfType = [UTType typeWithIdentifier:@"com.adobe.pdf"];
-        panel.allowedContentTypes = @[pdfType];
-    } else {
-        #pragma clang diagnostic push
-        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        panel.allowedFileTypes = @[@"pdf"];
-        #pragma clang diagnostic pop
-    }
-    
     panel.message = @"Please select a PDF file or a folder containing PDF files";
     
     [panel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result) {
@@ -1088,6 +1086,36 @@
         
         NSInteger colorMode = [self.imageColorModePopUp indexOfSelectedItem];
         NSInteger imageType = [self.imageTypePopUp indexOfSelectedItem];
+
+        switch (imageType) {
+            case 0:
+                imageOptions.Type = ImageTypeJPG;
+                break;
+            case 1:
+                imageOptions.Type = ImageTypeJPEG;
+                break;
+            case 2:
+                imageOptions.Type = ImageTypeJPEG2000;
+                break;
+            case 3:
+                imageOptions.Type = ImageTypePNG;
+                break;
+            case 4:
+                imageOptions.Type = ImageTypeBMP;
+                break;
+            case 5:
+                imageOptions.Type = ImageTypeTIFF;
+                break;
+            case 6:
+                imageOptions.Type = ImageTypeTGA;
+                break;
+            case 7:
+                imageOptions.Type = ImageTypeGIF;
+                break;
+            default:
+                imageOptions.Type = ImageTypeJPG;
+                break;
+        }
         
         switch (colorMode) {
             case 0:
@@ -1316,20 +1344,15 @@
     if ([options respondsToSelector:@selector(Type)]) {
         NSString *imageType;
         switch ([options Type]) {
-            case ImageTypeJPG:
-                imageType = @"JPG";
-                break;
-            case ImageTypePNG:
-                imageType = @"PNG";
-                break;
-            case ImageTypeBMP:
-                imageType = @"BMP";
-                break;
-            case ImageTypeTIFF:
-                imageType = @"TIFF";
-                break;
-            default:
-                imageType = @"Unknown";
+            case ImageTypeJPG:       imageType = @"JPG"; break;
+            case ImageTypeJPEG:      imageType = @"JPEG"; break;
+            case ImageTypeJPEG2000:  imageType = @"JPEG2000"; break;
+            case ImageTypePNG:       imageType = @"PNG"; break;
+            case ImageTypeBMP:       imageType = @"BMP"; break;
+            case ImageTypeTIFF:      imageType = @"TIFF"; break;
+            case ImageTypeTGA:       imageType = @"TGA"; break;
+            case ImageTypeGIF:       imageType = @"GIF"; break;
+            default: break;
         }
         NSString *left = [@"Image Type:" stringByPaddingToLength:22 withString:@" " startingAtIndex:0];
         [optionsDescription appendFormat:@"%@%@\n", left, imageType];
