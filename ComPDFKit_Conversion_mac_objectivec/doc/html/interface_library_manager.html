@@ -93,9 +93,6 @@ $(function(){initNavTree('interface_library_manager.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Manages all operations related to the SDK library.  
- <a href="#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="common_8h_source.html">common.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LibraryManager:</div>
@@ -116,9 +113,8 @@ Class Methods</h2></td></tr>
 <tr class="memitem:aa6e0e3c7743151b6a9a2773772aabdc6" id="r_aa6e0e3c7743151b6a9a2773772aabdc6"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#aa6e0e3c7743151b6a9a2773772aabdc6">release</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Manages all operations related to the SDK library. </p>
-
-<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00019">19</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00008">8</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Method Documentation</h2>
 <a id="a994c7e7518e1d918ac48745d77f34010" name="a994c7e7518e1d918ac48745d77f34010"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a994c7e7518e1d918ac48745d77f34010">&#9670;&#160;</a></span>getPageCount:password:</h2>
@@ -138,14 +134,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the number of pages in the document. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filePath</td><td>File path. </td></tr>
-    <tr><td class="paramname">password</td><td>Password required to open the document (if any). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Total number of pages in the document. </dd></dl>
 
 </div>
 </div>
@@ -163,7 +151,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the SDK version number. </p><dl class="section return"><dt>Returns</dt><dd>Version string. </dd></dl>
 
 <p class="reference">References <a class="el" href="#a888e7b9dac35736723f6935c64253807">getVersion</a>.</p>
 
@@ -185,12 +172,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialize the SDK. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">resourcePath</td><td>The resource file path for the SDK. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -208,13 +189,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Verify the SDK license. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">license</td><td>License string. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
 
 </div>
 </div>
@@ -232,7 +206,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Release SDK resources. </p>
 
 <p class="reference">References <a class="el" href="#aa6e0e3c7743151b6a9a2773772aabdc6">release</a>.</p>
 
@@ -258,14 +231,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the Document AI model. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">modelPath</td><td>Model file path. </td></tr>
-    <tr><td class="paramname">ocrLanguage</td><td>OCR recognition language. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
 
 </div>
 </div>
@@ -283,12 +248,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the OCR recognition language. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">language</td><td>OCR recognition language. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -310,13 +269,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the progress callback. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">handler</td><td>Progress callback block. </td></tr>
-    <tr><td class="paramname">isMT</td><td>Whether to use multithreading. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

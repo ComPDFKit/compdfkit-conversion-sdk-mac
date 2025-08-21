@@ -1,36 +1,94 @@
+ComPDFKit Conversion SDK v3.1.0 Release Date: 19 August 2025
+=====================================================
+
+Enhanceo Features
+
+Core:
+- Added support for recognizing underline and strikethrough styles applied to non-annotation text elements.
+
+PDF to Word:
+- Added font substitution capability while preserving layout fidelity to the original document.
+- Added support for table border styles, accurately reproducing original PDF table border colors and thickness.
+- Added support for detecting and converting hyphenated word breaks at paragraph line ends.
+- Added support for detecting and converting ordered list styles in the "(1)" format.
+
+PDF to Excel:
+- Added font substitution capability while preserving layout fidelity to the original document.
+- Added support for table border styles, accurately reproducing original PDF table border colors and thickness.
+- Improved text paragraph alignment within the converted output.
+
+PDF to PowerPoint:
+- Added font substitution capability while preserving layout fidelity to the original document.
+- Added support for table border styles, accurately reproducing original PDF table border colors and thickness.
+- Improved paragraph alignment within table cells.
+
+PDF to Image:
+- Added support for TGA, GIF, and JPEG2000 output formats.
+
+OCR:
+- Added support for Cyrillic, Arabic, Tamil, Telugu, and Kannada languages.
+- Improved recognition accuracy for Traditional Chinese.
+
+Issues Addressed
+
+Core:
+- Fixed an issue where certain characters were missing under specific conditions.
+- Fixed an issue where table cell background colors were incorrectly detected under certain conditions.
+
+PDF to Word:
+- Fixed an issue where images inside tables could be lost under certain conditions.
+- Fixed an issue where embedded images inside lists could be lost.
+- Fixed an issue where images with "top and bottom" text wrapping were positioned incorrectly in some cases.
+- Fixed an issue where hyperlink properties were lost under certain conditions.
+- Fixed an issue where table heights were calculated incorrectly in certain scenarios.
+
+PDF to Excel:
+- Fixed an issue where excessively large numbers could not be displayed correctly.
+
+PDF to PowerPoint:
+- Improved text layout stability to prevent formatting shifts in certain cases.
+
+PDF to JSON:
+- Fixed an issue where text paragraphs could be lost under certain conditions.
+
+PDF to Markdown:
+- Fixed an issue where text paragraphs could be lost under certain conditions.
+
+
 ComPDFKit Conversion SDK v3.0.0 Release Date: 06 June 2025
 =============================================================
 
 New Features
 ----------------------------------
-**Support converting PDF to Markdown format**
-  - Supports table conversion.
+**PDF to Markdown**
+- Added support for converting PDF to Markdown format.
+- Added support for table conversion.
 
-Enhancements
+Enhanced Features:
 ----------------------------------
 **PDF to Word:**
-- Transitioned from a main push frame layout to a mixed flow layout (frame and flow), significantly enhancing the editability of Word documents while nearly 100% preserving the original PDF layout for most documents.
-- Added support for Catalogue, Ordered List, and Unordered List objects. When they are detected and successfully recognized, the layout of the generated Word document will be significantly improved.
-- Introduced support for header and footer functionality. When headers and footers are detected, the corresponding content (text, images) is accurately converted into the Word document.
-- Now supports inserting images within tables.
-- Added support for rotating text.
+- Upgraded the Fixed layout to a Hybrid layout (combining Fixed and Flow layouts), significantly improving the editability of Word documents. The AI-powered hybrid layout ensures that over 80% of the resulting documents retain 100% of the original PDF layout.
+- Added support for converting objects like tables of contents, ordered lists, and unordered lists. When these objects are detected and successfully recognized, the layout of the converted Word document will be significantly improved.
+- Added support for converting header and footer objects. When headers and footers are detected, regardless of whether their content is text or images, they can be accurately converted into page elements.
+- Added support for inserting images into tables in the resulting Word document.
+- Added support for converting rotated text in PDF documents.
 
 **PDF to Excel:**
-- Significantly improved table readability.
-- Now supports applying different text styles within cells.
-- Added support for inserting images into tables.
-- Enhanced the accuracy of text alignment within table cells.
-- Fixed issues related to table order errors.
+- Enhanced the structural restoration of complex tables using AI layout analysis technology, significantly improving table readability.
+- Added support for applying different text styles within a cell in the resulting Excel document.
+- Added support for inserting images into tables in the resulting Excel document.
+- Enhanced the accuracy of text alignment within table cells in the resulting Excel document.
+- Fixed issues related to incorrect table order.
 
 **PDF to PowerPoint:**
-- Supports converting tables.
-- Supports converting ordered lists.
+- Added support for table conversion.
+- Added support for converting ordered lists.
 
 **PDF to HTML:**
-- Added support for flow mode.
+- Added support for Flow layout.
 
 **PDF to Image:**
-- Supports TIFF format.
+- Added support for TIFF format.
 - Added options to configure color modes (color, black & white, grayscale).
 - Introduced a new Path enhancement option that improves the display of Path elements in PDF documents (increasing path width and color saturation).
 
@@ -38,10 +96,10 @@ Enhancements
 - Added support for preserving table styles.
 
 **PDF to RTF:**
-- Supports table conversion.
+- Added support for table conversion.
 
 **PDF to JSON:**
-- New feature: includes text content attributes and page number fields.
+- Added support for preserving text content attributes and page number fields in the resulting JSON document.
 
 **PDF to Searchable PDF:**
 - Added support for converting TIFF format images to PDF.

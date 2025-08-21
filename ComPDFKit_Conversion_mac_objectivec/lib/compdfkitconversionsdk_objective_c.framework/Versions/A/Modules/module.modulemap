@@ -1,6 +1,0 @@
-framework module compdfkitconversionsdk_objective_c {
-  umbrella header "compdfkitconversionsdk_objective_c.h"
-  
-  export *
-  module * { export * }
-}

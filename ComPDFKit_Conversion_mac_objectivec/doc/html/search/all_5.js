@@ -1,5 +1,29 @@
 var searchData=
 [
-  ['htmloptions_0',['HtmlOptions',['../interface_html_options.html',1,'']]],
-  ['htmlpageoption_1',['htmlPageOption',['../interface_convert_options.html#a85c5c56aa29918624882cb38924aa27e',1,'ConvertOptions::htmlPageOption'],['../interface_html_options.html#a0de02473ddd5b16b27e6bf5f33de5511',1,'HtmlOptions::htmlPageOption']]]
+  ['cancel_0',['cancel',['../interface_c_p_d_f_conversion.html#a6a82a0f730da248c6707003b9afcaf4e',1,'CPDFConversion']]],
+  ['cdewarpresult_1',['CDEWARPResult',['../interface_c_d_e_w_a_r_p_result.html',1,'']]],
+  ['cellbackgroundcolorb_2',['cellBackgroundColorB',['../interface_c_table_cell.html#a4c56da04ff396995a521819e8b2f7dd0',1,'CTableCell']]],
+  ['cellbackgroundcolorg_3',['cellBackgroundColorG',['../interface_c_table_cell.html#a499a2cdfd1332c033ffda6900b755eb8',1,'CTableCell']]],
+  ['cellbackgroundcolorr_4',['cellBackgroundColorR',['../interface_c_table_cell.html#a3b2c84fd2202f0bdbe6bdabc7dfa604f',1,'CTableCell']]],
+  ['cells_5',['cells',['../interface_c_t_a_b_result.html#aa918e8cbfc9541ea50a9dd30b2f6bc6e',1,'CTABResult']]],
+  ['cellstext_6',['cellsText',['../interface_c_t_a_b_result.html#ab69ec5bdd4160964dcadf61ce03d01e0',1,'CTABResult']]],
+  ['cline_7',['CLine',['../interface_c_line.html',1,'']]],
+  ['cmagiccolorresult_8',['CMAGICCOLORResult',['../interface_c_m_a_g_i_c_c_o_l_o_r_result.html',1,'']]],
+  ['cocrresult_9',['COCRResult',['../interface_c_o_c_r_result.html',1,'']]],
+  ['colcount_10',['colCount',['../interface_c_t_a_b_result.html#a2aabb1877ec1f314d3de0e9e023f41ef',1,'CTABResult']]],
+  ['colormode_11',['ColorMode',['../interface_image_options.html#a270ec56ee904a5e4f9b5c8a5074f7a44',1,'ImageOptions']]],
+  ['compdfkit_20conversion_20sdk_12',['ComPDFKit Conversion SDK',['../index.html#autotoc_md1',1,'1.1 Why ComPDFKit Conversion SDK'],['../index.html#autotoc_md2',1,'1.2 ComPDFKit Conversion SDK']]],
+  ['compdfkitconversion_20documentation_13',['ComPDFKitConversion documentation',['../index.html',1,'']]],
+  ['containannotation_14',['containAnnotation',['../interface_convert_options.html#ae3bc107d0b020f33a9dee80ac27ed6d3',1,'ConvertOptions::containAnnotation'],['../interface_word_options.html#a5ac63b99e5ef9aca3dd783c3db2a8a11',1,'WordOptions::containAnnotation'],['../interface_excel_options.html#ac7b7eeb17389d7b9194dcf74b840cfbe',1,'ExcelOptions::containAnnotation'],['../interface_ppt_options.html#a57f93cf39d3d46808e84519d3e908aa1',1,'PptOptions::containAnnotation'],['../interface_html_options.html#a2a379b4784d8d57daabde14987822632',1,'HtmlOptions::containAnnotation'],['../interface_rtf_options.html#a0a6568896c1d5c076a5dd5202ac60405',1,'RtfOptions::containAnnotation'],['../interface_json_options.html#a6d096d4530999d5616be252b8fecd73d',1,'JsonOptions::containAnnotation'],['../interface_markdown_options.html#a4032cbec540301ecb705de862b4dff3c',1,'MarkdownOptions::containAnnotation']]],
+  ['containimage_15',['containImage',['../interface_convert_options.html#a4a084804fbf94886d5c60c9d52a60edd',1,'ConvertOptions::containImage'],['../interface_word_options.html#a27cda97276a96c513c01287e30c689d2',1,'WordOptions::containImage'],['../interface_excel_options.html#a7291ee692b47d8cf36be9e894c98865c',1,'ExcelOptions::containImage'],['../interface_ppt_options.html#a5540541410091799569cdb1cead01f43',1,'PptOptions::containImage'],['../interface_html_options.html#a94b07321a2d14bcf11e907e3a478dae3',1,'HtmlOptions::containImage'],['../interface_rtf_options.html#a4a7f15eced14f41ea3820bd3a24d971e',1,'RtfOptions::containImage'],['../interface_json_options.html#a9eab21b33a05e12608dad2204561927a',1,'JsonOptions::containImage'],['../interface_searchable_pdf_options.html#a831085f793c5ab7e4287ffca0c507425',1,'SearchablePdfOptions::containImage'],['../interface_markdown_options.html#a5832c201400ca713af191f3081f02912',1,'MarkdownOptions::containImage']]],
+  ['containtable_16',['ContainTable',['../interface_json_options.html#a4a7c1bac245cfb2893f01a006b3b36af',1,'JsonOptions']]],
+  ['conversion_20sdk_17',['Conversion SDK',['../index.html#autotoc_md1',1,'1.1 Why ComPDFKit Conversion SDK'],['../index.html#autotoc_md2',1,'1.2 ComPDFKit Conversion SDK']]],
+  ['convertoptions_18',['ConvertOptions',['../interface_convert_options.html',1,'']]],
+  ['cpdfconversion_19',['CPDFConversion',['../interface_c_p_d_f_conversion.html',1,'']]],
+  ['cpdfdocumentai_20',['CPDFDocumentAI',['../interface_c_p_d_f_document_a_i.html',1,'']]],
+  ['crect_21',['CRect',['../interface_c_rect.html',1,'']]],
+  ['csvformat_22',['CSVFormat',['../interface_excel_options.html#aa195419fd51b2a37d891501bc09d339c',1,'ExcelOptions']]],
+  ['ctablecell_23',['CTableCell',['../interface_c_table_cell.html',1,'']]],
+  ['ctabresult_24',['CTABResult',['../interface_c_t_a_b_result.html',1,'']]],
+  ['ctextline_25',['CTextLine',['../interface_c_text_line.html',1,'']]]
 ];

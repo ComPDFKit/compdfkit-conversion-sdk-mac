@@ -1,7 +1,6 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <Cocoa/Cocoa.h>
-
 #import "include/common.h"
 #import "include/conversion.h"
 
@@ -18,7 +17,6 @@
                                                  backing:NSBackingStoreBuffered
                                                    defer:NO];
     [self.window setTitle:@"ComPDFKit PDF Conversion Demo"];
-    
     self.viewController = [[ViewController alloc] init];
     self.window.contentViewController = self.viewController;
     
