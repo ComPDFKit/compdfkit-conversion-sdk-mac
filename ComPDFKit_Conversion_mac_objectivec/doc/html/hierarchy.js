@@ -22,6 +22,7 @@ var hierarchy =
       [ "PptOptions", "interface_ppt_options.html", null ],
       [ "RtfOptions", "interface_rtf_options.html", null ],
       [ "SearchablePdfOptions", "interface_searchable_pdf_options.html", null ],
+      [ "StampDetectionResult", "interface_stamp_detection_result.html", null ],
       [ "TxtOptions", "interface_txt_options.html", null ],
       [ "WordOptions", "interface_word_options.html", null ]
     ] ]

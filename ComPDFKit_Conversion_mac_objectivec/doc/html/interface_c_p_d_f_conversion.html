@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ComPDFKit Objective-C SDK: CPDFConversion Class Reference</title>
+<title>ComPDF Objective-C SDK: CPDFConversion Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ComPDFKit Objective-C SDK
+   <div id="projectname">ComPDF Objective-C SDK
    </div>
-   <div id="projectbrief">API Reference Documentation for ComPDFKit Objective-C SDK</div>
+   <div id="projectbrief">API Reference Documentation for ComPDF Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -125,6 +125,7 @@ Class Methods</h2></td></tr>
 <tr class="memitem:aacf6eba2f35185431dff1b6c54875d0b" id="r_aacf6eba2f35185431dff1b6c54875d0b"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#aacf6eba2f35185431dff1b6c54875d0b">startPDFToSearchablePDF:password:outputPath:options:</a></td></tr>
 <tr class="memdesc:aacf6eba2f35185431dff1b6c54875d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the conversion of a PDF file to a searchable PDF.  <br /></td></tr>
 <tr class="memitem:a55235be8e3487f55e327d6e98c99bc50" id="r_a55235be8e3487f55e327d6e98c99bc50"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a55235be8e3487f55e327d6e98c99bc50">startPDFToMarkdown:password:outputPath:options:</a></td></tr>
+<tr class="memdesc:a55235be8e3487f55e327d6e98c99bc50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the conversion of a PDF file to a Markdown document.  <br /></td></tr>
 <tr class="memitem:a6a82a0f730da248c6707003b9afcaf4e" id="r_a6a82a0f730da248c6707003b9afcaf4e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a6a82a0f730da248c6707003b9afcaf4e">cancel</a></td></tr>
 <tr class="memdesc:a6a82a0f730da248c6707003b9afcaf4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels any ongoing PDF conversion process.  <br /></td></tr>
 </table>
@@ -356,6 +357,18 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Starts the conversion of a PDF file to a Markdown document. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>The input PDF file path </td></tr>
+    <tr><td class="paramname">password</td><td>Password for opening the PDF file (if required) </td></tr>
+    <tr><td class="paramname">outputPath</td><td>The output Markdown file path </td></tr>
+    <tr><td class="paramname">options</td><td>Conversion settings (<a class="el" href="interface_markdown_options.html" title="PDF to Markdown conversion parameter object.">MarkdownOptions</a>)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success </dd></dl>
 
 </div>
 </div>

@@ -3,12 +3,12 @@ set -euo pipefail
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
-BUILD_DIR="${SCRIPT_DIR}/build"
+BUILD_DIR="${SCRIPT_DIR}/build_1"
 mkdir -p "${BUILD_DIR}"
 cd "${BUILD_DIR}"
 
 arch=$(uname -m)
-# arch="x86_64" 
+# arch="x86_64"
 echo "arch: $arch"
 if [ "$arch" = "x86_64" ]; then
     cmake .. -DCMAKE_SYSTEM_PROCESSOR="x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET="10.15" -DCMAKE_OSX_ARCHITECTURES="x86_64"

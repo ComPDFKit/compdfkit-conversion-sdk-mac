@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ComPDFKit Objective-C SDK: ExcelOptions Class Reference</title>
+<title>ComPDF Objective-C SDK: ExcelOptions Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ComPDFKit Objective-C SDK
+   <div id="projectname">ComPDF Objective-C SDK
    </div>
-   <div id="projectbrief">API Reference Documentation for ComPDFKit Objective-C SDK</div>
+   <div id="projectbrief">API Reference Documentation for ComPDF Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -116,6 +116,12 @@ Properties</h2></td></tr>
 <tr class="memdesc:ac7b7eeb17389d7b9194dcf74b840cfbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to include annotations.  <br /></td></tr>
 <tr class="memitem:afc662de24471d30bff59d2428c12acbf" id="r_afc662de24471d30bff59d2428c12acbf"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc662de24471d30bff59d2428c12acbf">enableOCR</a></td></tr>
 <tr class="memdesc:afc662de24471d30bff59d2428c12acbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to enable OCR.  <br /></td></tr>
+<tr class="memitem:a79ea9c0def2105c9ae91e78b36de34ba" id="r_a79ea9c0def2105c9ae91e78b36de34ba"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79ea9c0def2105c9ae91e78b36de34ba">auto_create_folder</a></td></tr>
+<tr class="memdesc:a79ea9c0def2105c9ae91e78b36de34ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to automatically create folder when exporting multiple documents.  <br /></td></tr>
+<tr class="memitem:adf1d638df090c3d2a258bdc5af0806d7" id="r_adf1d638df090c3d2a258bdc5af0806d7"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf1d638df090c3d2a258bdc5af0806d7">output_document_per_page</a></td></tr>
+<tr class="memdesc:adf1d638df090c3d2a258bdc5af0806d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether to output one document per page.  <br /></td></tr>
+<tr class="memitem:a6e897a14adc07360518454b4f08c404a" id="r_a6e897a14adc07360518454b4f08c404a"><td class="memItemLeft" align="right" valign="top">OCROption&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e897a14adc07360518454b4f08c404a">ocrOption</a></td></tr>
+<tr class="memdesc:a6e897a14adc07360518454b4f08c404a"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR option scope.  <br /></td></tr>
 <tr class="memitem:a660e0bffa6b5e7b5af8073cea2395eb4" id="r_a660e0bffa6b5e7b5af8073cea2395eb4"><td class="memItemLeft" align="right" valign="top">PageLayoutMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a660e0bffa6b5e7b5af8073cea2395eb4">pageLayoutMode</a></td></tr>
 <tr class="memdesc:a660e0bffa6b5e7b5af8073cea2395eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Page layout mode.  <br /></td></tr>
 <tr class="memitem:adb52e3dd1c728886ce8d78c879384230" id="r_adb52e3dd1c728886ce8d78c879384230"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb52e3dd1c728886ce8d78c879384230">pageRanges</a></td></tr>
@@ -130,7 +136,7 @@ Properties</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PDF to Excel conversion parameter object. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00279">279</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00320">320</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 </div><a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
 <a id="a51bdae237aed2df238c08be3f7439f79" name="a51bdae237aed2df238c08be3f7439f79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51bdae237aed2df238c08be3f7439f79">&#9670;&#160;</a></span>AllContent</h2>
@@ -154,7 +160,33 @@ Properties</h2></td></tr>
 
 <p>Whether to export all content to Excel. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00306">306</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00356">356</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a79ea9c0def2105c9ae91e78b36de34ba" name="a79ea9c0def2105c9ae91e78b36de34ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ea9c0def2105c9ae91e78b36de34ba">&#9670;&#160;</a></span>auto_create_folder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) auto_create_folder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to automatically create folder when exporting multiple documents. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00338">338</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -180,7 +212,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include annotations. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00291">291</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00332">332</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -206,7 +238,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include images (only effective when OCR is disabled) </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00285">285</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00326">326</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -232,7 +264,7 @@ Properties</h2></td></tr>
 
 <p>Whether to save as CSV format. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00303">303</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00353">353</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -258,7 +290,7 @@ Properties</h2></td></tr>
 
 <p>Whether to remove AI content during conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00282">282</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00323">323</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -284,7 +316,7 @@ Properties</h2></td></tr>
 
 <p>Whether to enable OCR. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00294">294</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00335">335</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -310,7 +342,7 @@ Properties</h2></td></tr>
 
 <p>Whether each worksheet contains only one table. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00309">309</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00359">359</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +368,59 @@ Properties</h2></td></tr>
 
 <p>Convert formulas to images. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00288">288</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00329">329</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a6e897a14adc07360518454b4f08c404a" name="a6e897a14adc07360518454b4f08c404a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e897a14adc07360518454b4f08c404a">&#9670;&#160;</a></span>ocrOption</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (OCROption) ocrOption</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OCR option scope. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00344">344</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="adf1d638df090c3d2a258bdc5af0806d7" name="adf1d638df090c3d2a258bdc5af0806d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf1d638df090c3d2a258bdc5af0806d7">&#9670;&#160;</a></span>output_document_per_page</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) output_document_per_page</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>whether to output one document per page. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00341">341</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -362,7 +446,7 @@ Properties</h2></td></tr>
 
 <p>Page layout mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00297">297</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00347">347</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -388,7 +472,7 @@ Properties</h2></td></tr>
 
 <p>Page ranges for conversion (e.g. "1-3,5,7-9") </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00300">300</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00350">350</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['formulatoimage_0',['formulaToImage',['../interface_convert_options.html#af88aaa2d01f8dcd5deae6d2aaba6284c',1,'ConvertOptions::formulaToImage'],['../interface_word_options.html#a536a6dcb89c811ec545fa0d7955b07ff',1,'WordOptions::formulaToImage'],['../interface_excel_options.html#aebc66a43338f4240b05f1cf4bb280c69',1,'ExcelOptions::formulaToImage'],['../interface_ppt_options.html#ab0babac4b91cbe318290307f27657826',1,'PptOptions::formulaToImage'],['../interface_html_options.html#ace6be894442af6f4d1ae17dc17151a8e',1,'HtmlOptions::formulaToImage'],['../interface_rtf_options.html#abf79f466e8c9f275540906fa0dbfd176',1,'RtfOptions::formulaToImage'],['../interface_searchable_pdf_options.html#a7dc526fd336f781a5566d44ff2cbdc92',1,'SearchablePdfOptions::formulaToImage']]]
+  ['image_0',['image',['../interface_c_m_a_g_i_c_c_o_l_o_r_result.html#a27e51f2c96c0617b1544938e8926efd8',1,'CMAGICCOLORResult::image'],['../interface_c_d_e_w_a_r_p_result.html#a868343933576798417b1ff62c9994aa8',1,'CDEWARPResult::image']]],
+  ['imagecolormode_1',['imageColorMode',['../interface_convert_options.html#aaae5018424333963dc4ed89ef40f63f4',1,'ConvertOptions']]],
+  ['imageoptions_2',['ImageOptions',['../interface_image_options.html',1,'']]],
+  ['imagepathenhance_3',['imagePathEnhance',['../interface_convert_options.html#a3dad772d722345a1b79f3e053f26fce6',1,'ConvertOptions']]],
+  ['imagescaling_4',['imageScaling',['../interface_convert_options.html#afbd25eb8c9ec3ac48b31c5fe37d9ba8c',1,'ConvertOptions']]],
+  ['imagetype_5',['imageType',['../interface_convert_options.html#a86205d9eabc3bc56a51400de743aefbe',1,'ConvertOptions']]],
+  ['initialize_3a_6',['initialize:',['../interface_library_manager.html#a06bb662e61396f1704b5388f16bdaac3',1,'LibraryManager']]]
 ];

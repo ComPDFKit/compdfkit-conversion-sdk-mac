@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ComPDFKit Objective-C SDK: common.h Source File</title>
+<title>ComPDF Objective-C SDK: common.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ComPDFKit Objective-C SDK
+   <div id="projectname">ComPDF Objective-C SDK
    </div>
-   <div id="projectbrief">API Reference Documentation for ComPDFKit Objective-C SDK</div>
+   <div id="projectbrief">API Reference Documentation for ComPDF Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -96,26 +96,28 @@ $(function(){initNavTree('common_8h_source.html','',''); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#import &quot;base_type.h&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">typedef</span> void (^COMProgressBlock)(<span class="keywordtype">int</span> current_page, <span class="keywordtype">int</span> total_page);</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="interface_library_manager.html">    8</a></span><span class="keyword">@interface </span><a class="code hl_interface" href="interface_library_manager.html">LibraryManager</a> : NSObject</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a06bb662e61396f1704b5388f16bdaac3">   10</a></span>+ (void)initialize:(NSString *)resourcePath;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="interface_library_manager.html#afc4b605fdf34933394535cf0474354fc">   11</a></span>+ (ErrorCode)licenseVerify:(NSString *)license;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a8547b58a6321701b4ee9b22813245f65">   12</a></span>+ (void)setProgress:(COMProgressBlock)handler isMT:(BOOL)isMT;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a5529f48014465a4d57d6a8a51f553284">   13</a></span>+ (int)setDocumentAIModel:(NSString *)modelPath </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>             ocrLanguage:(OCRLanguage)language;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a364be68105bd7a4f62c3d72c0d093a64">   15</a></span>+ (void)setOCRLanguage:(OCRLanguage)language;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a994c7e7518e1d918ac48745d77f34010">   16</a></span>+ (int)getPageCount:(NSString *)filePath </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                password:(NSString *)password;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a888e7b9dac35736723f6935c64253807">   18</a></span>+ (NSString *)<a class="code hl_function" href="interface_library_manager.html#a888e7b9dac35736723f6935c64253807">getVersion</a>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="interface_library_manager.html#aa6e0e3c7743151b6a9a2773772aabdc6">   19</a></span>+ (void)<a class="code hl_function" href="interface_library_manager.html#aa6e0e3c7743151b6a9a2773772aabdc6">release</a>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">@end</span></div>
-<div class="ttc" id="ainterface_library_manager_html"><div class="ttname"><a href="interface_library_manager.html">LibraryManager</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">common.h:9</a></div></div>
-<div class="ttc" id="ainterface_library_manager_html_a888e7b9dac35736723f6935c64253807"><div class="ttname"><a href="interface_library_manager.html#a888e7b9dac35736723f6935c64253807">+[LibraryManager getVersion]</a></div><div class="ttdeci">NSString * getVersion()</div></div>
-<div class="ttc" id="ainterface_library_manager_html_aa6e0e3c7743151b6a9a2773772aabdc6"><div class="ttname"><a href="interface_library_manager.html#aa6e0e3c7743151b6a9a2773772aabdc6">+[LibraryManager release]</a></div><div class="ttdeci">void release()</div></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">typedef</span> void (^COMProgressBlock)(<span class="keywordtype">int</span> current_page, <span class="keywordtype">int</span> total_page);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="interface_library_manager.html">   17</a></span><span class="keyword">@interface </span><a class="code hl_class" href="interface_library_manager.html">LibraryManager</a> : NSObject</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a06bb662e61396f1704b5388f16bdaac3">   23</a></span>+ (void)initialize:(NSString *)resourcePath;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="interface_library_manager.html#afc4b605fdf34933394535cf0474354fc">   30</a></span>+ (ErrorCode)licenseVerify:(NSString *)license;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a8547b58a6321701b4ee9b22813245f65">   36</a></span>+ (void)setProgress:(COMProgressBlock)handler isMT:(BOOL)isMT;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="interface_library_manager.html#ac7c58085da619e9dba7633b48aa28f39">   43</a></span>+ (int)setDocumentAIModel:(NSString *)modelPath</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            ocrLanguages:(NSArray&lt;NSNumber *&gt; *)languages;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a182634c3e946522968263deeb961f486">   49</a></span>+ (void)setOCRLanguage:(NSArray&lt;NSNumber *&gt; *)languages;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a994c7e7518e1d918ac48745d77f34010">   56</a></span>+ (int)getPageCount:(NSString *)filePath </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                password:(NSString *)password;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a888e7b9dac35736723f6935c64253807">   62</a></span>+ (NSString *)<a class="code hl_function" href="interface_library_manager.html#a888e7b9dac35736723f6935c64253807">getVersion</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="interface_library_manager.html#aa6e0e3c7743151b6a9a2773772aabdc6">   66</a></span>+ (void)<a class="code hl_function" href="interface_library_manager.html#aa6e0e3c7743151b6a9a2773772aabdc6">release</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="interface_library_manager.html#a6f61ed513e8f833c44c7b11f069acec3">   70</a></span>+ (void)<a class="code hl_function" href="interface_library_manager.html#a6f61ed513e8f833c44c7b11f069acec3">releaseDocumentAIModel</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">@end</span></div>
+<div class="ttc" id="ainterface_library_manager_html"><div class="ttname"><a href="interface_library_manager.html">LibraryManager</a></div><div class="ttdoc">Global initializer and utilities for the SDK.</div><div class="ttdef"><b>Definition</b> <a href="#l00017">common.h:18</a></div></div>
+<div class="ttc" id="ainterface_library_manager_html_a6f61ed513e8f833c44c7b11f069acec3"><div class="ttname"><a href="interface_library_manager.html#a6f61ed513e8f833c44c7b11f069acec3">+[LibraryManager releaseDocumentAIModel]</a></div><div class="ttdeci">void releaseDocumentAIModel()</div><div class="ttdoc">Release loaded Document AI model.</div></div>
+<div class="ttc" id="ainterface_library_manager_html_a888e7b9dac35736723f6935c64253807"><div class="ttname"><a href="interface_library_manager.html#a888e7b9dac35736723f6935c64253807">+[LibraryManager getVersion]</a></div><div class="ttdeci">NSString * getVersion()</div><div class="ttdoc">Get SDK version string.</div></div>
+<div class="ttc" id="ainterface_library_manager_html_aa6e0e3c7743151b6a9a2773772aabdc6"><div class="ttname"><a href="interface_library_manager.html#aa6e0e3c7743151b6a9a2773772aabdc6">+[LibraryManager release]</a></div><div class="ttdeci">void release()</div><div class="ttdoc">Release all SDK resources.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

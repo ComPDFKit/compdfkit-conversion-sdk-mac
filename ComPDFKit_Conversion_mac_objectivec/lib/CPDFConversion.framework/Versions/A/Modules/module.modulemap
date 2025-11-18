@@ -1,6 +1,0 @@
-framework module CPDFConversion {
-  umbrella header "CPDFConversion.h"
-  
-  export *
-  module * { export * }
-}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ComPDFKit Objective-C SDK: LayoutAnalysisResult Class Reference</title>
+<title>ComPDF Objective-C SDK: LayoutAnalysisResult Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ComPDFKit Objective-C SDK
+   <div id="projectname">ComPDF Objective-C SDK
    </div>
-   <div id="projectbrief">API Reference Documentation for ComPDFKit Objective-C SDK</div>
+   <div id="projectbrief">API Reference Documentation for ComPDF Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('interface_layout_analysis_result.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>Single layout element detected on a page.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="document__ai_8h_source.html">document_ai.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LayoutAnalysisResult:</div>
@@ -104,12 +107,16 @@ Inheritance diagram for LayoutAnalysisResult:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a3650489f8c7d4e213104d7091c72526b" id="r_a3650489f8c7d4e213104d7091c72526b"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3650489f8c7d4e213104d7091c72526b">label</a></td></tr>
+<tr class="memdesc:a3650489f8c7d4e213104d7091c72526b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detected label/type name.  <br /></td></tr>
 <tr class="memitem:a4e9a40ff04800b357ec58c99618cf6df" id="r_a4e9a40ff04800b357ec58c99618cf6df"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e9a40ff04800b357ec58c99618cf6df">score</a></td></tr>
+<tr class="memdesc:a4e9a40ff04800b357ec58c99618cf6df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confidence score in range [0,1].  <br /></td></tr>
 <tr class="memitem:a9e5712f030dca1c275fec90f97aa4125" id="r_a9e5712f030dca1c275fec90f97aa4125"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e5712f030dca1c275fec90f97aa4125">rect</a></td></tr>
+<tr class="memdesc:a9e5712f030dca1c275fec90f97aa4125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounding box as [left, top, right, bottom].  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00009">9</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<div class="textblock"><p>Single layout element detected on a page. </p>
+
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00013">13</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 </div><a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
 <a id="a3650489f8c7d4e213104d7091c72526b" name="a3650489f8c7d4e213104d7091c72526b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3650489f8c7d4e213104d7091c72526b">&#9670;&#160;</a></span>label</h2>
@@ -131,7 +138,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00011">11</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<p>Detected label/type name. </p>
+
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00016">16</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 
 </div>
 </div>
@@ -155,7 +164,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00013">13</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<p>Bounding box as [left, top, right, bottom]. </p>
+
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00020">20</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 
 </div>
 </div>
@@ -179,7 +190,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00012">12</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<p>Confidence score in range [0,1]. </p>
+
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00018">18</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 
 </div>
 </div>

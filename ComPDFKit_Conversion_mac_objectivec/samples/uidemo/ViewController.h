@@ -1,6 +1,6 @@
 #import <Cocoa/Cocoa.h>
-#import "include/common.h"
-#import "include/conversion.h"
+#import "../../include/common.h"
+#import "../../include/conversion.h"
 
 typedef NS_ENUM(NSInteger, ConversionType) {
     ConversionTypeUnknown = 0,
@@ -50,7 +50,14 @@ typedef NS_ENUM(NSInteger, ConversionType) {
 @property (strong) NSButton *formulaToImageCheckBox;
 @property (nonatomic, strong) NSPopUpButton *ocrLanguagePopUp;
 
+@property (strong) NSButton *outputPerPageCheckBox;            // output_document_per_page
+@property (strong) NSButton *backgroundImageCheckBox;          // contain_page_background_image
+@property (strong) NSButton *autoCreateFolderCheckBox;         // auto_create_folder (Excel)
+@property (strong) NSPopUpButton *ocrOptionPopUp;              // OCROption
+
+
 @property (nonatomic, assign) BOOL isConverting;
+
 
 @property (nonatomic, copy) NSString *selectedInputFile;
 @property (nonatomic, copy) NSString *outputDirectoryPath;

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ComPDFKit Objective-C SDK: RtfOptions Class Reference</title>
+<title>ComPDF Objective-C SDK: RtfOptions Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ComPDFKit Objective-C SDK
+   <div id="projectname">ComPDF Objective-C SDK
    </div>
-   <div id="projectbrief">API Reference Documentation for ComPDFKit Objective-C SDK</div>
+   <div id="projectbrief">API Reference Documentation for ComPDF Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -116,14 +116,46 @@ Properties</h2></td></tr>
 <tr class="memdesc:a0a6568896c1d5c076a5dd5202ac60405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to include annotations.  <br /></td></tr>
 <tr class="memitem:a78251ee619e277261f796a2f45448921" id="r_a78251ee619e277261f796a2f45448921"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78251ee619e277261f796a2f45448921">enableOCR</a></td></tr>
 <tr class="memdesc:a78251ee619e277261f796a2f45448921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to enable OCR.  <br /></td></tr>
+<tr class="memitem:ad3ed0880975466b3ca892020cbb80e6b" id="r_ad3ed0880975466b3ca892020cbb80e6b"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3ed0880975466b3ca892020cbb80e6b">contain_page_background_image</a></td></tr>
+<tr class="memdesc:ad3ed0880975466b3ca892020cbb80e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to contain page background images when converting,which takes effect only when enable_ocr is true.  <br /></td></tr>
+<tr class="memitem:aeb8a887da19a4887de2b92c25f85a320" id="r_aeb8a887da19a4887de2b92c25f85a320"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb8a887da19a4887de2b92c25f85a320">output_document_per_page</a></td></tr>
+<tr class="memdesc:aeb8a887da19a4887de2b92c25f85a320"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether to output one document per page.  <br /></td></tr>
+<tr class="memitem:a96fb977c0faa79d12e7af04504e08f00" id="r_a96fb977c0faa79d12e7af04504e08f00"><td class="memItemLeft" align="right" valign="top">OCROption&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96fb977c0faa79d12e7af04504e08f00">ocrOption</a></td></tr>
+<tr class="memdesc:a96fb977c0faa79d12e7af04504e08f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR option scope.  <br /></td></tr>
 <tr class="memitem:a03944ef3960476787e9c1298c800a05f" id="r_a03944ef3960476787e9c1298c800a05f"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03944ef3960476787e9c1298c800a05f">pageRanges</a></td></tr>
 <tr class="memdesc:a03944ef3960476787e9c1298c800a05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Page ranges for conversion (e.g. "1-3,5,7-9")  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PDF to RTF conversion parameter object. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00366">366</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00434">434</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 </div><a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
+<a id="ad3ed0880975466b3ca892020cbb80e6b" name="ad3ed0880975466b3ca892020cbb80e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ed0880975466b3ca892020cbb80e6b">&#9670;&#160;</a></span>contain_page_background_image</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) contain_page_background_image</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to contain page background images when converting,which takes effect only when enable_ocr is true. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00452">452</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
 <a id="a0a6568896c1d5c076a5dd5202ac60405" name="a0a6568896c1d5c076a5dd5202ac60405"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a6568896c1d5c076a5dd5202ac60405">&#9670;&#160;</a></span>containAnnotation</h2>
 
@@ -146,7 +178,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include annotations. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00378">378</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00446">446</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -172,7 +204,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include images (only effective when OCR is disabled) </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00372">372</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00440">440</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -198,7 +230,7 @@ Properties</h2></td></tr>
 
 <p>Whether to remove AI content during conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00369">369</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00437">437</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -224,7 +256,7 @@ Properties</h2></td></tr>
 
 <p>Whether to enable OCR. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00381">381</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00449">449</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -250,7 +282,59 @@ Properties</h2></td></tr>
 
 <p>Convert formulas to images. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00375">375</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00443">443</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a96fb977c0faa79d12e7af04504e08f00" name="a96fb977c0faa79d12e7af04504e08f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96fb977c0faa79d12e7af04504e08f00">&#9670;&#160;</a></span>ocrOption</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (OCROption) ocrOption</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OCR option scope. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00458">458</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="aeb8a887da19a4887de2b92c25f85a320" name="aeb8a887da19a4887de2b92c25f85a320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8a887da19a4887de2b92c25f85a320">&#9670;&#160;</a></span>output_document_per_page</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) output_document_per_page</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>whether to output one document per page. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00455">455</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -276,7 +360,7 @@ Properties</h2></td></tr>
 
 <p>Page ranges for conversion (e.g. "1-3,5,7-9") </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00384">384</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00461">461</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>

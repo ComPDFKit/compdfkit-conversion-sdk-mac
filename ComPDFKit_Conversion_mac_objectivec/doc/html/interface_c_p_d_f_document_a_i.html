@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ComPDFKit Objective-C SDK: CPDFDocumentAI Class Reference</title>
+<title>ComPDF Objective-C SDK: CPDFDocumentAI Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ComPDFKit Objective-C SDK
+   <div id="projectname">ComPDF Objective-C SDK
    </div>
-   <div id="projectbrief">API Reference Documentation for ComPDFKit Objective-C SDK</div>
+   <div id="projectbrief">API Reference Documentation for ComPDF Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('interface_c_p_d_f_document_a_i.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>High-level APIs for Document AI tasks.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="document__ai_8h_source.html">document_ai.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CPDFDocumentAI:</div>
@@ -103,18 +106,26 @@ Inheritance diagram for CPDFDocumentAI:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:af6b61b814df538e42028be62c7b59a7b" id="r_af6b61b814df538e42028be62c7b59a7b"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#af6b61b814df538e42028be62c7b59a7b">LayoutAnalysis:andResults:</a></td></tr>
-<tr class="memitem:af664962c589210c65e19d379c5bdf48a" id="r_af664962c589210c65e19d379c5bdf48a"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#af664962c589210c65e19d379c5bdf48a">Ocr:andResult:</a></td></tr>
-<tr class="memitem:a9158c92fb9ac8551d3d06cd6a743eef8" id="r_a9158c92fb9ac8551d3d06cd6a743eef8"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a9158c92fb9ac8551d3d06cd6a743eef8">MagicColor:andOutputImage:</a></td></tr>
-<tr class="memitem:a058d0b4c7eff854f2fd72e6279417dc5" id="r_a058d0b4c7eff854f2fd72e6279417dc5"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a058d0b4c7eff854f2fd72e6279417dc5">Dewarp:andOutputImage:</a></td></tr>
-<tr class="memitem:ab9f994e2c6831d21906d4314e0759ec7" id="r_ab9f994e2c6831d21906d4314e0759ec7"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#ab9f994e2c6831d21906d4314e0759ec7">TableRec:andResult:</a></td></tr>
+<tr class="memitem:a450b12c68857fbd3311c216c85c2aa7b" id="r_a450b12c68857fbd3311c216c85c2aa7b"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a450b12c68857fbd3311c216c85c2aa7b">LayoutAnalysis:andResults:</a></td></tr>
+<tr class="memdesc:a450b12c68857fbd3311c216c85c2aa7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform page layout analysis.  <br /></td></tr>
+<tr class="memitem:ae28dfd1bfbdf471a64d84ac57ff569a7" id="r_ae28dfd1bfbdf471a64d84ac57ff569a7"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#ae28dfd1bfbdf471a64d84ac57ff569a7">StampDetection:andResults:</a></td></tr>
+<tr class="memdesc:ae28dfd1bfbdf471a64d84ac57ff569a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect stamps/seals on the page.  <br /></td></tr>
+<tr class="memitem:a5a7b997450ac42e4a039e06283a3f25d" id="r_a5a7b997450ac42e4a039e06283a3f25d"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a5a7b997450ac42e4a039e06283a3f25d">Ocr:andResult:</a></td></tr>
+<tr class="memdesc:a5a7b997450ac42e4a039e06283a3f25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run OCR on the page/image.  <br /></td></tr>
+<tr class="memitem:a8e3a591b8abd9f6f5c7307e0fd752eeb" id="r_a8e3a591b8abd9f6f5c7307e0fd752eeb"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a8e3a591b8abd9f6f5c7307e0fd752eeb">MagicColor:andOutputImage:</a></td></tr>
+<tr class="memdesc:a8e3a591b8abd9f6f5c7307e0fd752eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply MagicColor enhancement to the input image.  <br /></td></tr>
+<tr class="memitem:a1e0cf6f371dbc432f0ba82548d97850d" id="r_a1e0cf6f371dbc432f0ba82548d97850d"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a1e0cf6f371dbc432f0ba82548d97850d">Dewarp:andOutputImage:</a></td></tr>
+<tr class="memdesc:a1e0cf6f371dbc432f0ba82548d97850d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dewarp the input image (deskew/flatten).  <br /></td></tr>
+<tr class="memitem:a3b20028516abef1cb1e375ca23e2deda" id="r_a3b20028516abef1cb1e375ca23e2deda"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a3b20028516abef1cb1e375ca23e2deda">TableRec:andResult:</a></td></tr>
+<tr class="memdesc:a3b20028516abef1cb1e375ca23e2deda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recognize tables from the page/image.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00103">103</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<div class="textblock"><p>High-level APIs for Document AI tasks. </p>
+
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00207">207</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Method Documentation</h2>
-<a id="a058d0b4c7eff854f2fd72e6279417dc5" name="a058d0b4c7eff854f2fd72e6279417dc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a058d0b4c7eff854f2fd72e6279417dc5">&#9670;&#160;</a></span>Dewarp:andOutputImage:</h2>
+<a id="a1e0cf6f371dbc432f0ba82548d97850d" name="a1e0cf6f371dbc432f0ba82548d97850d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e0cf6f371dbc432f0ba82548d97850d">&#9670;&#160;</a></span>Dewarp:andOutputImage:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -122,7 +133,7 @@ Class Methods</h2></td></tr>
         <tr>
           <td class="memname">+ (ErrorCode) Dewarp: </td>
           <td></td>
-          <td class="paramtype">(NSString *)</td>          <td class="paramname"><span class="paramname"><em>inputPath</em></span></td>
+          <td class="paramtype">(id)</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td>
         </tr>
         <tr>
           <td class="paramkey">andOutputImage:</td>
@@ -132,10 +143,21 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Dewarp the input image (deskew/flatten). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
+    <tr><td class="paramname">outputImage</td><td>Input: optional points to guide dewarp; Output: points + image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Two-phase usage supported: first call may return only points; call again with those points to get the corrected image. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
+
 </div>
 </div>
-<a id="af6b61b814df538e42028be62c7b59a7b" name="af6b61b814df538e42028be62c7b59a7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6b61b814df538e42028be62c7b59a7b">&#9670;&#160;</a></span>LayoutAnalysis:andResults:</h2>
+<a id="a450b12c68857fbd3311c216c85c2aa7b" name="a450b12c68857fbd3311c216c85c2aa7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a450b12c68857fbd3311c216c85c2aa7b">&#9670;&#160;</a></span>LayoutAnalysis:andResults:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,7 +165,7 @@ Class Methods</h2></td></tr>
         <tr>
           <td class="memname">+ (ErrorCode) LayoutAnalysis: </td>
           <td></td>
-          <td class="paramtype">(NSString *)</td>          <td class="paramname"><span class="paramname"><em>inputPath</em></span></td>
+          <td class="paramtype">(id)</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td>
         </tr>
         <tr>
           <td class="paramkey">andResults:</td>
@@ -153,10 +175,20 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Perform page layout analysis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
+    <tr><td class="paramname">LayoutResult</td><td>Output array filled with layout elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
+
 </div>
 </div>
-<a id="a9158c92fb9ac8551d3d06cd6a743eef8" name="a9158c92fb9ac8551d3d06cd6a743eef8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9158c92fb9ac8551d3d06cd6a743eef8">&#9670;&#160;</a></span>MagicColor:andOutputImage:</h2>
+<a id="a8e3a591b8abd9f6f5c7307e0fd752eeb" name="a8e3a591b8abd9f6f5c7307e0fd752eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3a591b8abd9f6f5c7307e0fd752eeb">&#9670;&#160;</a></span>MagicColor:andOutputImage:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,7 +196,7 @@ Class Methods</h2></td></tr>
         <tr>
           <td class="memname">+ (ErrorCode) MagicColor: </td>
           <td></td>
-          <td class="paramtype">(NSString *)</td>          <td class="paramname"><span class="paramname"><em>inputPath</em></span></td>
+          <td class="paramtype">(id)</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td>
         </tr>
         <tr>
           <td class="paramkey">andOutputImage:</td>
@@ -174,10 +206,20 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Apply MagicColor enhancement to the input image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
+    <tr><td class="paramname">outputImage</td><td>Output enhanced image container. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
+
 </div>
 </div>
-<a id="af664962c589210c65e19d379c5bdf48a" name="af664962c589210c65e19d379c5bdf48a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af664962c589210c65e19d379c5bdf48a">&#9670;&#160;</a></span>Ocr:andResult:</h2>
+<a id="a5a7b997450ac42e4a039e06283a3f25d" name="a5a7b997450ac42e4a039e06283a3f25d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7b997450ac42e4a039e06283a3f25d">&#9670;&#160;</a></span>Ocr:andResult:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +227,7 @@ Class Methods</h2></td></tr>
         <tr>
           <td class="memname">+ (ErrorCode) Ocr: </td>
           <td></td>
-          <td class="paramtype">(NSString *)</td>          <td class="paramname"><span class="paramname"><em>inputPath</em></span></td>
+          <td class="paramtype">(id)</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td>
         </tr>
         <tr>
           <td class="paramkey">andResult:</td>
@@ -195,10 +237,51 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Run OCR on the page/image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
+    <tr><td class="paramname">ocrResult</td><td>Output array filled with OCR results. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
+
 </div>
 </div>
-<a id="ab9f994e2c6831d21906d4314e0759ec7" name="ab9f994e2c6831d21906d4314e0759ec7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9f994e2c6831d21906d4314e0759ec7">&#9670;&#160;</a></span>TableRec:andResult:</h2>
+<a id="ae28dfd1bfbdf471a64d84ac57ff569a7" name="ae28dfd1bfbdf471a64d84ac57ff569a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae28dfd1bfbdf471a64d84ac57ff569a7">&#9670;&#160;</a></span>StampDetection:andResults:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (ErrorCode) StampDetection: </td>
+          <td></td>
+          <td class="paramtype">(id)</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andResults:</td>
+          <td></td>
+          <td class="paramtype">(NSMutableArray&lt; <a class="el" href="interface_stamp_detection_result.html">StampDetectionResult</a> * &gt; *)</td>          <td class="paramname"><span class="paramname"><em>StampResult</em></span>&#160;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detect stamps/seals on the page. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
+    <tr><td class="paramname">StampResult</td><td>Output array filled with stamp results. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
+
+</div>
+</div>
+<a id="a3b20028516abef1cb1e375ca23e2deda" name="a3b20028516abef1cb1e375ca23e2deda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b20028516abef1cb1e375ca23e2deda">&#9670;&#160;</a></span>TableRec:andResult:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +289,7 @@ Class Methods</h2></td></tr>
         <tr>
           <td class="memname">+ (ErrorCode) TableRec: </td>
           <td></td>
-          <td class="paramtype">(NSString *)</td>          <td class="paramname"><span class="paramname"><em>inputPath</em></span></td>
+          <td class="paramtype">(id)</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td>
         </tr>
         <tr>
           <td class="paramkey">andResult:</td>
@@ -215,6 +298,16 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Recognize tables from the page/image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
+    <tr><td class="paramname">tabResult</td><td>Output array filled with table results. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
 
 </div>
 </div>
