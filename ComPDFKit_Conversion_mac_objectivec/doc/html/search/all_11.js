@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['pagelayoutmode_0',['pageLayoutMode',['../interface_convert_options.html#a44b69b11aab54beb4016370ad2fb8217',1,'ConvertOptions::pageLayoutMode'],['../interface_word_options.html#a8c6b0704f9876233907e24870d724f90',1,'WordOptions::pageLayoutMode'],['../interface_excel_options.html#a660e0bffa6b5e7b5af8073cea2395eb4',1,'ExcelOptions::pageLayoutMode'],['../interface_html_options.html#aeb578b7034b6709016ed8c544568e15c',1,'HtmlOptions::pageLayoutMode']]],
-  ['pageranges_1',['pageRanges',['../interface_convert_options.html#a9f1acac27b19a2bbfebe7090b341381e',1,'ConvertOptions::pageRanges'],['../interface_word_options.html#af3334b01329d8f531aff024b2e4d250c',1,'WordOptions::pageRanges'],['../interface_excel_options.html#adb52e3dd1c728886ce8d78c879384230',1,'ExcelOptions::pageRanges'],['../interface_ppt_options.html#a61a0134840229c4fc00eef066f07bb0a',1,'PptOptions::pageRanges'],['../interface_html_options.html#af070ef4ca494bb5145c0bc38828cb113',1,'HtmlOptions::pageRanges'],['../interface_rtf_options.html#a03944ef3960476787e9c1298c800a05f',1,'RtfOptions::pageRanges'],['../interface_image_options.html#a165ae5fa43cb5aed24735d31cfb3c9c4',1,'ImageOptions::pageRanges'],['../interface_txt_options.html#a1a8a21cf3d583bc7804f13d1c1c798ec',1,'TxtOptions::pageRanges'],['../interface_json_options.html#a47f2c55d3688efd998279dae1894aab9',1,'JsonOptions::pageRanges'],['../interface_searchable_pdf_options.html#a7b984d809e266dabd387549ed5c8f85f',1,'SearchablePdfOptions::pageRanges'],['../interface_markdown_options.html#ae8f5384b830dbfa0c7736b9286f1b45f',1,'MarkdownOptions::pageRanges']]],
-  ['pathenhance_2',['PathEnhance',['../interface_image_options.html#ac1ef1c3b147bb05a00880814fbb690f7',1,'ImageOptions']]],
-  ['points_3',['points',['../interface_c_d_e_w_a_r_p_result.html#a09267f5313c596b86bee6d4fb8666dd8',1,'CDEWARPResult']]],
-  ['pptoptions_4',['PptOptions',['../interface_ppt_options.html',1,'']]]
+  ['tableformat_0',['TableFormat',['../interface_txt_options.html#ae98283352617e3eb6ffd5149c09d3cec',1,'TxtOptions']]],
+  ['tablerec_3aandresult_3a_1',['TableRec:andResult:',['../interface_c_p_d_f_document_a_i.html#a3b20028516abef1cb1e375ca23e2deda',1,'CPDFDocumentAI']]],
+  ['text_2',['text',['../interface_c_text_line.html#afbd9a94be3c813ad510ae6eb3536e225',1,'CTextLine::text'],['../interface_c_table_cell.html#a4e21fa0ee64d6062038099fb11f30707',1,'CTableCell::text'],['../interface_c_o_c_r_result.html#aab267ce62c27098087ee8664cf1e0c80',1,'COCRResult::text']]],
+  ['textlength_3',['textLength',['../interface_c_text_line.html#a475dd64a97967ef47558344232fb1ed8',1,'CTextLine::textLength'],['../interface_c_table_cell.html#ada51508abb8aa572f2c251ccdb6189b3',1,'CTableCell::textLength']]],
+  ['top_4',['top',['../interface_c_rect.html#a00f8ced06542cb0f4de9d30acd941d16',1,'CRect']]],
+  ['trial_5',['License &amp;amp; Trial',['../index.html#autotoc_md3',1,'']]],
+  ['txtoptions_6',['TxtOptions',['../interface_txt_options.html',1,'']]],
+  ['txttableformat_7',['txtTableFormat',['../interface_convert_options.html#a510035bab2d6eae00a6cba7938fcb56f',1,'ConvertOptions']]],
+  ['type_8',['Type',['../interface_image_options.html#a23ca6c8aada2f104ef03e423fc36a607',1,'ImageOptions']]],
+  ['type_9',['type',['../interface_c_t_a_b_result.html#a64bdc83bcc883a9a6ebd9f1afa579792',1,'CTABResult']]]
 ];

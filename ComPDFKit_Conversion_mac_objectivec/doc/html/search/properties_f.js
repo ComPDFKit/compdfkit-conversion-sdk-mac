@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['widthofcols_0',['widthOfCols',['../interface_c_t_a_b_result.html#af5928cab9ede768946f0778f69439098',1,'CTABResult']]]
+  ['verticallines_0',['verticalLines',['../interface_c_t_a_b_result.html#af4413e08f7de59858dccd2c4758f0858',1,'CTABResult']]]
 ];

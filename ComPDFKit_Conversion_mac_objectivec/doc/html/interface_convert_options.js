@@ -1,5 +1,7 @@
 var interface_convert_options =
 [
+    [ "auto_create_folder", "interface_convert_options.html#ad8a228983f70994827ad2b74c1aea118", null ],
+    [ "contain_page_background_image", "interface_convert_options.html#a88267a177252f2ce4c2c3126f6d2fae9", null ],
     [ "containAnnotation", "interface_convert_options.html#ae3bc107d0b020f33a9dee80ac27ed6d3", null ],
     [ "containImage", "interface_convert_options.html#a4a084804fbf94886d5c60c9d52a60edd", null ],
     [ "enableAILayout", "interface_convert_options.html#adc86ec625d62e966c09a4163bb27b779", null ],
@@ -14,6 +16,8 @@ var interface_convert_options =
     [ "imageScaling", "interface_convert_options.html#afbd25eb8c9ec3ac48b31c5fe37d9ba8c", null ],
     [ "imageType", "interface_convert_options.html#a86205d9eabc3bc56a51400de743aefbe", null ],
     [ "jsonContainTable", "interface_convert_options.html#aca4c04a2486e7211bb1e5b61bf0e04cb", null ],
+    [ "ocrOption", "interface_convert_options.html#af105eccbde3e86dce33d20b3b1bdd167", null ],
+    [ "output_document_per_page", "interface_convert_options.html#a9be071e8ebe8bd568b50680b883d1eeb", null ],
     [ "pageLayoutMode", "interface_convert_options.html#a44b69b11aab54beb4016370ad2fb8217", null ],
     [ "pageRanges", "interface_convert_options.html#a9f1acac27b19a2bbfebe7090b341381e", null ],
     [ "txtTableFormat", "interface_convert_options.html#a510035bab2d6eae00a6cba7938fcb56f", null ]

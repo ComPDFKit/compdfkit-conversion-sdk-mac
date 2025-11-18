@@ -1,3 +1,51 @@
+ComPDFKit Conversion SDK v3.2.0 Release Date: 17 November 2025
+=====================================================
+
+Enhanced Features
+
+Core:
+- Improved document layout restoration effects.
+- Optimized conversion speed.
+- Added functionality to output each page as a separate document.
+
+PDF to Word:
+- Added support for setting text styles for list bullets.
+- Improved paragraph alignment detection.
+- Added support for recognizing superscript text.
+
+PDF to Excel:
+- Added an option to automatically create folders. When enabled, folders will be created to store CSV files when multiple CSVs are generated.
+- PDF to PowerPoint:
+- Added support for setting text styles for list bullets.
+
+PDF to Image:
+- Added support for the WEBP format.
+
+OCR (Optical Character Recognition):
+- Added support for Thai, Greek, and Eslav languages.
+- Improved recognition for English, Arabic, Telugu, Tamil, Devanagari, and Cyrillic languages.
+- Added support for recognizing OCR text font size.
+- Added an option to retain the original document page background image.
+- Added separate OCR options for garbled text and scanned pages.
+- Added support for recognizing multiple OCR languages simultaneously.
+- Optimized OCR speed.
+
+PDF to JSON:
+- Added support for converting images within tables.
+
+Issues Addressed
+
+Core:
+- Fixed an issue where font replacement in some special documents caused excessive style differences.
+- Fixed a problem where underlines in text were sometimes lost in certain cases.
+
+PDF to Excel:
+- Fixed an issue where the first column width in tables was excessively large in certain cases.
+
+PDF to PowerPoint:
+- Fixed an issue with incorrect text line breaks in certain special cases.
+
+
 ComPDFKit Conversion SDK v3.1.0 Release Date: 19 August 2025
 =====================================================
 

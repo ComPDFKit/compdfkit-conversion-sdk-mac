@@ -1,4 +1,5 @@
 #import "ViewController.h"
+#include <objc/NSObjCRuntime.h>
 #include <AppKit/AppKit.h>
 #import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
 
@@ -18,7 +19,7 @@
 
 - (void)setupUI {
     self.inputPathField = [[NSTextField alloc] initWithFrame:NSMakeRect(20, 850, 500, 28)];
-    self.inputPathField.placeholderString = @"Input PDF Path";
+    self.inputPathField.placeholderString = @"Input Path";
     [self.view addSubview:self.inputPathField];
     
     self.chooseInputBtn = [[NSButton alloc] initWithFrame:NSMakeRect(540, 850, 140, 28)];
@@ -40,16 +41,16 @@
     [self.view addSubview:self.chooseOutputBtn];
     
     self.convertTypePopUp = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(20, 770, 220, 28)];
-    [self.convertTypePopUp addItemWithTitle:@"PDF to Word"];
-    [self.convertTypePopUp addItemWithTitle:@"PDF to Excel"];
-    [self.convertTypePopUp addItemWithTitle:@"PDF to PPT"];
-    [self.convertTypePopUp addItemWithTitle:@"PDF to HTML"];
-    [self.convertTypePopUp addItemWithTitle:@"PDF to RTF"];
-    [self.convertTypePopUp addItemWithTitle:@"PDF to Image"];
-    [self.convertTypePopUp addItemWithTitle:@"PDF to TXT"];
-    [self.convertTypePopUp addItemWithTitle:@"PDF to JSON"];
-    [self.convertTypePopUp addItemWithTitle:@"PDF to Searchable PDF"];
-    [self.convertTypePopUp addItemWithTitle:@"PDF to Markdown"];
+    [self.convertTypePopUp addItemWithTitle:@"Word"];
+    [self.convertTypePopUp addItemWithTitle:@"Excel"];
+    [self.convertTypePopUp addItemWithTitle:@"PPT"];
+    [self.convertTypePopUp addItemWithTitle:@"HTML"];
+    [self.convertTypePopUp addItemWithTitle:@"RTF"];
+    [self.convertTypePopUp addItemWithTitle:@"Image"];
+    [self.convertTypePopUp addItemWithTitle:@"TXT"];
+    [self.convertTypePopUp addItemWithTitle:@"JSON"];
+    [self.convertTypePopUp addItemWithTitle:@"Searchable PDF"];
+    [self.convertTypePopUp addItemWithTitle:@"Markdown"];
     [self.convertTypePopUp setTarget:self];
     [self.convertTypePopUp setAction:@selector(conversionTypeChanged:)];
     [self.view addSubview:self.convertTypePopUp];
@@ -170,8 +171,8 @@
     [pageLayoutLabel setStringValue:@"Page Layout:"];
     
     self.pageLayoutModePopUp = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(140, 60, 180, 24)];
-    [self.pageLayoutModePopUp addItemWithTitle:@"Flow Layout"];
-    [self.pageLayoutModePopUp addItemWithTitle:@"Box Layout"];
+    [self.pageLayoutModePopUp addItemWithTitle:@"Hybrid"];
+    [self.pageLayoutModePopUp addItemWithTitle:@"Fixed"];
     [self.pageLayoutModePopUp selectItemAtIndex:0]; 
 
     self.pageRangesLabel = [[NSTextField alloc] initWithFrame:NSZeroRect]; 
@@ -212,6 +213,7 @@
     [self.imageTypePopUp addItemWithTitle:@"TIFF"];
     [self.imageTypePopUp addItemWithTitle:@"TGA"];
     [self.imageTypePopUp addItemWithTitle:@"GIF"];
+    [self.imageTypePopUp addItemWithTitle:@"WEBP"];
     
     NSTextField *scalingLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(20, 30, 100, 20)];
     [scalingLabel setBezeled:NO];
@@ -247,18 +249,54 @@
     [ocrLanguageLabel setSelectable:NO];
     [ocrLanguageLabel setStringValue:@"OCR Language:"];
     
-    self.ocrLanguagePopUp = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(400, 240, 160, 24)];
-    [self.ocrLanguagePopUp addItemWithTitle:@"Auto"];
-    [self.ocrLanguagePopUp addItemWithTitle:@"Chinese (Simplified)"];
-    [self.ocrLanguagePopUp addItemWithTitle:@"Chinese (Traditional)"];
-    [self.ocrLanguagePopUp addItemWithTitle:@"English"];
-    [self.ocrLanguagePopUp addItemWithTitle:@"Korean"];
-    [self.ocrLanguagePopUp addItemWithTitle:@"Japanese"];
-    [self.ocrLanguagePopUp addItemWithTitle:@"Latin"];
-    [self.ocrLanguagePopUp addItemWithTitle:@"Devanagari"];
-    [self.ocrLanguagePopUp addItemWithTitle:@"Unknown"];
+    self.ocrLanguagePopUp = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(400, 240, 200, 24)];
+    // 顺序与 OCRLanguage 枚举保持一致，便于索引映射
+    [self.ocrLanguagePopUp addItemWithTitle:@"Unknown"];                 // 0
+    [self.ocrLanguagePopUp addItemWithTitle:@"Chinese (Simplified)"];   // 1
+    [self.ocrLanguagePopUp addItemWithTitle:@"Chinese (Traditional)"];  // 2
+    [self.ocrLanguagePopUp addItemWithTitle:@"English"];                // 3
+    [self.ocrLanguagePopUp addItemWithTitle:@"Korean"];                 // 4
+    [self.ocrLanguagePopUp addItemWithTitle:@"Japanese"];               // 5
+    [self.ocrLanguagePopUp addItemWithTitle:@"Latin"];                  // 6
+    [self.ocrLanguagePopUp addItemWithTitle:@"Devanagari"];             // 7
+    [self.ocrLanguagePopUp addItemWithTitle:@"Cyrillic"];               // 8
+    [self.ocrLanguagePopUp addItemWithTitle:@"Arabic"];                 // 9
+    [self.ocrLanguagePopUp addItemWithTitle:@"Tamil"];                  // 10
+    [self.ocrLanguagePopUp addItemWithTitle:@"Telugu"];                 // 11
+    [self.ocrLanguagePopUp addItemWithTitle:@"Kannada"];                // 12
+    [self.ocrLanguagePopUp addItemWithTitle:@"Thai"];                   // 13
+    [self.ocrLanguagePopUp addItemWithTitle:@"Greek"];                  // 14
+    [self.ocrLanguagePopUp addItemWithTitle:@"Eslav"];                  // 15
+    [self.ocrLanguagePopUp addItemWithTitle:@"Auto"];                   // 16
+    [self.ocrLanguagePopUp selectItemAtIndex:16];
     [self.ocrLanguagePopUp setTarget:self];
     [self.ocrLanguagePopUp setAction:@selector(ocrLanguageChanged:)];
+
+    self.outputPerPageCheckBox = [[NSButton alloc] initWithFrame:NSMakeRect(20, 120, 220, 20)];
+    [self.outputPerPageCheckBox setButtonType:NSButtonTypeSwitch];
+    [self.outputPerPageCheckBox setTitle:@"Output Per Page"];
+    [self.outputPerPageCheckBox setState:NSControlStateValueOff];
+
+    self.backgroundImageCheckBox = [[NSButton alloc] initWithFrame:NSMakeRect(20, 90, 240, 20)];
+    [self.backgroundImageCheckBox setButtonType:NSButtonTypeSwitch];
+    [self.backgroundImageCheckBox setTitle:@"Contain Page Background Image"];
+    [self.backgroundImageCheckBox setState:NSControlStateValueOff];
+
+    if (self.ocrCheckBox) {
+        [self.ocrCheckBox setTarget:self];
+        [self.ocrCheckBox setAction:@selector(ocrCheckBoxToggled:)];
+    }
+
+    self.autoCreateFolderCheckBox = [[NSButton alloc] initWithFrame:NSMakeRect(20, 60, 220, 20)];
+    [self.autoCreateFolderCheckBox setButtonType:NSButtonTypeSwitch];
+    [self.autoCreateFolderCheckBox setTitle:@"Auto Create Folder"];
+    [self.autoCreateFolderCheckBox setState:NSControlStateValueOff];
+
+    self.ocrOptionPopUp = [[NSPopUpButton alloc] initWithFrame:NSMakeRect(400, 240, 160, 24)];
+    [self.ocrOptionPopUp addItemWithTitle:@"All"];
+    [self.ocrOptionPopUp addItemWithTitle:@"Invalid Character"];
+    [self.ocrOptionPopUp addItemWithTitle:@"Scan Page"];
+    [self.ocrOptionPopUp addItemWithTitle:@"Invalid Character + Scan Page"];
     
     [self initializeSDK];
     
@@ -277,8 +315,6 @@
     [self appendLogMessage:@"Initializing SDK..."];
     
     @try {
-
-        
         NSArray *possibleResourcePaths = @[
             [[NSBundle mainBundle] resourcePath],
         ];
@@ -307,14 +343,12 @@
             [self appendLogMessage:@"WARNING: Could not find a valid resource path! SDK may not function correctly."];
             resourcePath = @"../../../resource";
         }
-        NSString* licenseFilePath = [resourcePath stringByAppendingPathComponent:@"license/license.xml"];
-        if (![fileManager fileExistsAtPath:licenseFilePath]) {
-            [self appendLogMessage:@"WARNING: License file not found! Some features may be limited."];
-        } else {
-            [self appendLogMessage:@"License file found, proceeding with initialization."];
-        }
+        
+        NSString *licenseFilePath = [resourcePath stringByAppendingPathComponent:@"license/license.xml"];
         NSInteger licenseResult = [LibraryManager licenseVerify:licenseFilePath];
+
         [self appendLogMessage:[NSString stringWithFormat:@"License verification result: %@", licenseResult==0 ? @"Success" : @"Failure"]];
+
         [LibraryManager initialize:resourcePath];
         [self appendLogMessage:@"SDK initialization completed"];
 
@@ -338,7 +372,7 @@
         }
         
         if (modelPath && modelPath.length > 0) {
-            NSInteger result = [LibraryManager setDocumentAIModel:modelPath ocrLanguage:OCRLanguageUnknown];
+            NSInteger result = [LibraryManager setDocumentAIModel:modelPath ocrLanguages:@[@(OCRLanguageAuto)]];
             [self appendLogMessage:[NSString stringWithFormat:@"OCR model setup result: %@", result==0 ? @"Success" : @"Failure"]];
             
             if (result != 0) {
@@ -410,25 +444,25 @@
     rightY -= stepY;
     
     NSString *selectedTypeStr = [sender titleOfSelectedItem];
-    if ([selectedTypeStr isEqualToString:@"PDF to Word"]) {
+    if ([selectedTypeStr isEqualToString:@"Word"]) {
         self.selectedConversionType = ConversionTypePDFToWord;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to Excel"]) {
+    } else if ([selectedTypeStr isEqualToString:@"Excel"]) {
         self.selectedConversionType = ConversionTypePDFToExcel;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to PPT"]) {
+    } else if ([selectedTypeStr isEqualToString:@"PPT"]) {
         self.selectedConversionType = ConversionTypePDFToPPT;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to HTML"]) {
+    } else if ([selectedTypeStr isEqualToString:@"HTML"]) {
         self.selectedConversionType = ConversionTypePDFToHTML;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to RTF"]) {
+    } else if ([selectedTypeStr isEqualToString:@"RTF"]) {
         self.selectedConversionType = ConversionTypePDFToRTF;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to Image"]) {
+    } else if ([selectedTypeStr isEqualToString:@"Image"]) {
         self.selectedConversionType = ConversionTypePDFToImage;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to TXT"]) {
+    } else if ([selectedTypeStr isEqualToString:@"TXT"]) {
         self.selectedConversionType = ConversionTypePDFToText;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to JSON"]) {
+    } else if ([selectedTypeStr isEqualToString:@"JSON"]) {
         self.selectedConversionType = ConversionTypePDFToJSON;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to Searchable PDF"]) {
+    } else if ([selectedTypeStr isEqualToString:@"Searchable PDF"]) {
         self.selectedConversionType = ConversionTypePDFToSearchablePDF;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to Markdown"]) {
+    } else if ([selectedTypeStr isEqualToString:@"Markdown"]) {
         self.selectedConversionType = ConversionTypePDFToMarkdown;
     }
     else {
@@ -454,7 +488,7 @@
     rightY -= stepY; \
 } while(0)
 
-    if ([selectedTypeStr isEqualToString:@"PDF to Image"]) {
+    if ([selectedTypeStr isEqualToString:@"Image"]) {
         [self.pathEnhanceCheckBox setState:NSControlStateValueOff];
         ADD_OPTION_VIEW(self.pathEnhanceCheckBox);
         NSTextField *imageColorModeLabel = [[NSTextField alloc] init];
@@ -483,7 +517,7 @@
         scalingLabel.selectable = NO;
         ADD_LABEL_RIGHT(scalingLabel);
         ADD_POPUP_RIGHT(self.scalingTextField);
-    } else if ([selectedTypeStr isEqualToString:@"PDF to Excel"]) {
+    } else if ([selectedTypeStr isEqualToString:@"Excel"]) {
         [self.containImageCheckBox setState:NSControlStateValueOn];
         [self.containAnnotationCheckBox setState:NSControlStateValueOn];
         [self.enableAILayoutCheckBox setState:NSControlStateValueOn];
@@ -497,6 +531,19 @@
         ADD_OPTION_VIEW(self.enableAILayoutCheckBox);
         ADD_OPTION_VIEW(self.csvFormatCheckBox);
         ADD_OPTION_VIEW(self.allContentCheckBox);
+        ADD_OPTION_VIEW(self.outputPerPageCheckBox);
+        ADD_OPTION_VIEW(self.autoCreateFolderCheckBox);
+        // OCR Option (right)
+        {
+            NSTextField *ocrOptionLabel = [[NSTextField alloc] init];
+            ocrOptionLabel.stringValue = @"OCR Option:";
+            ocrOptionLabel.bezeled = NO;
+            ocrOptionLabel.drawsBackground = NO;
+            ocrOptionLabel.editable = NO;
+            ocrOptionLabel.selectable = NO;
+            ADD_LABEL_RIGHT(ocrOptionLabel);
+            ADD_POPUP_RIGHT(self.ocrOptionPopUp);
+        }
         NSTextField *ocrLanguageLabel = [[NSTextField alloc] init];
         ocrLanguageLabel.stringValue = @"OCR Language:";
         ocrLanguageLabel.bezeled = NO;
@@ -514,13 +561,25 @@
         ADD_LABEL_RIGHT(excelWorksheetLabel);
         ADD_POPUP_RIGHT(self.excelWorksheetOptionPopUp);
         ADD_OPTION_VIEW(self.formulaToImageCheckBox);
-    } else if ([selectedTypeStr isEqualToString:@"PDF to TXT"]) {
+    } else if ([selectedTypeStr isEqualToString:@"TXT"]) {
         [self.enableAILayoutCheckBox setState:NSControlStateValueOn];
         [self.ocrCheckBox setState:NSControlStateValueOff];
         [self.tableFormatCheckBox setState:NSControlStateValueOn];
         ADD_OPTION_VIEW(self.ocrCheckBox);
         ADD_OPTION_VIEW(self.enableAILayoutCheckBox);
         ADD_OPTION_VIEW(self.tableFormatCheckBox);
+        ADD_OPTION_VIEW(self.outputPerPageCheckBox);
+        // OCR Option (right)
+        {
+            NSTextField *ocrOptionLabel = [[NSTextField alloc] init];
+            ocrOptionLabel.stringValue = @"OCR Option:";
+            ocrOptionLabel.bezeled = NO;
+            ocrOptionLabel.drawsBackground = NO;
+            ocrOptionLabel.editable = NO;
+            ocrOptionLabel.selectable = NO;
+            ADD_LABEL_RIGHT(ocrOptionLabel);
+            ADD_POPUP_RIGHT(self.ocrOptionPopUp);
+        }
 
         NSTextField *ocrLanguageLabel = [[NSTextField alloc] init];
         ocrLanguageLabel.stringValue = @"OCR Language:";
@@ -531,7 +590,7 @@
         ADD_LABEL_RIGHT(ocrLanguageLabel);
         ADD_POPUP_RIGHT(self.ocrLanguagePopUp);
 
-    } else if ([selectedTypeStr isEqualToString:@"PDF to JSON"]) {
+    } else if ([selectedTypeStr isEqualToString:@"JSON"]) {
         [self.enableAILayoutCheckBox setState:NSControlStateValueOn];
         [self.containAnnotationCheckBox setState:NSControlStateValueOn];
         [self.containImageCheckBox setState:NSControlStateValueOn];
@@ -542,6 +601,18 @@
         ADD_OPTION_VIEW(self.containAnnotationCheckBox);
         ADD_OPTION_VIEW(self.enableAILayoutCheckBox);
         ADD_OPTION_VIEW(self.containTableCheckBox);
+        ADD_OPTION_VIEW(self.outputPerPageCheckBox);
+        // OCR Option (right)
+        {
+            NSTextField *ocrOptionLabel = [[NSTextField alloc] init];
+            ocrOptionLabel.stringValue = @"OCR Option:";
+            ocrOptionLabel.bezeled = NO;
+            ocrOptionLabel.drawsBackground = NO;
+            ocrOptionLabel.editable = NO;
+            ocrOptionLabel.selectable = NO;
+            ADD_LABEL_RIGHT(ocrOptionLabel);
+            ADD_POPUP_RIGHT(self.ocrOptionPopUp);
+        }
         NSTextField *ocrLanguageLabel = [[NSTextField alloc] init];
         ocrLanguageLabel.stringValue = @"OCR Language:";
         ocrLanguageLabel.bezeled = NO;
@@ -551,10 +622,23 @@
         ADD_LABEL_RIGHT(ocrLanguageLabel);
         ADD_POPUP_RIGHT(self.ocrLanguagePopUp);
         baseY -= stepY;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to Searchable PDF"]) {
+    } else if ([selectedTypeStr isEqualToString:@"Searchable PDF"]) {
         [self.containImageCheckBox setState:NSControlStateValueOn];
         [self.formulaToImageCheckBox setState:NSControlStateValueOff];
         ADD_OPTION_VIEW(self.containImageCheckBox);
+        ADD_OPTION_VIEW(self.backgroundImageCheckBox);
+        ADD_OPTION_VIEW(self.outputPerPageCheckBox);
+        // OCR Option (right)
+        {
+            NSTextField *ocrOptionLabel = [[NSTextField alloc] init];
+            ocrOptionLabel.stringValue = @"OCR Option:";
+            ocrOptionLabel.bezeled = NO;
+            ocrOptionLabel.drawsBackground = NO;
+            ocrOptionLabel.editable = NO;
+            ocrOptionLabel.selectable = NO;
+            ADD_LABEL_RIGHT(ocrOptionLabel);
+            ADD_POPUP_RIGHT(self.ocrOptionPopUp);
+        }
         self.ocrCheckBox.state = NSControlStateValueOn;
         ADD_OPTION_VIEW(self.formulaToImageCheckBox);
         NSTextField *ocrLanguageLabel = [[NSTextField alloc] init];
@@ -566,7 +650,7 @@
         ADD_LABEL_RIGHT(ocrLanguageLabel);
         ADD_POPUP_RIGHT(self.ocrLanguagePopUp);
         baseY -= stepY;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to HTML"]) {
+    } else if ([selectedTypeStr isEqualToString:@"HTML"]) {
         [self.enableAILayoutCheckBox setState:NSControlStateValueOn];
         [self.containAnnotationCheckBox setState:NSControlStateValueOn];
         [self.containImageCheckBox setState:NSControlStateValueOn];
@@ -574,8 +658,21 @@
         [self.formulaToImageCheckBox setState:NSControlStateValueOff];
         ADD_OPTION_VIEW(self.ocrCheckBox);
         ADD_OPTION_VIEW(self.containImageCheckBox);
+        ADD_OPTION_VIEW(self.backgroundImageCheckBox);
         ADD_OPTION_VIEW(self.containAnnotationCheckBox);
         ADD_OPTION_VIEW(self.enableAILayoutCheckBox);
+        ADD_OPTION_VIEW(self.outputPerPageCheckBox);
+        // OCR Option (right)
+        {
+            NSTextField *ocrOptionLabel = [[NSTextField alloc] init];
+            ocrOptionLabel.stringValue = @"OCR Option:";
+            ocrOptionLabel.bezeled = NO;
+            ocrOptionLabel.drawsBackground = NO;
+            ocrOptionLabel.editable = NO;
+            ocrOptionLabel.selectable = NO;
+            ADD_LABEL_RIGHT(ocrOptionLabel);
+            ADD_POPUP_RIGHT(self.ocrOptionPopUp);
+        }
         NSTextField *ocrLanguageLabel = [[NSTextField alloc] init];
         ocrLanguageLabel.stringValue = @"OCR Language:";
         ocrLanguageLabel.bezeled = NO;
@@ -601,7 +698,7 @@
         ADD_LABEL_RIGHT(htmlOptionLabel);
         ADD_POPUP_RIGHT(self.htmlOptionPopUp);
         ADD_OPTION_VIEW(self.formulaToImageCheckBox);
-    } else if ([selectedTypeStr isEqualToString:@"PDF to PPT"]) {
+    } else if ([selectedTypeStr isEqualToString:@"PPT"]) {
         [self.enableAILayoutCheckBox setState:NSControlStateValueOn];
         [self.containAnnotationCheckBox setState:NSControlStateValueOn];
         [self.containImageCheckBox setState:NSControlStateValueOn];
@@ -609,9 +706,22 @@
         [self.formulaToImageCheckBox setState:NSControlStateValueOff];
         ADD_OPTION_VIEW(self.ocrCheckBox);
         ADD_OPTION_VIEW(self.containImageCheckBox);
+        ADD_OPTION_VIEW(self.backgroundImageCheckBox);
         ADD_OPTION_VIEW(self.containAnnotationCheckBox);
         ADD_OPTION_VIEW(self.enableAILayoutCheckBox);
         ADD_OPTION_VIEW(self.formulaToImageCheckBox);
+        ADD_OPTION_VIEW(self.outputPerPageCheckBox);
+        // OCR Option (right)
+        {
+            NSTextField *ocrOptionLabel = [[NSTextField alloc] init];
+            ocrOptionLabel.stringValue = @"OCR Option:";
+            ocrOptionLabel.bezeled = NO;
+            ocrOptionLabel.drawsBackground = NO;
+            ocrOptionLabel.editable = NO;
+            ocrOptionLabel.selectable = NO;
+            ADD_LABEL_RIGHT(ocrOptionLabel);
+            ADD_POPUP_RIGHT(self.ocrOptionPopUp);
+        }
         NSTextField *ocrLanguageLabel = [[NSTextField alloc] init];
         ocrLanguageLabel.stringValue = @"OCR Language:";
         ocrLanguageLabel.bezeled = NO;
@@ -621,7 +731,7 @@
         ADD_LABEL_RIGHT(ocrLanguageLabel);
         ADD_POPUP_RIGHT(self.ocrLanguagePopUp);
         baseY -= stepY;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to RTF"]) {
+    } else if ([selectedTypeStr isEqualToString:@"RTF"]) {
         [self.enableAILayoutCheckBox setState:NSControlStateValueOn];
         [self.containAnnotationCheckBox setState:NSControlStateValueOn];
         [self.containImageCheckBox setState:NSControlStateValueOn];
@@ -629,9 +739,22 @@
         [self.formulaToImageCheckBox setState:NSControlStateValueOff];
         ADD_OPTION_VIEW(self.ocrCheckBox);
         ADD_OPTION_VIEW(self.containImageCheckBox);
+        ADD_OPTION_VIEW(self.backgroundImageCheckBox);
         ADD_OPTION_VIEW(self.containAnnotationCheckBox);
         ADD_OPTION_VIEW(self.enableAILayoutCheckBox);
         ADD_OPTION_VIEW(self.formulaToImageCheckBox);
+        ADD_OPTION_VIEW(self.outputPerPageCheckBox);
+        // OCR Option (right)
+        {
+            NSTextField *ocrOptionLabel = [[NSTextField alloc] init];
+            ocrOptionLabel.stringValue = @"OCR Option:";
+            ocrOptionLabel.bezeled = NO;
+            ocrOptionLabel.drawsBackground = NO;
+            ocrOptionLabel.editable = NO;
+            ocrOptionLabel.selectable = NO;
+            ADD_LABEL_RIGHT(ocrOptionLabel);
+            ADD_POPUP_RIGHT(self.ocrOptionPopUp);
+        }
         NSTextField *ocrLanguageLabel = [[NSTextField alloc] init];
         ocrLanguageLabel.stringValue = @"OCR Language:";
         ocrLanguageLabel.bezeled = NO;
@@ -641,7 +764,7 @@
         ADD_LABEL_RIGHT(ocrLanguageLabel);
         ADD_POPUP_RIGHT(self.ocrLanguagePopUp);
         baseY -= stepY;
-    } else if ([selectedTypeStr isEqualToString:@"PDF to Word"]) {
+    } else if ([selectedTypeStr isEqualToString:@"Word"]) {
         [self.enableAILayoutCheckBox setState:NSControlStateValueOn];
         [self.containAnnotationCheckBox setState:NSControlStateValueOn];
         [self.containImageCheckBox setState:NSControlStateValueOn];
@@ -649,9 +772,22 @@
         [self.formulaToImageCheckBox setState:NSControlStateValueOff];
         ADD_OPTION_VIEW(self.ocrCheckBox);
         ADD_OPTION_VIEW(self.containImageCheckBox);
+        ADD_OPTION_VIEW(self.backgroundImageCheckBox);
         ADD_OPTION_VIEW(self.containAnnotationCheckBox);
         ADD_OPTION_VIEW(self.enableAILayoutCheckBox);
         ADD_OPTION_VIEW(self.formulaToImageCheckBox);
+        ADD_OPTION_VIEW(self.outputPerPageCheckBox);
+        // OCR Option (right)
+        {
+            NSTextField *ocrOptionLabel = [[NSTextField alloc] init];
+            ocrOptionLabel.stringValue = @"OCR Option:";
+            ocrOptionLabel.bezeled = NO;
+            ocrOptionLabel.drawsBackground = NO;
+            ocrOptionLabel.editable = NO;
+            ocrOptionLabel.selectable = NO;
+            ADD_LABEL_RIGHT(ocrOptionLabel);
+            ADD_POPUP_RIGHT(self.ocrOptionPopUp);
+        }
         NSTextField *ocrLanguageLabel = [[NSTextField alloc] init];
         ocrLanguageLabel.stringValue = @"OCR Language:";
         ocrLanguageLabel.bezeled = NO;
@@ -668,7 +804,7 @@
         pageLayoutLabel.selectable = NO;
         ADD_LABEL_RIGHT(pageLayoutLabel);
         ADD_POPUP_RIGHT(self.pageLayoutModePopUp);
-    } else if ([selectedTypeStr isEqualToString:@"PDF to Markdown"]) {
+    } else if ([selectedTypeStr isEqualToString:@"Markdown"]) {
         [self.enableAILayoutCheckBox setState:NSControlStateValueOn];
         [self.containAnnotationCheckBox setState:NSControlStateValueOn];
         [self.containImageCheckBox setState:NSControlStateValueOn];
@@ -677,6 +813,18 @@
         ADD_OPTION_VIEW(self.containImageCheckBox);
         ADD_OPTION_VIEW(self.containAnnotationCheckBox);
         ADD_OPTION_VIEW(self.enableAILayoutCheckBox);
+        ADD_OPTION_VIEW(self.outputPerPageCheckBox);
+        // OCR Option (right)
+        {
+            NSTextField *ocrOptionLabel = [[NSTextField alloc] init];
+            ocrOptionLabel.stringValue = @"OCR Option:";
+            ocrOptionLabel.bezeled = NO;
+            ocrOptionLabel.drawsBackground = NO;
+            ocrOptionLabel.editable = NO;
+            ocrOptionLabel.selectable = NO;
+            ADD_LABEL_RIGHT(ocrOptionLabel);
+            ADD_POPUP_RIGHT(self.ocrOptionPopUp);
+        }
         NSTextField *ocrLanguageLabel = [[NSTextField alloc] init];
         ocrLanguageLabel.stringValue = @"OCR Language:";
         ocrLanguageLabel.bezeled = NO;
@@ -697,10 +845,22 @@
         ADD_OPTION_VIEW(self.ocrLanguagePopUp);
     }
 
+    [self syncBackgroundContainmentWithOCR];
+
 #undef ADD_OPTION_VIEW
 #undef ADD_OPTION_VIEW_RIGHT
 #undef ADD_LABEL_RIGHT
 #undef ADD_POPUP_RIGHT
+}
+
+- (void)ocrCheckBoxToggled:(NSButton *)sender {
+    self.backgroundImageCheckBox.state = sender.state;
+}
+
+- (void)syncBackgroundContainmentWithOCR {
+    if (self.backgroundImageCheckBox && self.ocrCheckBox) {
+        self.backgroundImageCheckBox.state = self.ocrCheckBox.state;
+    }
 }
 
 - (void)chooseInput:(id)sender {
@@ -807,7 +967,7 @@
         
         [self appendLogMessage:[NSString stringWithFormat:@"Found %lu PDF files, starting batch conversion", (unsigned long)pdfFiles.count]];
         
-        dispatch_queue_t queue = dispatch_queue_create("com.compdfkit.conversion.batchQueue", DISPATCH_QUEUE_SERIAL);
+        dispatch_queue_t queue = dispatch_queue_create("com.ComPDF.conversion.batchQueue", DISPATCH_QUEUE_SERIAL);
         dispatch_async(queue, ^{
             NSUInteger totalCount = pdfFiles.count;
             __block NSUInteger finishedCount = 0;
@@ -863,23 +1023,23 @@
 - (NSString *)conversionTypeToString:(ConversionType)type {
     switch (type) {
         case ConversionTypePDFToWord:
-            return @"PDF to Word";
+            return @"Word";
         case ConversionTypePDFToExcel:
-            return @"PDF to Excel";
+            return @"Excel";
         case ConversionTypePDFToPPT:
-            return @"PDF to PPT";
+            return @"PPT";
         case ConversionTypePDFToHTML:
-            return @"PDF to HTML";
+            return @"HTML";
         case ConversionTypePDFToRTF:
-            return @"PDF to RTF";
+            return @"RTF";
         case ConversionTypePDFToImage:
-            return @"PDF to Image";
+            return @"Image";
         case ConversionTypePDFToText:
-            return @"PDF to TXT";
+            return @"TXT";
         case ConversionTypePDFToJSON:
-            return @"PDF to JSON";
+            return @"JSON";
         case ConversionTypePDFToSearchablePDF:
-            return @"PDF to Searchable PDF";
+            return @"Searchable PDF";
         default:
             return @"Unknown";
     }
@@ -922,6 +1082,9 @@
         wordOptions.containAnnotation = self.containAnnotationCheckBox.state == NSControlStateValueOn;
         wordOptions.enableAILayout = self.enableAILayoutCheckBox.state == NSControlStateValueOn;
         wordOptions.formulaToImage = self.formulaToImageCheckBox.state == NSControlStateValueOn;
+        wordOptions.output_document_per_page = (self.outputPerPageCheckBox.state == NSControlStateValueOn);
+        wordOptions.contain_page_background_image = (self.backgroundImageCheckBox.state == NSControlStateValueOn);
+        wordOptions.ocrOption = [self currentOCROption];
         
         NSInteger layoutMode = [self.pageLayoutModePopUp indexOfSelectedItem];
         wordOptions.pageLayoutMode = (layoutMode == 0) ? PageLayoutModeFlow : PageLayoutModeBox;
@@ -930,9 +1093,10 @@
             wordOptions.pageRanges = pageRanges;
         }
         
-        outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:@"docx"]];
+    outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:@"docx"]];
+    outputPath = [self ensureUniquePathForFile:outputPath];
         
-        [self appendLogMessage:@"Starting PDF to Word conversion..."];
+        [self appendLogMessage:@"Starting Word conversion..."];
         [self logOptionsDetails:wordOptions];
         
         ErrorCode result = [CPDFConversion startPDFToWord:inputFilePath 
@@ -950,6 +1114,9 @@
         excelOptions.enableAILayout = self.enableAILayoutCheckBox.state == NSControlStateValueOn;
         excelOptions.CSVFormat = self.csvFormatCheckBox.state == NSControlStateValueOn;
         excelOptions.AllContent = self.allContentCheckBox.state == NSControlStateValueOn;
+        excelOptions.output_document_per_page = (self.outputPerPageCheckBox.state == NSControlStateValueOn);
+        excelOptions.auto_create_folder = (self.autoCreateFolderCheckBox.state == NSControlStateValueOn);
+        excelOptions.ocrOption = [self currentOCROption];
         
         NSInteger worksheetIndex = [self.excelWorksheetOptionPopUp indexOfSelectedItem];
         switch (worksheetIndex) {
@@ -974,10 +1141,15 @@
             excelOptions.pageRanges = pageRanges;
         }
         
-        NSString *extension = excelOptions.CSVFormat ? @"csv" : @"xlsx";
-        outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:extension]];
+        if (excelOptions.CSVFormat) {
+            outputPath = outputDirPath;
+        } else {
+            NSString *extension = @"xlsx";
+            outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:extension]];
+            outputPath = [self ensureUniquePathForFile:outputPath];
+        }
         
-        [self appendLogMessage:@"Starting PDF to Excel conversion..."];
+        [self appendLogMessage:@"Starting Excel conversion..."];
         [self logOptionsDetails:excelOptions];
         
         ErrorCode result = [CPDFConversion startPDFToExcel:inputFilePath 
@@ -993,14 +1165,18 @@
         pptOptions.containImage = self.containImageCheckBox.state == NSControlStateValueOn;
         pptOptions.containAnnotation = self.containAnnotationCheckBox.state == NSControlStateValueOn;
         pptOptions.enableAILayout = self.enableAILayoutCheckBox.state == NSControlStateValueOn;
+        pptOptions.output_document_per_page = (self.outputPerPageCheckBox.state == NSControlStateValueOn);
+        pptOptions.contain_page_background_image = (self.backgroundImageCheckBox.state == NSControlStateValueOn);
+        pptOptions.ocrOption = [self currentOCROption];
         
         if (pageRanges.length > 0) {
             pptOptions.pageRanges = pageRanges;
         }
         
-        outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:@"pptx"]];
+    outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:@"pptx"]];
+    outputPath = [self ensureUniquePathForFile:outputPath];
         
-        [self appendLogMessage:@"Starting PDF to PPT conversion..."];
+        [self appendLogMessage:@"Starting PPT conversion..."];
         [self logOptionsDetails:pptOptions];
         
         ErrorCode result = [CPDFConversion startPDFToPpt:inputFilePath 
@@ -1016,6 +1192,9 @@
         htmlOptions.containImage = self.containImageCheckBox.state == NSControlStateValueOn;
         htmlOptions.containAnnotation = self.containAnnotationCheckBox.state == NSControlStateValueOn;
         htmlOptions.enableAILayout = self.enableAILayoutCheckBox.state == NSControlStateValueOn;
+        htmlOptions.output_document_per_page = (self.outputPerPageCheckBox.state == NSControlStateValueOn);
+        htmlOptions.contain_page_background_image = (self.backgroundImageCheckBox.state == NSControlStateValueOn);
+        htmlOptions.ocrOption = [self currentOCROption];
         
         NSInteger layoutMode = [self.pageLayoutModePopUp indexOfSelectedItem];
         htmlOptions.pageLayoutMode = (layoutMode == 0) ? PageLayoutModeFlow : PageLayoutModeBox;
@@ -1024,9 +1203,10 @@
             htmlOptions.pageRanges = pageRanges;
         }
         
-        outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:@"html"]];
+    outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:@"html"]];
+    outputPath = [self ensureUniquePathForFile:outputPath];
         
-        [self appendLogMessage:@"Starting PDF to HTML conversion..."];
+        [self appendLogMessage:@"Starting HTML conversion..."];
         [self logOptionsDetails:htmlOptions];
         
         NSInteger htmlOptionIndex = [self.htmlOptionPopUp indexOfSelectedItem];
@@ -1061,6 +1241,9 @@
         rtfOptions.containImage = self.containImageCheckBox.state == NSControlStateValueOn;
         rtfOptions.containAnnotation = self.containAnnotationCheckBox.state == NSControlStateValueOn;
         rtfOptions.enableAILayout = self.enableAILayoutCheckBox.state == NSControlStateValueOn;
+        rtfOptions.output_document_per_page = (self.outputPerPageCheckBox.state == NSControlStateValueOn);
+        rtfOptions.contain_page_background_image = (self.backgroundImageCheckBox.state == NSControlStateValueOn);
+        rtfOptions.ocrOption = [self currentOCROption];
         
         NSInteger layoutMode = [self.pageLayoutModePopUp indexOfSelectedItem];
         
@@ -1069,8 +1252,9 @@
         }
         
         outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:@"rtf"]];
+        outputPath = [self ensureUniquePathForFile:outputPath];
         
-        [self appendLogMessage:@"Starting PDF to RTF conversion..."];
+        [self appendLogMessage:@"Starting RTF conversion..."];
         [self logOptionsDetails:rtfOptions];
         
         ErrorCode result = [CPDFConversion startPDFToRtf:inputFilePath 
@@ -1112,6 +1296,9 @@
             case 7:
                 imageOptions.Type = ImageTypeGIF;
                 break;
+            case 8:
+                imageOptions.Type = ImageTypeWEBP;
+                break;
             default:
                 imageOptions.Type = ImageTypeJPG;
                 break;
@@ -1140,7 +1327,8 @@
             imageOptions.pageRanges = pageRanges;
         }
         
-        NSString *imgOutputDir = [outputDirPath stringByAppendingPathComponent:fileNameBase];
+    NSString *imgOutputDir = [outputDirPath stringByAppendingPathComponent:fileNameBase];
+    imgOutputDir = [self ensureUniqueDirectory:imgOutputDir];
         
         NSError *dirError;
         [[NSFileManager defaultManager] createDirectoryAtPath:imgOutputDir
@@ -1153,17 +1341,17 @@
             return;
         }
         
-        outputPath = outputDirPath;
+        outputPath = imgOutputDir;
         
-        [self appendLogMessage:@"Starting PDF to Image conversion..."];
+        [self appendLogMessage:@"Starting Image conversion..."];
         [self logOptionsDetails:imageOptions];
         
-        ErrorCode result = [CPDFConversion startPDFToImage:inputFilePath 
-                                                       password:@""
-                                                     outputPath:outputPath
-                                                        options:imageOptions];
+                ErrorCode result = [CPDFConversion startPDFToImage:inputFilePath 
+                                                                                                             password:@""
+                                                                                                         outputPath:outputPath
+                                                                                                                options:imageOptions];
         
-        [self handleConversionResult:result outputPath:imgOutputDir];
+        [self handleConversionResult:result outputPath:outputPath];
         
         if (result == ErrorCodeSuccess) {
             NSError *countError;
@@ -1179,14 +1367,17 @@
         txtOptions.enableOCR = self.ocrCheckBox.state == NSControlStateValueOn;
         txtOptions.enableAILayout = self.enableAILayoutCheckBox.state == NSControlStateValueOn;
         txtOptions.TableFormat = self.tableFormatCheckBox.state == NSControlStateValueOn;
+        txtOptions.output_document_per_page = (self.outputPerPageCheckBox.state == NSControlStateValueOn);
+        txtOptions.ocrOption = [self currentOCROption];
         
         if (pageRanges.length > 0) {
             txtOptions.pageRanges = pageRanges;
         }
         
         outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:@"txt"]];
+        outputPath = [self ensureUniquePathForFile:outputPath];
         
-        [self appendLogMessage:@"Starting PDF to TXT conversion..."];
+        [self appendLogMessage:@"Starting TXT conversion..."];
         [self logOptionsDetails:txtOptions];
         
         ErrorCode result = [CPDFConversion startPDFToTxt:inputFilePath 
@@ -1203,35 +1394,43 @@
         jsonOptions.containAnnotation = self.containAnnotationCheckBox.state == NSControlStateValueOn;
         jsonOptions.enableAILayout = self.enableAILayoutCheckBox.state == NSControlStateValueOn;
         jsonOptions.ContainTable = self.containTableCheckBox.state == NSControlStateValueOn;
+        jsonOptions.output_document_per_page = (self.outputPerPageCheckBox.state == NSControlStateValueOn);
+        jsonOptions.ocrOption = [self currentOCROption];
         
         if (pageRanges.length > 0) {
             jsonOptions.pageRanges = pageRanges;
         }
         
-        outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:@"json"]];
+        NSString *jsonBase = [fileNameBase stringByAppendingString:@"_json"];
+        outputPath = [outputDirPath stringByAppendingPathComponent:[jsonBase stringByAppendingPathExtension:@"json"]];
+        outputPath = [self ensureUniquePathForFile:outputPath];
         
-        [self appendLogMessage:@"Starting PDF to JSON conversion..."];
+        [self appendLogMessage:@"Starting JSON conversion..."];
         [self logOptionsDetails:jsonOptions];
         
         ErrorCode result = [CPDFConversion startPDFToJson:inputFilePath 
                                                       password:@""
-                                                    outputPath:outputPath
+                                                    outputPath:outputDirPath
                                                        options:jsonOptions];
         
-        [self handleConversionResult:result outputPath:outputPath];
+        [self handleConversionResult:result outputPath:outputDirPath];
         
     } else if (conversionType == ConversionTypePDFToSearchablePDF) {
         SearchablePdfOptions *searchablePdfOptions = [[SearchablePdfOptions alloc] init];
         searchablePdfOptions.enableOCR = self.ocrCheckBox.state == NSControlStateValueOn;
         searchablePdfOptions.containImage = self.containImageCheckBox.state == NSControlStateValueOn;
+        searchablePdfOptions.output_document_per_page = (self.outputPerPageCheckBox.state == NSControlStateValueOn);
+        searchablePdfOptions.contain_page_background_image = (self.backgroundImageCheckBox.state == NSControlStateValueOn);
+        searchablePdfOptions.ocrOption = [self currentOCROption];
         
         if (pageRanges.length > 0) {
             searchablePdfOptions.pageRanges = pageRanges;
         }
         
-        outputPath = [outputDirPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_searchable.pdf", fileNameBase]];
+    outputPath = [outputDirPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_searchable.pdf", fileNameBase]];
+    outputPath = [self ensureUniquePathForFile:outputPath];
         
-        [self appendLogMessage:@"Starting PDF to Searchable PDF conversion..."];
+        [self appendLogMessage:@"Starting Searchable PDF conversion..."];
         [self logOptionsDetails:searchablePdfOptions];
         
         ErrorCode result = [CPDFConversion startPDFToSearchablePDF:inputFilePath 
@@ -1247,20 +1446,75 @@
         markdownOptions.containImage = self.containImageCheckBox.state == NSControlStateValueOn;
         markdownOptions.containAnnotation = self.containAnnotationCheckBox.state == NSControlStateValueOn;
         markdownOptions.enableAILayout = self.enableAILayoutCheckBox.state == NSControlStateValueOn;
+        markdownOptions.output_document_per_page = (self.outputPerPageCheckBox.state == NSControlStateValueOn);
+        markdownOptions.ocrOption = [self currentOCROption];
         if (pageRanges.length > 0) {
             markdownOptions.pageRanges = pageRanges;
         }
-        outputPath = [outputDirPath stringByAppendingPathComponent:[fileNameBase stringByAppendingPathExtension:@"md"]];
-        [self appendLogMessage:@"Starting PDF to Markdown conversion..."];
+        NSString *mdBase = [fileNameBase stringByAppendingString:@"_md"];
+        NSString *desiredMdPath = [outputDirPath stringByAppendingPathComponent:[mdBase stringByAppendingPathExtension:@"md"]];
+        outputPath = [self ensureUniquePathForFile:desiredMdPath];
+
+        [self appendLogMessage:[NSString stringWithFormat:@"Starting Markdown conversion..., outputPath: %@", outputPath]];
         [self logOptionsDetails:markdownOptions];
         ErrorCode result = [CPDFConversion startPDFToMarkdown:inputFilePath
-                                                    password:@""
-                                                    outputPath:outputPath
-                                                    options:markdownOptions];
-        [self handleConversionResult:result outputPath:outputPath];
+                                            password:@""
+                                             outputPath:outputDirPath
+                                             options:markdownOptions];
+        [self handleConversionResult:result outputPath:outputDirPath];
     } else {
         [self appendLogMessage:[NSString stringWithFormat:@"Unsupported conversion type: %@", [self conversionTypeToString:conversionType]]];
     }
+}
+
+- (NSString *)ensureUniquePathForFile:(NSString *)path {
+    if (path.length == 0) return path;
+    NSFileManager *fm = [NSFileManager defaultManager];
+    if (![fm fileExistsAtPath:path]) {
+        return path;
+    }
+    NSString *dir = [path stringByDeletingLastPathComponent];
+    NSString *name = [[path lastPathComponent] stringByDeletingPathExtension];
+    NSString *ext = [path pathExtension];
+    NSUInteger counter = 1;
+    NSString *candidate = path;
+    while ([fm fileExistsAtPath:candidate]) {
+        NSString *suffix = [NSString stringWithFormat:@"(%lu)", (unsigned long)counter];
+        NSString *fileName = [name stringByAppendingString:suffix];
+        candidate = [dir stringByAppendingPathComponent:[fileName stringByAppendingString:(ext.length ? [@"." stringByAppendingString:ext] : @"")]];
+        counter++;
+        if (counter > 10000) {
+            break;
+        }
+    }
+    return candidate;
+}
+
+- (NSString *)ensureUniqueDirectory:(NSString *)dirPath {
+    if (dirPath.length == 0) return dirPath;
+    NSFileManager *fm = [NSFileManager defaultManager];
+    BOOL isDir = NO;
+    if (![fm fileExistsAtPath:dirPath isDirectory:&isDir]) {
+        return dirPath;
+    }
+    if (!isDir) { // if file exists with same name, still need a new folder name
+        dirPath = [dirPath stringByAppendingString:@"_dir"];
+    }
+    NSString *base = [dirPath lastPathComponent];
+    NSString *parent = [dirPath stringByDeletingLastPathComponent];
+    NSUInteger counter = 1;
+    NSString *candidate = dirPath;
+    while ([fm fileExistsAtPath:candidate isDirectory:&isDir]) {
+        // 使用中文全角括号，例如：base（1）
+        NSString *suffix = [NSString stringWithFormat:@"（%lu）", (unsigned long)counter];
+        NSString *nameWithSuffix = [base stringByAppendingString:suffix];
+        candidate = [parent stringByAppendingPathComponent:nameWithSuffix];
+        counter++;
+        if (counter > 10000) {
+            break;
+        }
+    }
+    return candidate;
 }
 
 - (void)handleConversionResult:(ErrorCode)result outputPath:(NSString *)outputPath {
@@ -1297,7 +1551,7 @@
     if ([options respondsToSelector:@selector(pageLayoutMode)]) {
         PageLayoutMode layoutMode = [options pageLayoutMode];
         NSString *left = [@"Page Layout Mode:" stringByPaddingToLength:22 withString:@" " startingAtIndex:0];
-        [optionsDescription appendFormat:@"%@%@\n", left, (layoutMode == PageLayoutModeBox) ? @"Box Mode" : @"Flow Mode"];
+        [optionsDescription appendFormat:@"%@%@\n", left, (layoutMode == PageLayoutModeBox) ? @"Fixed" : @"Hybrid"];
     }
     
     if ([options respondsToSelector:@selector(CSVFormat)] && [options respondsToSelector:@selector(AllContent)]) {
@@ -1352,6 +1606,7 @@
             case ImageTypeTIFF:      imageType = @"TIFF"; break;
             case ImageTypeTGA:       imageType = @"TGA"; break;
             case ImageTypeGIF:       imageType = @"GIF"; break;
+            case ImageTypeWEBP:      imageType = @"WEBP"; break;
             default: break;
         }
         NSString *left = [@"Image Type:" stringByPaddingToLength:22 withString:@" " startingAtIndex:0];
@@ -1370,8 +1625,44 @@
             [optionsDescription appendFormat:@"%@%@\n", left, pageRanges];
         }
     }
+
+    if ([options respondsToSelector:@selector(output_document_per_page)]) {
+        NSString *left = [@"Output Per Page:" stringByPaddingToLength:22 withString:@" " startingAtIndex:0];
+        BOOL v = ((BOOL)[options output_document_per_page]);
+        [optionsDescription appendFormat:@"%@%@\n", left, v ? @"Yes" : @"No"];
+    }
+    if ([options respondsToSelector:@selector(contain_page_background_image)]) {
+        NSString *left = [@"Background Image:" stringByPaddingToLength:22 withString:@" " startingAtIndex:0];
+        BOOL v = ((BOOL)[options contain_page_background_image]);
+        [optionsDescription appendFormat:@"%@%@\n", left, v ? @"Yes" : @"No"];
+    }
+    if ([options respondsToSelector:@selector(auto_create_folder)]) {
+        NSString *left = [@"Auto Create Folder:" stringByPaddingToLength:22 withString:@" " startingAtIndex:0];
+        BOOL v = ((BOOL)[options auto_create_folder]);
+        [optionsDescription appendFormat:@"%@%@\n", left, v ? @"Yes" : @"No"];
+    }
+    if ([options respondsToSelector:@selector(ocrOption)]) {
+        NSString *left = [@"OCR Option:" stringByPaddingToLength:22 withString:@" " startingAtIndex:0];
+        NSString *val = @"Unknown";
+        if ([options ocrOption] == OCROptionAll) val = @"All";
+        else if ([options ocrOption] == OCROptionInvalidCharacter) val = @"Invalid Character";
+        else if ([options ocrOption] == OCROptionScanPage) val = @"Scan Page";
+        else if ([options ocrOption] == OCROptionInvalidCharacterAndScanPage) val = @"Invalid+Scan";
+        [optionsDescription appendFormat:@"%@%@\n", left, val];
+    }
     
     [self appendLogMessage:optionsDescription];
+}
+
+- (OCROption)currentOCROption {
+    NSInteger idx = [self.ocrOptionPopUp indexOfSelectedItem];
+    switch (idx) {
+        case 0: return OCROptionAll;
+        case 1: return OCROptionInvalidCharacter;
+        case 2: return OCROptionScanPage;
+        case 3: return OCROptionInvalidCharacterAndScanPage;
+        default: return OCROptionAll;
+    }
 }
 
 - (void)dealloc {
@@ -1380,19 +1671,8 @@
 
 - (void)ocrLanguageChanged:(NSPopUpButton *)sender {
     NSInteger idx = [sender indexOfSelectedItem];
-    OCRLanguage lang = OCRLanguageAuto;
-    switch (idx) {
-        case 0: lang = OCRLanguageAuto; break;
-        case 1: lang = OCRLanguageChinese; break;
-        case 2: lang = OCRLanguageChineseTraditional; break;
-        case 3: lang = OCRLanguageEnglish; break;
-        case 4: lang = OCRLanguageKorean; break;
-        case 5: lang = OCRLanguageJapanese; break;
-        case 6: lang = OCRLanguageLatin; break;
-        case 7: lang = OCRLanguageDevanagari; break;
-        case 8: lang = OCRLanguageUnknown; break;
-    }
-    [LibraryManager setOCRLanguage:lang];
+    OCRLanguage lang = (OCRLanguage)idx;
+    [LibraryManager setOCRLanguage:@[@(lang)]];
 }
 
 @end

@@ -24,8 +24,8 @@
 */
 var NAVTREE =
 [
-  [ "ComPDFKit Objective-C SDK", "index.html", [
-    [ "ComPDFKitConversion documentation", "index.html", "index" ],
+  [ "ComPDF Objective-C SDK", "index.html", [
+    [ "ComPDFConversion documentation", "index.html", "index" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],

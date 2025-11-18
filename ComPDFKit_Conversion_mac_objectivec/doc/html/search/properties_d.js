@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['tableformat_0',['TableFormat',['../interface_txt_options.html#ae98283352617e3eb6ffd5149c09d3cec',1,'TxtOptions']]],
-  ['text_1',['text',['../interface_c_text_line.html#afbd9a94be3c813ad510ae6eb3536e225',1,'CTextLine::text'],['../interface_c_table_cell.html#a4e21fa0ee64d6062038099fb11f30707',1,'CTableCell::text'],['../interface_c_o_c_r_result.html#aab267ce62c27098087ee8664cf1e0c80',1,'COCRResult::text']]],
-  ['textlength_2',['textLength',['../interface_c_text_line.html#a475dd64a97967ef47558344232fb1ed8',1,'CTextLine::textLength'],['../interface_c_table_cell.html#ada51508abb8aa572f2c251ccdb6189b3',1,'CTableCell::textLength']]],
-  ['top_3',['top',['../interface_c_rect.html#a00f8ced06542cb0f4de9d30acd941d16',1,'CRect']]],
-  ['txttableformat_4',['txtTableFormat',['../interface_convert_options.html#a510035bab2d6eae00a6cba7938fcb56f',1,'ConvertOptions']]],
-  ['type_5',['Type',['../interface_image_options.html#a23ca6c8aada2f104ef03e423fc36a607',1,'ImageOptions']]],
-  ['type_6',['type',['../interface_c_t_a_b_result.html#a64bdc83bcc883a9a6ebd9f1afa579792',1,'CTABResult']]]
+  ['scaling_0',['Scaling',['../interface_image_options.html#a9d2d72c88e4fb5879dee3fc1a8e30c65',1,'ImageOptions']]],
+  ['score_1',['score',['../interface_layout_analysis_result.html#a4e9a40ff04800b357ec58c99618cf6df',1,'LayoutAnalysisResult::score'],['../interface_stamp_detection_result.html#a7ca1df99b7595b0c50ad10ec46c4c0b5',1,'StampDetectionResult::score'],['../interface_c_text_line.html#adf399b729de4a10a8d99951499198663',1,'CTextLine::score'],['../interface_c_t_a_b_result.html#a4b5dd661384ce73a1d7407f295238e73',1,'CTABResult::score'],['../interface_c_o_c_r_result.html#a9edbba95de93096c051673ba93a5373d',1,'COCRResult::score']]],
+  ['startcol_2',['startCol',['../interface_c_table_cell.html#a033b888f906558cde61b9bbb76ecaa16',1,'CTableCell']]],
+  ['startrow_3',['startRow',['../interface_c_table_cell.html#a80521957304fc07dd6f96f8f19efc02f',1,'CTableCell']]],
+  ['startx_4',['startX',['../interface_c_line.html#aaf39cf4ac1624f7de8257ef2493cc5d5',1,'CLine']]],
+  ['starty_5',['startY',['../interface_c_line.html#a1adfc53960a143a6be29c8470a719c44',1,'CLine']]]
 ];

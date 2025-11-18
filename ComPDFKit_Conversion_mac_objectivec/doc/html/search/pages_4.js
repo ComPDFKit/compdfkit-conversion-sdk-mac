@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['documentation_0',['ComPDFKitConversion documentation',['../index.html',1,'']]]
+  ['trial_0',['License &amp;amp; Trial',['../index.html#autotoc_md3',1,'']]]
 ];

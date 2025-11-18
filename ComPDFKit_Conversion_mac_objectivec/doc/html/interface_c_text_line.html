@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ComPDFKit Objective-C SDK: CTextLine Class Reference</title>
+<title>ComPDF Objective-C SDK: CTextLine Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ComPDFKit Objective-C SDK
+   <div id="projectname">ComPDF Objective-C SDK
    </div>
-   <div id="projectbrief">API Reference Documentation for ComPDFKit Objective-C SDK</div>
+   <div id="projectbrief">API Reference Documentation for ComPDF Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('interface_c_text_line.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>A recognized text line with bounding box.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="document__ai_8h_source.html">document_ai.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CTextLine:</div>
@@ -104,13 +107,18 @@ Inheritance diagram for CTextLine:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:adf399b729de4a10a8d99951499198663" id="r_adf399b729de4a10a8d99951499198663"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf399b729de4a10a8d99951499198663">score</a></td></tr>
+<tr class="memdesc:adf399b729de4a10a8d99951499198663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confidence score in range [0,1].  <br /></td></tr>
 <tr class="memitem:a475dd64a97967ef47558344232fb1ed8" id="r_a475dd64a97967ef47558344232fb1ed8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a475dd64a97967ef47558344232fb1ed8">textLength</a></td></tr>
+<tr class="memdesc:a475dd64a97967ef47558344232fb1ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text length (character count).  <br /></td></tr>
 <tr class="memitem:afbd9a94be3c813ad510ae6eb3536e225" id="r_afbd9a94be3c813ad510ae6eb3536e225"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbd9a94be3c813ad510ae6eb3536e225">text</a></td></tr>
+<tr class="memdesc:afbd9a94be3c813ad510ae6eb3536e225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recognized text content (UTF-8).  <br /></td></tr>
 <tr class="memitem:a889cb6577c648566a206baa97462cba9" id="r_a889cb6577c648566a206baa97462cba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_c_rect.html">CRect</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a889cb6577c648566a206baa97462cba9">bbox</a></td></tr>
+<tr class="memdesc:a889cb6577c648566a206baa97462cba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounding box of the text line as [left, top, right, bottom].  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00035">35</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<div class="textblock"><p>A recognized text line with bounding box. </p>
+
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00078">78</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 </div><a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
 <a id="a889cb6577c648566a206baa97462cba9" name="a889cb6577c648566a206baa97462cba9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a889cb6577c648566a206baa97462cba9">&#9670;&#160;</a></span>bbox</h2>
@@ -132,7 +140,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00039">39</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<p>Bounding box of the text line as [left, top, right, bottom]. </p>
+
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00086">86</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 
 </div>
 </div>
@@ -156,7 +166,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00036">36</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<p>Confidence score in range [0,1]. </p>
+
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00080">80</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 
 </div>
 </div>
@@ -180,7 +192,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00038">38</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<p>Recognized text content (UTF-8). </p>
+
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00084">84</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 
 </div>
 </div>
@@ -204,7 +218,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00037">37</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<p>Text length (character count). </p>
+
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00082">82</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 
 </div>
 </div>

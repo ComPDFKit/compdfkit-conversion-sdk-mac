@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ComPDFKit Objective-C SDK: LibraryManager Class Reference</title>
+<title>ComPDF Objective-C SDK: LibraryManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ComPDFKit Objective-C SDK
+   <div id="projectname">ComPDF Objective-C SDK
    </div>
-   <div id="projectbrief">API Reference Documentation for ComPDFKit Objective-C SDK</div>
+   <div id="projectbrief">API Reference Documentation for ComPDF Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('interface_library_manager.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>Global initializer and utilities for the SDK.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="common_8h_source.html">common.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LibraryManager:</div>
@@ -104,17 +107,28 @@ Inheritance diagram for LibraryManager:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
 <tr class="memitem:a06bb662e61396f1704b5388f16bdaac3" id="r_a06bb662e61396f1704b5388f16bdaac3"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a06bb662e61396f1704b5388f16bdaac3">initialize:</a></td></tr>
+<tr class="memdesc:a06bb662e61396f1704b5388f16bdaac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize SDK resources.  <br /></td></tr>
 <tr class="memitem:afc4b605fdf34933394535cf0474354fc" id="r_afc4b605fdf34933394535cf0474354fc"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#afc4b605fdf34933394535cf0474354fc">licenseVerify:</a></td></tr>
+<tr class="memdesc:afc4b605fdf34933394535cf0474354fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify license.  <br /></td></tr>
 <tr class="memitem:a8547b58a6321701b4ee9b22813245f65" id="r_a8547b58a6321701b4ee9b22813245f65"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a8547b58a6321701b4ee9b22813245f65">setProgress:isMT:</a></td></tr>
-<tr class="memitem:a5529f48014465a4d57d6a8a51f553284" id="r_a5529f48014465a4d57d6a8a51f553284"><td class="memItemLeft" align="right" valign="top">(int)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a5529f48014465a4d57d6a8a51f553284">setDocumentAIModel:ocrLanguage:</a></td></tr>
-<tr class="memitem:a364be68105bd7a4f62c3d72c0d093a64" id="r_a364be68105bd7a4f62c3d72c0d093a64"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a364be68105bd7a4f62c3d72c0d093a64">setOCRLanguage:</a></td></tr>
+<tr class="memdesc:a8547b58a6321701b4ee9b22813245f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a progress callback.  <br /></td></tr>
+<tr class="memitem:ac7c58085da619e9dba7633b48aa28f39" id="r_ac7c58085da619e9dba7633b48aa28f39"><td class="memItemLeft" align="right" valign="top">(int)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#ac7c58085da619e9dba7633b48aa28f39">setDocumentAIModel:ocrLanguages:</a></td></tr>
+<tr class="memdesc:ac7c58085da619e9dba7633b48aa28f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load Document AI model and set OCR languages.  <br /></td></tr>
+<tr class="memitem:a182634c3e946522968263deeb961f486" id="r_a182634c3e946522968263deeb961f486"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a182634c3e946522968263deeb961f486">setOCRLanguage:</a></td></tr>
+<tr class="memdesc:a182634c3e946522968263deeb961f486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default OCR languages for OCR-related tasks.  <br /></td></tr>
 <tr class="memitem:a994c7e7518e1d918ac48745d77f34010" id="r_a994c7e7518e1d918ac48745d77f34010"><td class="memItemLeft" align="right" valign="top">(int)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a994c7e7518e1d918ac48745d77f34010">getPageCount:password:</a></td></tr>
+<tr class="memdesc:a994c7e7518e1d918ac48745d77f34010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get page count of a PDF file.  <br /></td></tr>
 <tr class="memitem:a888e7b9dac35736723f6935c64253807" id="r_a888e7b9dac35736723f6935c64253807"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a888e7b9dac35736723f6935c64253807">getVersion</a></td></tr>
+<tr class="memdesc:a888e7b9dac35736723f6935c64253807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SDK version string.  <br /></td></tr>
 <tr class="memitem:aa6e0e3c7743151b6a9a2773772aabdc6" id="r_aa6e0e3c7743151b6a9a2773772aabdc6"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#aa6e0e3c7743151b6a9a2773772aabdc6">release</a></td></tr>
+<tr class="memdesc:aa6e0e3c7743151b6a9a2773772aabdc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release all SDK resources.  <br /></td></tr>
+<tr class="memitem:a6f61ed513e8f833c44c7b11f069acec3" id="r_a6f61ed513e8f833c44c7b11f069acec3"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a6f61ed513e8f833c44c7b11f069acec3">releaseDocumentAIModel</a></td></tr>
+<tr class="memdesc:a6f61ed513e8f833c44c7b11f069acec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release loaded Document AI model.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00008">8</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
+<div class="textblock"><p>Global initializer and utilities for the SDK. </p>
+
+<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00017">17</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Method Documentation</h2>
 <a id="a994c7e7518e1d918ac48745d77f34010" name="a994c7e7518e1d918ac48745d77f34010"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a994c7e7518e1d918ac48745d77f34010">&#9670;&#160;</a></span>getPageCount:password:</h2>
@@ -135,6 +149,16 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get page count of a PDF file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>PDF file path. </td></tr>
+    <tr><td class="paramname">password</td><td>PDF open password if needed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of pages (&gt;=0); negative value indicates error. </dd></dl>
+
 </div>
 </div>
 <a id="a888e7b9dac35736723f6935c64253807" name="a888e7b9dac35736723f6935c64253807"></a>
@@ -151,6 +175,9 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get SDK version string. </p>
+<dl class="section return"><dt>Returns</dt><dd>Version, e.g. "1.2.3". </dd></dl>
 
 <p class="reference">References <a class="el" href="#a888e7b9dac35736723f6935c64253807">getVersion</a>.</p>
 
@@ -173,6 +200,14 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initialize SDK resources. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resourcePath</td><td>Path to resource directory (models, configs, etc.). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="afc4b605fdf34933394535cf0474354fc" name="afc4b605fdf34933394535cf0474354fc"></a>
@@ -189,6 +224,16 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verify license. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">license</td><td>Online XML path (verified online) or offline license string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ErrorCodeSuccess on success; mapped license error codes on failure. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Online verification uses a timeout (e.g., ~10s) and maps network issues to IO error. </dd></dl>
 
 </div>
 </div>
@@ -207,14 +252,39 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Release all SDK resources. </p>
+
 <p class="reference">References <a class="el" href="#aa6e0e3c7743151b6a9a2773772aabdc6">release</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="#aa6e0e3c7743151b6a9a2773772aabdc6">release</a>.</p>
 
 </div>
 </div>
-<a id="a5529f48014465a4d57d6a8a51f553284" name="a5529f48014465a4d57d6a8a51f553284"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5529f48014465a4d57d6a8a51f553284">&#9670;&#160;</a></span>setDocumentAIModel:ocrLanguage:</h2>
+<a id="a6f61ed513e8f833c44c7b11f069acec3" name="a6f61ed513e8f833c44c7b11f069acec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f61ed513e8f833c44c7b11f069acec3">&#9670;&#160;</a></span>releaseDocumentAIModel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (void) releaseDocumentAIModel </td>
+          <td></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Release loaded Document AI model. </p>
+
+<p class="reference">References <a class="el" href="#a6f61ed513e8f833c44c7b11f069acec3">releaseDocumentAIModel</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a6f61ed513e8f833c44c7b11f069acec3">releaseDocumentAIModel</a>.</p>
+
+</div>
+</div>
+<a id="ac7c58085da619e9dba7633b48aa28f39" name="ac7c58085da619e9dba7633b48aa28f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7c58085da619e9dba7633b48aa28f39">&#9670;&#160;</a></span>setDocumentAIModel:ocrLanguages:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,17 +295,27 @@ Class Methods</h2></td></tr>
           <td class="paramtype">(NSString *)</td>          <td class="paramname"><span class="paramname"><em>modelPath</em></span></td>
         </tr>
         <tr>
-          <td class="paramkey">ocrLanguage:</td>
+          <td class="paramkey">ocrLanguages:</td>
           <td></td>
-          <td class="paramtype">(OCRLanguage)</td>          <td class="paramname"><span class="paramname"><em>language</em></span>&#160;</td>
+          <td class="paramtype">(NSArray&lt; NSNumber * &gt; *)</td>          <td class="paramname"><span class="paramname"><em>languages</em></span>&#160;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Load Document AI model and set OCR languages. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">modelPath</td><td>Model root path. </td></tr>
+    <tr><td class="paramname">languages</td><td>Array of OCRLanguage wrapped in NSNumber. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ErrorCode value (0 for success). </dd></dl>
+
 </div>
 </div>
-<a id="a364be68105bd7a4f62c3d72c0d093a64" name="a364be68105bd7a4f62c3d72c0d093a64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a364be68105bd7a4f62c3d72c0d093a64">&#9670;&#160;</a></span>setOCRLanguage:</h2>
+<a id="a182634c3e946522968263deeb961f486" name="a182634c3e946522968263deeb961f486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182634c3e946522968263deeb961f486">&#9670;&#160;</a></span>setOCRLanguage:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,11 +323,19 @@ Class Methods</h2></td></tr>
         <tr>
           <td class="memname">+ (void) setOCRLanguage: </td>
           <td></td>
-          <td class="paramtype">(OCRLanguage)</td>          <td class="paramname"><span class="paramname"><em>language</em></span></td>
+          <td class="paramtype">(NSArray&lt; NSNumber * &gt; *)</td>          <td class="paramname"><span class="paramname"><em>languages</em></span></td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set default OCR languages for OCR-related tasks. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">languages</td><td>Array of OCRLanguage wrapped in NSNumber. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -269,6 +357,15 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set a progress callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>Progress block called during conversion. </td></tr>
+    <tr><td class="paramname">isMT</td><td>If YES, callback is dispatched onto main thread; if NO, called directly. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

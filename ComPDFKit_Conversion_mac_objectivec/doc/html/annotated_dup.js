@@ -21,6 +21,7 @@ var annotated_dup =
     [ "PptOptions", "interface_ppt_options.html", "interface_ppt_options" ],
     [ "RtfOptions", "interface_rtf_options.html", "interface_rtf_options" ],
     [ "SearchablePdfOptions", "interface_searchable_pdf_options.html", "interface_searchable_pdf_options" ],
+    [ "StampDetectionResult", "interface_stamp_detection_result.html", "interface_stamp_detection_result" ],
     [ "TxtOptions", "interface_txt_options.html", "interface_txt_options" ],
     [ "WordOptions", "interface_word_options.html", "interface_word_options" ]
 ];

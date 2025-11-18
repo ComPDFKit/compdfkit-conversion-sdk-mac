@@ -1,8 +1,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <Cocoa/Cocoa.h>
-#import "include/common.h"
-#import "include/conversion.h"
+#import "../../include/common.h"
+#import "../../include/conversion.h"
 
 @interface AppDelegate ()
 @property (strong) NSWindow *window;
@@ -16,7 +16,7 @@
                                                styleMask:(NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable)
                                                  backing:NSBackingStoreBuffered
                                                    defer:NO];
-    [self.window setTitle:@"ComPDFKit PDF Conversion Demo"];
+    [self.window setTitle:@"ComPDF Conversion SDK V3.2.0"];
     self.viewController = [[ViewController alloc] init];
     self.window.contentViewController = self.viewController;
     

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['getpagecount_3apassword_3a_0',['getPageCount:password:',['../interface_library_manager.html#a994c7e7518e1d918ac48745d77f34010',1,'LibraryManager']]],
-  ['getversion_1',['getVersion',['../interface_library_manager.html#a888e7b9dac35736723f6935c64253807',1,'LibraryManager']]]
+  ['jsoncontaintable_0',['jsonContainTable',['../interface_convert_options.html#aca4c04a2486e7211bb1e5b61bf0e04cb',1,'ConvertOptions']]],
+  ['jsonoptions_1',['JsonOptions',['../interface_json_options.html',1,'']]],
+  ['jsonstr_2',['jsonStr',['../interface_c_t_a_b_result.html#a3bddb07a029734b274eaf2e386c91c54',1,'CTABResult']]]
 ];
