@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['dewarp_3aandoutputimage_3a_0',['Dewarp:andOutputImage:',['../interface_c_p_d_f_document_a_i.html#a1e0cf6f371dbc432f0ba82548d97850d',1,'CPDFDocumentAI']]]
+  ['getpagecount_3apassword_3a_0',['getPageCount:password:',['../interface_library_manager.html#a994c7e7518e1d918ac48745d77f34010',1,'LibraryManager']]],
+  ['getversion_1',['getVersion',['../interface_library_manager.html#a888e7b9dac35736723f6935c64253807',1,'LibraryManager']]]
 ];

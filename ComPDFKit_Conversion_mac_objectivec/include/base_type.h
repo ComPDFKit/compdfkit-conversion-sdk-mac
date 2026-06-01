@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 
-/// \brief OCR language.
+/// \brief OCR language. When an API accepts NSArray<NSNumber *> *languages,
+/// pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish), @(OCRLanguageJapanese)].
 typedef NS_ENUM(NSInteger, OCRLanguage) {
     /// Unknown language
     OCRLanguageUnknown = 0,
@@ -81,6 +82,12 @@ typedef NS_ENUM(NSInteger, ErrorCode) {
     ErrorCodeLicenseFileReadFailed = 28,
     /// No OCR permission
     ErrorCodeLicenseOCRPermissionDeny = 29,
+    /// The current conversion concurrency exceeds the license limit
+    ErrorCodeLicenseConcurrencyExceeded = 30,
+    /// The current conversion pages exceed the license limit
+    ErrorCodeLicensePageLimitExceeded = 31,
+    /// The quota persistence file has been tampered with
+    ErrorCodeLicenseQuotaCorrupted = 32,
 
     /// Table not found
     ErrorCodeNoTable = 40,
@@ -219,6 +226,9 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Whether to remove AI content during conversion
 @property (nonatomic, assign) BOOL enableAILayout;
 
+/// Whether to enable AI table recognition during conversion
+@property (nonatomic, assign) BOOL enableAITableRecognition;
+
 /// Whether to include images (only effective when OCR is disabled)
 @property (nonatomic, assign) BOOL containImage;
 
@@ -242,6 +252,9 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Whether to enable OCR
 @property (nonatomic, assign) BOOL enableOCR;
+
+/// Whether to make the text transparent in the output document.
+@property (nonatomic, assign) BOOL transparentText;
 
 /// Whether to format tables when converting to TXT
 @property (nonatomic, assign) BOOL txtTableFormat;
@@ -279,6 +292,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
 
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
 @end
 
 /// \brief PDF to Word conversion parameter object.
@@ -286,6 +305,9 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Whether to remove AI content during conversion
 @property (nonatomic, assign) BOOL enableAILayout;
+
+/// Whether to enable AI table recognition during conversion
+@property (nonatomic, assign) BOOL enableAITableRecognition;
 
 /// Whether to include images (only effective when OCR is disabled)
 @property (nonatomic, assign) BOOL containImage;
@@ -314,6 +336,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
 
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
 @end
 
 /// \brief PDF to Excel conversion parameter object.
@@ -321,6 +349,9 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Whether to remove AI content during conversion
 @property (nonatomic, assign) BOOL enableAILayout;
+
+/// Whether to enable AI table recognition during conversion
+@property (nonatomic, assign) BOOL enableAITableRecognition;
 
 /// Whether to include images (only effective when OCR is disabled)
 @property (nonatomic, assign) BOOL containImage;
@@ -349,6 +380,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
 
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
 /// Whether to save as CSV format
 @property (nonatomic, assign) BOOL CSVFormat;
 
@@ -365,6 +402,9 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Whether to remove AI content during conversion
 @property (nonatomic, assign) BOOL enableAILayout;
+
+/// Whether to enable AI table recognition during conversion
+@property (nonatomic, assign) BOOL enableAITableRecognition;
 
 /// Whether to include images (only effective when OCR is disabled)
 @property (nonatomic, assign) BOOL containImage;
@@ -390,6 +430,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
 
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
 @end
 
 /// \brief PDF to Html conversion parameter object.
@@ -397,6 +443,9 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Whether to remove AI content during conversion
 @property (nonatomic, assign) BOOL enableAILayout;
+
+/// Whether to enable AI table recognition during conversion
+@property (nonatomic, assign) BOOL enableAITableRecognition;
 
 /// Whether to include images (only effective when OCR is disabled)
 @property (nonatomic, assign) BOOL containImage;
@@ -428,6 +477,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
 
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
 @end
 
 /// \brief PDF to RTF conversion parameter object.
@@ -435,6 +490,9 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Whether to remove AI content during conversion
 @property (nonatomic, assign) BOOL enableAILayout;
+
+/// Whether to enable AI table recognition during conversion
+@property (nonatomic, assign) BOOL enableAITableRecognition;
 
 /// Whether to include images (only effective when OCR is disabled)
 @property (nonatomic, assign) BOOL containImage;
@@ -459,6 +517,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
+
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
 @end
 
@@ -488,6 +552,9 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Whether to remove AI content during conversion
 @property (nonatomic, assign) BOOL enableAILayout;
 
+/// Whether to enable AI table recognition during conversion
+@property (nonatomic, assign) BOOL enableAITableRecognition;
+
 /// Whether to enable OCR
 @property (nonatomic, assign) BOOL enableOCR;
 
@@ -500,6 +567,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
 
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
 /// Whether to format tables when converting to TXT
 @property (nonatomic, assign) BOOL TableFormat;
 
@@ -510,6 +583,9 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Whether to remove AI content during conversion
 @property (nonatomic, assign) BOOL enableAILayout;
+
+/// Whether to enable AI table recognition during conversion
+@property (nonatomic, assign) BOOL enableAITableRecognition;
 
 /// Whether to include images (only effective when OCR is disabled)
 @property (nonatomic, assign) BOOL containImage;
@@ -529,6 +605,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
 
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
 /// Whether to include tables when converting to JSON
 @property (nonatomic, assign) BOOL ContainTable;
 
@@ -539,6 +621,9 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Whether to enable OCR
 @property (nonatomic, assign) BOOL enableOCR;
+
+/// Whether to make the text transparent in the output document.
+@property (nonatomic, assign) BOOL transparentText;
 
 /// Whether to include images (only effective when OCR is disabled)
 @property (nonatomic, assign) BOOL containImage;
@@ -557,6 +642,47 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
+
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
+@end
+
+/// \brief PDF to OFD conversion parameter object.
+@interface OfdOptions : NSObject
+
+/// Whether to enable OCR
+@property (nonatomic, assign) BOOL enableOCR;
+
+/// Whether to make the text transparent in the output document.
+@property (nonatomic, assign) BOOL transparentText;
+
+/// Whether to include images (only effective when OCR is disabled)
+@property (nonatomic, assign) BOOL containImage;
+
+/// Convert formulas to images
+@property (nonatomic, assign) BOOL formulaToImage;
+
+/// Whether to contain page background images when converting,which takes effect only when enable_ocr is true.
+@property (nonatomic, assign) BOOL contain_page_background_image;
+
+/// whether to output one document per page.
+@property (nonatomic, assign) BOOL output_document_per_page;
+
+/// OCR option scope
+@property (nonatomic, assign) OCROption ocrOption;
+
+/// Page ranges for conversion (e.g. @"1-3,5,7-9")
+@property (nonatomic, copy) NSString *pageRanges;
+
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
 @end
 
@@ -581,8 +707,17 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
 
+/// Specify the font name to convert, e.g. @"Arial".
+@property (nonatomic, copy) NSString *fontName;
+
 /// Whether to remove AI content during conversion
 @property (nonatomic, assign) BOOL enableAILayout;
+
+/// Whether to enable AI table recognition during conversion
+@property (nonatomic, assign) BOOL enableAITableRecognition;
+
+/// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
+@property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
 @end
 

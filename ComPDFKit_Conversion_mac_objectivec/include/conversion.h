@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "base_type.h"
+#import "common.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,6 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
                     outputPath:(NSString * _Nonnull)outputPath
                        options:(WordOptions * _Nonnull)options;
 
+/// Per-call callback version (progress/cancel).
++ (ErrorCode)startPDFToWord:(NSString * _Nonnull)filePath
+                   password:(NSString * _Nonnull)password
+                 outputPath:(NSString * _Nonnull)outputPath
+                    options:(WordOptions * _Nonnull)options
+                   progress:(COMProgressBlock _Nullable)progress
+                     cancel:(COMCancelBlock _Nullable)cancel;
+
 /**
  * @brief Starts the conversion of a PDF file to an RTF document.
  * @param filePath The input PDF file path
@@ -37,6 +45,13 @@ NS_ASSUME_NONNULL_BEGIN
                      password:(NSString * _Nonnull)password
                    outputPath:(NSString * _Nonnull)outputPath
                       options:(RtfOptions * _Nonnull)options;
+
++ (ErrorCode)startPDFToRtf:(NSString * _Nonnull)filePath
+                  password:(NSString * _Nonnull)password
+                outputPath:(NSString * _Nonnull)outputPath
+                   options:(RtfOptions * _Nonnull)options
+                  progress:(COMProgressBlock _Nullable)progress
+                    cancel:(COMCancelBlock _Nullable)cancel;
 
 /**
  * @brief Starts the conversion of a PDF file to an Excel document.
@@ -52,6 +67,13 @@ NS_ASSUME_NONNULL_BEGIN
                     outputPath:(NSString * _Nonnull)outputPath
                        options:(ExcelOptions * _Nonnull)options;
 
++ (ErrorCode)startPDFToExcel:(NSString * _Nonnull)filePath
+                    password:(NSString * _Nonnull)password
+                  outputPath:(NSString * _Nonnull)outputPath
+                     options:(ExcelOptions * _Nonnull)options
+                    progress:(COMProgressBlock _Nullable)progress
+                      cancel:(COMCancelBlock _Nullable)cancel;
+
 /**
  * @brief Starts the conversion of a PDF file to an HTML document.
  * @param filePath The input PDF file path
@@ -65,6 +87,13 @@ NS_ASSUME_NONNULL_BEGIN
                       password:(NSString * _Nonnull)password
                     outputPath:(NSString * _Nonnull)outputPath
                        options:(HtmlOptions * _Nonnull)options;
+
++ (ErrorCode)startPDFToHtml:(NSString * _Nonnull)filePath
+                   password:(NSString * _Nonnull)password
+                 outputPath:(NSString * _Nonnull)outputPath
+                    options:(HtmlOptions * _Nonnull)options
+                   progress:(COMProgressBlock _Nullable)progress
+                     cancel:(COMCancelBlock _Nullable)cancel;
 
 /**
  * @brief Starts the conversion of a PDF file to images.
@@ -80,6 +109,13 @@ NS_ASSUME_NONNULL_BEGIN
                     outputPath:(NSString * _Nonnull)outputPath
                        options:(ImageOptions * _Nonnull)options;
 
++ (ErrorCode)startPDFToImage:(NSString * _Nonnull)filePath
+                    password:(NSString * _Nonnull)password
+                  outputPath:(NSString * _Nonnull)outputPath
+                     options:(ImageOptions * _Nonnull)options
+                    progress:(COMProgressBlock _Nullable)progress
+                      cancel:(COMCancelBlock _Nullable)cancel;
+
 /**
  * @brief Starts the conversion of a PDF file to a TXT file.
  * @param filePath The input PDF file path
@@ -93,6 +129,13 @@ NS_ASSUME_NONNULL_BEGIN
                       password:(NSString * _Nonnull)password
                     outputPath:(NSString * _Nonnull)outputPath
                        options:(TxtOptions * _Nonnull)options;
+
++ (ErrorCode)startPDFToTxt:(NSString * _Nonnull)filePath
+                   password:(NSString * _Nonnull)password
+                 outputPath:(NSString * _Nonnull)outputPath
+                    options:(TxtOptions * _Nonnull)options
+                   progress:(COMProgressBlock _Nullable)progress
+                     cancel:(COMCancelBlock _Nullable)cancel;
 
 /**
  * @brief Starts the conversion of a PDF file to a JSON file.
@@ -108,6 +151,13 @@ NS_ASSUME_NONNULL_BEGIN
                     outputPath:(NSString * _Nonnull)outputPath
                        options:(JsonOptions * _Nonnull)options;
 
++ (ErrorCode)startPDFToJson:(NSString * _Nonnull)filePath
+                    password:(NSString * _Nonnull)password
+                  outputPath:(NSString * _Nonnull)outputPath
+                     options:(JsonOptions * _Nonnull)options
+                    progress:(COMProgressBlock _Nullable)progress
+                      cancel:(COMCancelBlock _Nullable)cancel;
+
 /**
  * @brief Starts the conversion of a PDF file to a PowerPoint presentation.
  * @param filePath The input PDF file path
@@ -121,6 +171,13 @@ NS_ASSUME_NONNULL_BEGIN
                       password:(NSString * _Nonnull)password
                     outputPath:(NSString * _Nonnull)outputPath
                        options:(PptOptions * _Nonnull)options;
+
++ (ErrorCode)startPDFToPpt:(NSString * _Nonnull)filePath
+                   password:(NSString * _Nonnull)password
+                 outputPath:(NSString * _Nonnull)outputPath
+                    options:(PptOptions * _Nonnull)options
+                   progress:(COMProgressBlock _Nullable)progress
+                     cancel:(COMCancelBlock _Nullable)cancel;
 
 /**
  * @brief Starts the conversion of a PDF file to a searchable PDF.
@@ -136,15 +193,44 @@ NS_ASSUME_NONNULL_BEGIN
                     outputPath:(NSString * _Nonnull)outputPath
                        options:(SearchablePdfOptions * _Nonnull)options;
 
++ (ErrorCode)startPDFToSearchablePDF:(NSString * _Nonnull)filePath
+                          password:(NSString * _Nonnull)password
+                        outputPath:(NSString * _Nonnull)outputPath
+                           options:(SearchablePdfOptions * _Nonnull)options
+                          progress:(COMProgressBlock _Nullable)progress
+                            cancel:(COMCancelBlock _Nullable)cancel;
+
 + (ErrorCode)startPDFToMarkdown:(NSString * _Nonnull)filePath
                        password:(NSString * _Nonnull)password
                      outputPath:(NSString * _Nonnull)outputPath
                         options:(MarkdownOptions * _Nonnull)options;
 
++ (ErrorCode)startPDFToMarkdown:(NSString * _Nonnull)filePath
+                       password:(NSString * _Nonnull)password
+                     outputPath:(NSString * _Nonnull)outputPath
+                        options:(MarkdownOptions * _Nonnull)options
+                       progress:(COMProgressBlock _Nullable)progress
+                         cancel:(COMCancelBlock _Nullable)cancel;
+
 /**
- * @brief Cancels any ongoing PDF conversion process.
+ * @brief Starts the conversion of a PDF file to an OFD document.
+ * @param filePath The input PDF file path
+ * @param password Password for opening the PDF file (if required)
+ * @param outputPath The output OFD file path
+ * @param options Conversion settings (ConvertOptions)
+ * @return Error code, 0 for success
  */
-+ (void)cancel;
++ (ErrorCode)startPDFToOFD:(NSString * _Nonnull)filePath
+                   password:(NSString * _Nonnull)password
+                 outputPath:(NSString * _Nonnull)outputPath
+                    options:(OfdOptions * _Nonnull)options;
+
++ (ErrorCode)startPDFToOFD:(NSString * _Nonnull)filePath
+                   password:(NSString * _Nonnull)password
+                 outputPath:(NSString * _Nonnull)outputPath
+                    options:(OfdOptions * _Nonnull)options
+                   progress:(COMProgressBlock _Nullable)progress
+                     cancel:(COMCancelBlock _Nullable)cancel;
 
 @end
 

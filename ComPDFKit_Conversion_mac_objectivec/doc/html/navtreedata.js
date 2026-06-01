@@ -31,7 +31,7 @@ var NAVTREE =
       [ "Data Structure Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
@@ -41,7 +41,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"interface_rtf_options.html#ad3ed0880975466b3ca892020cbb80e6b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

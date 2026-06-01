@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wordoptions_0',['WordOptions',['../interface_word_options.html',1,'']]]
+  ['txtoptions_0',['TxtOptions',['../interface_txt_options.html',1,'']]]
 ];

@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, ConversionType) {
     ConversionTypePDFToJSON,
     ConversionTypePDFToRTF,
     ConversionTypePDFToSearchablePDF,
+    ConversionTypePDFToOFD,
     ConversionTypePDFToMarkdown
 };
 
@@ -34,6 +35,7 @@ typedef NS_ENUM(NSInteger, ConversionType) {
 @property (strong) NSButton *containImageCheckBox;
 @property (strong) NSButton *containAnnotationCheckBox;
 @property (strong) NSButton *enableAILayoutCheckBox;
+@property (strong) NSButton *enableAITableRecognitionCheckBox;
 @property (strong) NSButton *csvFormatCheckBox;
 @property (strong) NSButton *allContentCheckBox;
 @property (strong) NSPopUpButton *excelWorksheetOptionPopUp;
@@ -45,10 +47,13 @@ typedef NS_ENUM(NSInteger, ConversionType) {
 @property (strong) NSPopUpButton *imageColorModePopUp;
 @property (strong) NSPopUpButton *imageTypePopUp;
 @property (strong) NSTextField *scalingTextField;
+@property (strong) NSTextField *fontNameTextField;
 @property (strong) NSTextField *pageRangesTextField;
 @property (strong) NSTextField *pageRangesLabel;
 @property (strong) NSButton *formulaToImageCheckBox;
 @property (nonatomic, strong) NSPopUpButton *ocrLanguagePopUp;
+
+@property (strong) NSButton *transparentTextCheckBox;
 
 @property (strong) NSButton *outputPerPageCheckBox;            // output_document_per_page
 @property (strong) NSButton *backgroundImageCheckBox;          // contain_page_background_image

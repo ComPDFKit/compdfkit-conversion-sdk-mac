@@ -108,6 +108,8 @@ Inheritance diagram for SearchablePdfOptions:</div>
 Properties</h2></td></tr>
 <tr class="memitem:aa85a96a46c133e54aa6489834fdd9229" id="r_aa85a96a46c133e54aa6489834fdd9229"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa85a96a46c133e54aa6489834fdd9229">enableOCR</a></td></tr>
 <tr class="memdesc:aa85a96a46c133e54aa6489834fdd9229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to enable OCR.  <br /></td></tr>
+<tr class="memitem:a2aaa2a864fedba0373074cfcd5f18022" id="r_a2aaa2a864fedba0373074cfcd5f18022"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aaa2a864fedba0373074cfcd5f18022">transparentText</a></td></tr>
+<tr class="memdesc:a2aaa2a864fedba0373074cfcd5f18022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to make the text transparent in the output document.  <br /></td></tr>
 <tr class="memitem:a831085f793c5ab7e4287ffca0c507425" id="r_a831085f793c5ab7e4287ffca0c507425"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a831085f793c5ab7e4287ffca0c507425">containImage</a></td></tr>
 <tr class="memdesc:a831085f793c5ab7e4287ffca0c507425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to include images (only effective when OCR is disabled)  <br /></td></tr>
 <tr class="memitem:a7dc526fd336f781a5566d44ff2cbdc92" id="r_a7dc526fd336f781a5566d44ff2cbdc92"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dc526fd336f781a5566d44ff2cbdc92">formulaToImage</a></td></tr>
@@ -120,11 +122,15 @@ Properties</h2></td></tr>
 <tr class="memdesc:ab76cbba8f0b5d1a7dc8086d45851b79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR option scope.  <br /></td></tr>
 <tr class="memitem:a7b984d809e266dabd387549ed5c8f85f" id="r_a7b984d809e266dabd387549ed5c8f85f"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b984d809e266dabd387549ed5c8f85f">pageRanges</a></td></tr>
 <tr class="memdesc:a7b984d809e266dabd387549ed5c8f85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Page ranges for conversion (e.g. "1-3,5,7-9")  <br /></td></tr>
+<tr class="memitem:a81420a4a30893af462c1b793aa1225e1" id="r_a81420a4a30893af462c1b793aa1225e1"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81420a4a30893af462c1b793aa1225e1">fontName</a></td></tr>
+<tr class="memdesc:a81420a4a30893af462c1b793aa1225e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the font name to convert, e.g. "Arial".  <br /></td></tr>
+<tr class="memitem:accd7982a6fed6e0bf176a8ad93403c96" id="r_accd7982a6fed6e0bf176a8ad93403c96"><td class="memItemLeft" align="right" valign="top">NSArray&lt; NSNumber * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accd7982a6fed6e0bf176a8ad93403c96">languages</a></td></tr>
+<tr class="memdesc:accd7982a6fed6e0bf176a8ad93403c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PDF to SearchablePdf conversion parameter object. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00538">538</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00620">620</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 </div><a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
 <a id="a2331f52d8e439694c0be0eb62592f99e" name="a2331f52d8e439694c0be0eb62592f99e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2331f52d8e439694c0be0eb62592f99e">&#9670;&#160;</a></span>contain_page_background_image</h2>
@@ -148,7 +154,7 @@ Properties</h2></td></tr>
 
 <p>Whether to contain page background images when converting,which takes effect only when enable_ocr is true. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00550">550</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00635">635</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -174,7 +180,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include images (only effective when OCR is disabled) </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00544">544</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00629">629</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -200,7 +206,33 @@ Properties</h2></td></tr>
 
 <p>Whether to enable OCR. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00541">541</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00623">623</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a81420a4a30893af462c1b793aa1225e1" name="a81420a4a30893af462c1b793aa1225e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81420a4a30893af462c1b793aa1225e1">&#9670;&#160;</a></span>fontName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString*) fontName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel copy">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specify the font name to convert, e.g. "Arial". </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00647">647</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -226,7 +258,33 @@ Properties</h2></td></tr>
 
 <p>Convert formulas to images. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00547">547</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00632">632</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="accd7982a6fed6e0bf176a8ad93403c96" name="accd7982a6fed6e0bf176a8ad93403c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accd7982a6fed6e0bf176a8ad93403c96">&#9670;&#160;</a></span>languages</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray&lt;NSNumber *&gt;*) languages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel copy">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)]. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00650">650</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -252,7 +310,7 @@ Properties</h2></td></tr>
 
 <p>OCR option scope. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00556">556</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00641">641</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -278,7 +336,7 @@ Properties</h2></td></tr>
 
 <p>whether to output one document per page. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00553">553</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00638">638</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -304,7 +362,33 @@ Properties</h2></td></tr>
 
 <p>Page ranges for conversion (e.g. "1-3,5,7-9") </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00559">559</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00644">644</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a2aaa2a864fedba0373074cfcd5f18022" name="a2aaa2a864fedba0373074cfcd5f18022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aaa2a864fedba0373074cfcd5f18022">&#9670;&#160;</a></span>transparentText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) transparentText</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to make the text transparent in the output document. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00626">626</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>

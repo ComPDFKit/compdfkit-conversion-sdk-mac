@@ -18,6 +18,7 @@ var annotated_dup =
     [ "LayoutAnalysisResult", "interface_layout_analysis_result.html", "interface_layout_analysis_result" ],
     [ "LibraryManager", "interface_library_manager.html", "interface_library_manager" ],
     [ "MarkdownOptions", "interface_markdown_options.html", "interface_markdown_options" ],
+    [ "OfdOptions", "interface_ofd_options.html", "interface_ofd_options" ],
     [ "PptOptions", "interface_ppt_options.html", "interface_ppt_options" ],
     [ "RtfOptions", "interface_rtf_options.html", "interface_rtf_options" ],
     [ "SearchablePdfOptions", "interface_searchable_pdf_options.html", "interface_searchable_pdf_options" ],

@@ -108,6 +108,8 @@ Inheritance diagram for JsonOptions:</div>
 Properties</h2></td></tr>
 <tr class="memitem:a7fcd95d46b1ebaaa803b27461bbff55f" id="r_a7fcd95d46b1ebaaa803b27461bbff55f"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fcd95d46b1ebaaa803b27461bbff55f">enableAILayout</a></td></tr>
 <tr class="memdesc:a7fcd95d46b1ebaaa803b27461bbff55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to remove AI content during conversion.  <br /></td></tr>
+<tr class="memitem:a0e3a244ee39d369c37a433a8c5e95191" id="r_a0e3a244ee39d369c37a433a8c5e95191"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e3a244ee39d369c37a433a8c5e95191">enableAITableRecognition</a></td></tr>
+<tr class="memdesc:a0e3a244ee39d369c37a433a8c5e95191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to enable AI table recognition during conversion.  <br /></td></tr>
 <tr class="memitem:a9eab21b33a05e12608dad2204561927a" id="r_a9eab21b33a05e12608dad2204561927a"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9eab21b33a05e12608dad2204561927a">containImage</a></td></tr>
 <tr class="memdesc:a9eab21b33a05e12608dad2204561927a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to include images (only effective when OCR is disabled)  <br /></td></tr>
 <tr class="memitem:a6d096d4530999d5616be252b8fecd73d" id="r_a6d096d4530999d5616be252b8fecd73d"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d096d4530999d5616be252b8fecd73d">containAnnotation</a></td></tr>
@@ -120,13 +122,17 @@ Properties</h2></td></tr>
 <tr class="memdesc:aab517b58384e0f543eb07abfea102fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR option scope.  <br /></td></tr>
 <tr class="memitem:a47f2c55d3688efd998279dae1894aab9" id="r_a47f2c55d3688efd998279dae1894aab9"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47f2c55d3688efd998279dae1894aab9">pageRanges</a></td></tr>
 <tr class="memdesc:a47f2c55d3688efd998279dae1894aab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Page ranges for conversion (e.g. "1-3,5,7-9")  <br /></td></tr>
+<tr class="memitem:a90b4b002ae6e14cf23d0d08d8d469d5a" id="r_a90b4b002ae6e14cf23d0d08d8d469d5a"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90b4b002ae6e14cf23d0d08d8d469d5a">fontName</a></td></tr>
+<tr class="memdesc:a90b4b002ae6e14cf23d0d08d8d469d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the font name to convert, e.g. "Arial".  <br /></td></tr>
+<tr class="memitem:a2847c68a7afc155354f8b45bc70d07b4" id="r_a2847c68a7afc155354f8b45bc70d07b4"><td class="memItemLeft" align="right" valign="top">NSArray&lt; NSNumber * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2847c68a7afc155354f8b45bc70d07b4">languages</a></td></tr>
+<tr class="memdesc:a2847c68a7afc155354f8b45bc70d07b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].  <br /></td></tr>
 <tr class="memitem:a4a7c1bac245cfb2893f01a006b3b36af" id="r_a4a7c1bac245cfb2893f01a006b3b36af"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a7c1bac245cfb2893f01a006b3b36af">ContainTable</a></td></tr>
 <tr class="memdesc:a4a7c1bac245cfb2893f01a006b3b36af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to include tables when converting to JSON.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PDF to Json conversion parameter object. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00509">509</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00582">582</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 </div><a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
 <a id="a6d096d4530999d5616be252b8fecd73d" name="a6d096d4530999d5616be252b8fecd73d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d096d4530999d5616be252b8fecd73d">&#9670;&#160;</a></span>containAnnotation</h2>
@@ -150,7 +156,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include annotations. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00518">518</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00594">594</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -176,7 +182,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include images (only effective when OCR is disabled) </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00515">515</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00591">591</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -202,7 +208,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include tables when converting to JSON. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00533">533</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00615">615</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -228,7 +234,33 @@ Properties</h2></td></tr>
 
 <p>Whether to remove AI content during conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00512">512</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00585">585</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a0e3a244ee39d369c37a433a8c5e95191" name="a0e3a244ee39d369c37a433a8c5e95191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3a244ee39d369c37a433a8c5e95191">&#9670;&#160;</a></span>enableAITableRecognition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) enableAITableRecognition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to enable AI table recognition during conversion. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00588">588</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -254,7 +286,59 @@ Properties</h2></td></tr>
 
 <p>Whether to enable OCR. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00521">521</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00597">597</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a90b4b002ae6e14cf23d0d08d8d469d5a" name="a90b4b002ae6e14cf23d0d08d8d469d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90b4b002ae6e14cf23d0d08d8d469d5a">&#9670;&#160;</a></span>fontName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString*) fontName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel copy">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specify the font name to convert, e.g. "Arial". </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00609">609</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a2847c68a7afc155354f8b45bc70d07b4" name="a2847c68a7afc155354f8b45bc70d07b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2847c68a7afc155354f8b45bc70d07b4">&#9670;&#160;</a></span>languages</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray&lt;NSNumber *&gt;*) languages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel copy">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)]. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00612">612</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -280,7 +364,7 @@ Properties</h2></td></tr>
 
 <p>OCR option scope. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00527">527</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00603">603</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -306,7 +390,7 @@ Properties</h2></td></tr>
 
 <p>whether to output one document per page. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00524">524</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00600">600</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -332,7 +416,7 @@ Properties</h2></td></tr>
 
 <p>Page ranges for conversion (e.g. "1-3,5,7-9") </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00530">530</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00606">606</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>

@@ -4,6 +4,7 @@ var interface_c_p_d_f_document_a_i =
     [ "LayoutAnalysis:andResults:", "interface_c_p_d_f_document_a_i.html#a450b12c68857fbd3311c216c85c2aa7b", null ],
     [ "MagicColor:andOutputImage:", "interface_c_p_d_f_document_a_i.html#a8e3a591b8abd9f6f5c7307e0fd752eeb", null ],
     [ "Ocr:andResult:", "interface_c_p_d_f_document_a_i.html#a5a7b997450ac42e4a039e06283a3f25d", null ],
+    [ "Ocr:languages:andResult:", "interface_c_p_d_f_document_a_i.html#a3d40cac3b49745f0b46374d2f2554180", null ],
     [ "StampDetection:andResults:", "interface_c_p_d_f_document_a_i.html#ae28dfd1bfbdf471a64d84ac57ff569a7", null ],
     [ "TableRec:andResult:", "interface_c_p_d_f_document_a_i.html#a3b20028516abef1cb1e375ca23e2deda", null ]
 ];
