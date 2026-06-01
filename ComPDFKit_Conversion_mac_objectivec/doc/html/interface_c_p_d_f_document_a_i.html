@@ -93,9 +93,6 @@ $(function(){initNavTree('interface_c_p_d_f_document_a_i.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>High-level APIs for Document AI tasks.  
- <a href="#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="document__ai_8h_source.html">document_ai.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CPDFDocumentAI:</div>
@@ -107,22 +104,18 @@ Inheritance diagram for CPDFDocumentAI:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
 <tr class="memitem:a450b12c68857fbd3311c216c85c2aa7b" id="r_a450b12c68857fbd3311c216c85c2aa7b"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a450b12c68857fbd3311c216c85c2aa7b">LayoutAnalysis:andResults:</a></td></tr>
-<tr class="memdesc:a450b12c68857fbd3311c216c85c2aa7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform page layout analysis.  <br /></td></tr>
 <tr class="memitem:ae28dfd1bfbdf471a64d84ac57ff569a7" id="r_ae28dfd1bfbdf471a64d84ac57ff569a7"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#ae28dfd1bfbdf471a64d84ac57ff569a7">StampDetection:andResults:</a></td></tr>
-<tr class="memdesc:ae28dfd1bfbdf471a64d84ac57ff569a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect stamps/seals on the page.  <br /></td></tr>
+<tr class="memitem:a3d40cac3b49745f0b46374d2f2554180" id="r_a3d40cac3b49745f0b46374d2f2554180"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a3d40cac3b49745f0b46374d2f2554180">Ocr:languages:andResult:</a></td></tr>
+<tr class="memdesc:a3d40cac3b49745f0b46374d2f2554180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish), @(OCRLanguageJapanese)].  <br /></td></tr>
 <tr class="memitem:a5a7b997450ac42e4a039e06283a3f25d" id="r_a5a7b997450ac42e4a039e06283a3f25d"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a5a7b997450ac42e4a039e06283a3f25d">Ocr:andResult:</a></td></tr>
-<tr class="memdesc:a5a7b997450ac42e4a039e06283a3f25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run OCR on the page/image.  <br /></td></tr>
+<tr class="memdesc:a5a7b997450ac42e4a039e06283a3f25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses English by default when languages are not specified.  <br /></td></tr>
 <tr class="memitem:a8e3a591b8abd9f6f5c7307e0fd752eeb" id="r_a8e3a591b8abd9f6f5c7307e0fd752eeb"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a8e3a591b8abd9f6f5c7307e0fd752eeb">MagicColor:andOutputImage:</a></td></tr>
-<tr class="memdesc:a8e3a591b8abd9f6f5c7307e0fd752eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply MagicColor enhancement to the input image.  <br /></td></tr>
 <tr class="memitem:a1e0cf6f371dbc432f0ba82548d97850d" id="r_a1e0cf6f371dbc432f0ba82548d97850d"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a1e0cf6f371dbc432f0ba82548d97850d">Dewarp:andOutputImage:</a></td></tr>
-<tr class="memdesc:a1e0cf6f371dbc432f0ba82548d97850d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dewarp the input image (deskew/flatten).  <br /></td></tr>
 <tr class="memitem:a3b20028516abef1cb1e375ca23e2deda" id="r_a3b20028516abef1cb1e375ca23e2deda"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a3b20028516abef1cb1e375ca23e2deda">TableRec:andResult:</a></td></tr>
-<tr class="memdesc:a3b20028516abef1cb1e375ca23e2deda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recognize tables from the page/image.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>High-level APIs for Document AI tasks. </p>
-
-<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00207">207</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="document__ai_8h_source.html#l00116">116</a> of file <a class="el" href="document__ai_8h_source.html">document_ai.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Method Documentation</h2>
 <a id="a1e0cf6f371dbc432f0ba82548d97850d" name="a1e0cf6f371dbc432f0ba82548d97850d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e0cf6f371dbc432f0ba82548d97850d">&#9670;&#160;</a></span>Dewarp:andOutputImage:</h2>
@@ -142,17 +135,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Dewarp the input image (deskew/flatten). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
-    <tr><td class="paramname">outputImage</td><td>Input: optional points to guide dewarp; Output: points + image. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Two-phase usage supported: first call may return only points; call again with those points to get the corrected image. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
 
 </div>
 </div>
@@ -175,16 +157,6 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Perform page layout analysis. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
-    <tr><td class="paramname">LayoutResult</td><td>Output array filled with layout elements. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
-
 </div>
 </div>
 <a id="a8e3a591b8abd9f6f5c7307e0fd752eeb" name="a8e3a591b8abd9f6f5c7307e0fd752eeb"></a>
@@ -205,16 +177,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Apply MagicColor enhancement to the input image. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
-    <tr><td class="paramname">outputImage</td><td>Output enhanced image container. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
 
 </div>
 </div>
@@ -237,15 +199,35 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Run OCR on the page/image. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
-    <tr><td class="paramname">ocrResult</td><td>Output array filled with OCR results. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
+<p>Uses English by default when languages are not specified. </p>
+
+</div>
+</div>
+<a id="a3d40cac3b49745f0b46374d2f2554180" name="a3d40cac3b49745f0b46374d2f2554180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d40cac3b49745f0b46374d2f2554180">&#9670;&#160;</a></span>Ocr:languages:andResult:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (ErrorCode) Ocr: </td>
+          <td></td>
+          <td class="paramtype">(id)</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td>
+        </tr>
+        <tr>
+          <td class="paramkey">languages:</td>
+          <td></td>
+          <td class="paramtype">(NSArray&lt; NSNumber * &gt; *)</td>          <td class="paramname"><span class="paramname"><em>languages</em></span></td>
+        </tr>
+        <tr>
+          <td class="paramkey">andResult:</td>
+          <td></td>
+          <td class="paramtype">(NSMutableArray&lt; <a class="el" href="interface_c_o_c_r_result.html">COCRResult</a> * &gt; *)</td>          <td class="paramname"><span class="paramname"><em>ocrResult</em></span>&#160;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish), @(OCRLanguageJapanese)]. </p>
 
 </div>
 </div>
@@ -268,16 +250,6 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Detect stamps/seals on the page. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
-    <tr><td class="paramname">StampResult</td><td>Output array filled with stamp results. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
-
 </div>
 </div>
 <a id="a3b20028516abef1cb1e375ca23e2deda" name="a3b20028516abef1cb1e375ca23e2deda"></a>
@@ -298,16 +270,6 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Recognize tables from the page/image. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>Input source (NSString file path or NSImage). </td></tr>
-    <tr><td class="paramname">tabResult</td><td>Output array filled with table results. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Error code, 0 for success. </dd></dl>
 
 </div>
 </div>

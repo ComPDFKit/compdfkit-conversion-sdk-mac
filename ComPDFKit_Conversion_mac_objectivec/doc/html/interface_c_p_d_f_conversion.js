@@ -1,14 +1,25 @@
 var interface_c_p_d_f_conversion =
 [
-    [ "cancel", "interface_c_p_d_f_conversion.html#a6a82a0f730da248c6707003b9afcaf4e", null ],
     [ "startPDFToExcel:password:outputPath:options:", "interface_c_p_d_f_conversion.html#ab0543351fb4324c9736d836a26018a45", null ],
+    [ "startPDFToExcel:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#a0ffbc59cf0a12883e3d166f587d0d8a1", null ],
     [ "startPDFToHtml:password:outputPath:options:", "interface_c_p_d_f_conversion.html#abe9ffb9cf6c5be1dbb2eed9aa9539a74", null ],
+    [ "startPDFToHtml:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#a5f06c7db6e58d2f147dbed014ca73cc2", null ],
     [ "startPDFToImage:password:outputPath:options:", "interface_c_p_d_f_conversion.html#a1e76b38fdb8255bb639679f565dc2d5f", null ],
+    [ "startPDFToImage:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#a83ff41fd8b1bac6bb6eb69141dd742ad", null ],
     [ "startPDFToJson:password:outputPath:options:", "interface_c_p_d_f_conversion.html#af3fe281f136135df7c7cf8fbb98a719e", null ],
+    [ "startPDFToJson:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#a574f64c0626e8d0827a203c56339dc46", null ],
     [ "startPDFToMarkdown:password:outputPath:options:", "interface_c_p_d_f_conversion.html#a55235be8e3487f55e327d6e98c99bc50", null ],
+    [ "startPDFToMarkdown:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#a2fe1a6ea3c939d8b1c0ba12118ef81f6", null ],
+    [ "startPDFToOFD:password:outputPath:options:", "interface_c_p_d_f_conversion.html#a85c0418f9c97044d4b3956bb34321924", null ],
+    [ "startPDFToOFD:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#a2708d77882c2f1a9ef79efc58bdee6d4", null ],
     [ "startPDFToPpt:password:outputPath:options:", "interface_c_p_d_f_conversion.html#a272b67890dc5b7d67de25561e57eaa5c", null ],
+    [ "startPDFToPpt:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#a198b85830ba2ff5e0cf5ef26ced2f54b", null ],
     [ "startPDFToRtf:password:outputPath:options:", "interface_c_p_d_f_conversion.html#af6fa4b6acbfa54642f645f6d83dcb010", null ],
+    [ "startPDFToRtf:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#aa4f6783c7a027d9b8aa5fad70b0f4dac", null ],
     [ "startPDFToSearchablePDF:password:outputPath:options:", "interface_c_p_d_f_conversion.html#aacf6eba2f35185431dff1b6c54875d0b", null ],
+    [ "startPDFToSearchablePDF:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#a418d52ae38bb46602273c90df9a66f86", null ],
     [ "startPDFToTxt:password:outputPath:options:", "interface_c_p_d_f_conversion.html#a34f6cd51d6d8975d0bb5e0fc4ea8780c", null ],
-    [ "startPDFToWord:password:outputPath:options:", "interface_c_p_d_f_conversion.html#a927dc246ff77b464da23dad31e5b1123", null ]
+    [ "startPDFToTxt:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#a51922c41c8d46e5a4c043dcc392600eb", null ],
+    [ "startPDFToWord:password:outputPath:options:", "interface_c_p_d_f_conversion.html#a927dc246ff77b464da23dad31e5b1123", null ],
+    [ "startPDFToWord:password:outputPath:options:progress:cancel:", "interface_c_p_d_f_conversion.html#a1ad295a25caf219b4a43be5c79ba5a47", null ]
 ];

@@ -19,6 +19,7 @@ var hierarchy =
       [ "LayoutAnalysisResult", "interface_layout_analysis_result.html", null ],
       [ "LibraryManager", "interface_library_manager.html", null ],
       [ "MarkdownOptions", "interface_markdown_options.html", null ],
+      [ "OfdOptions", "interface_ofd_options.html", null ],
       [ "PptOptions", "interface_ppt_options.html", null ],
       [ "RtfOptions", "interface_rtf_options.html", null ],
       [ "SearchablePdfOptions", "interface_searchable_pdf_options.html", null ],

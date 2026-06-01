@@ -11,12 +11,13 @@
 
 @implementation AppDelegate
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    NSRect frame = NSMakeRect(200, 200, 600, 680);
+        NSRect frame = NSMakeRect(200, 200, 760, 940);
     self.window = [[NSWindow alloc] initWithContentRect:frame
                                                styleMask:(NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable)
                                                  backing:NSBackingStoreBuffered
                                                    defer:NO];
-    [self.window setTitle:@"ComPDF Conversion SDK V3.2.0"];
+    [self.window setTitle:@"ComPDF Conversion SDK V4.1.0"];
+        [self.window setMinSize:NSMakeSize(760, 940)];
     self.viewController = [[ViewController alloc] init];
     self.window.contentViewController = self.viewController;
     

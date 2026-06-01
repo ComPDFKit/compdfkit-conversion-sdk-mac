@@ -1,5 +1,30 @@
 var searchData=
 [
-  ['release_0',['release',['../interface_library_manager.html#aa6e0e3c7743151b6a9a2773772aabdc6',1,'LibraryManager']]],
-  ['releasedocumentaimodel_1',['releaseDocumentAIModel',['../interface_library_manager.html#a6f61ed513e8f833c44c7b11f069acec3',1,'LibraryManager']]]
+  ['setdocumentaimodel_3a_0',['setDocumentAIModel:',['../interface_library_manager.html#a8f5bcef7ac2bc24fd365be3bd649c2e7',1,'LibraryManager']]],
+  ['setdocumentaimodel_3agpuid_3a_1',['setDocumentAIModel:gpuId:',['../interface_library_manager.html#aa1424ba0843464d89282dae0b4139f99',1,'LibraryManager']]],
+  ['setdocumentaimodelcount_3atablemodelcount_3a_2',['setDocumentAIModelCount:tableModelCount:',['../interface_library_manager.html#acb3f6e64563759c50250abd897b9247e',1,'LibraryManager']]],
+  ['setlogger_3aenablewarning_3a_3',['setLogger:enableWarning:',['../interface_library_manager.html#a242d808b65a3c99e7e4b510969e24f38',1,'LibraryManager']]],
+  ['stampdetection_3aandresults_3a_4',['StampDetection:andResults:',['../interface_c_p_d_f_document_a_i.html#ae28dfd1bfbdf471a64d84ac57ff569a7',1,'CPDFDocumentAI']]],
+  ['startpdftoexcel_3apassword_3aoutputpath_3aoptions_3a_5',['startPDFToExcel:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#ab0543351fb4324c9736d836a26018a45',1,'CPDFConversion']]],
+  ['startpdftoexcel_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_6',['startPDFToExcel:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#a0ffbc59cf0a12883e3d166f587d0d8a1',1,'CPDFConversion']]],
+  ['startpdftohtml_3apassword_3aoutputpath_3aoptions_3a_7',['startPDFToHtml:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#abe9ffb9cf6c5be1dbb2eed9aa9539a74',1,'CPDFConversion']]],
+  ['startpdftohtml_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_8',['startPDFToHtml:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#a5f06c7db6e58d2f147dbed014ca73cc2',1,'CPDFConversion']]],
+  ['startpdftoimage_3apassword_3aoutputpath_3aoptions_3a_9',['startPDFToImage:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#a1e76b38fdb8255bb639679f565dc2d5f',1,'CPDFConversion']]],
+  ['startpdftoimage_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_10',['startPDFToImage:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#a83ff41fd8b1bac6bb6eb69141dd742ad',1,'CPDFConversion']]],
+  ['startpdftojson_3apassword_3aoutputpath_3aoptions_3a_11',['startPDFToJson:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#af3fe281f136135df7c7cf8fbb98a719e',1,'CPDFConversion']]],
+  ['startpdftojson_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_12',['startPDFToJson:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#a574f64c0626e8d0827a203c56339dc46',1,'CPDFConversion']]],
+  ['startpdftomarkdown_3apassword_3aoutputpath_3aoptions_3a_13',['startPDFToMarkdown:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#a55235be8e3487f55e327d6e98c99bc50',1,'CPDFConversion']]],
+  ['startpdftomarkdown_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_14',['startPDFToMarkdown:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#a2fe1a6ea3c939d8b1c0ba12118ef81f6',1,'CPDFConversion']]],
+  ['startpdftoofd_3apassword_3aoutputpath_3aoptions_3a_15',['startPDFToOFD:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#a85c0418f9c97044d4b3956bb34321924',1,'CPDFConversion']]],
+  ['startpdftoofd_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_16',['startPDFToOFD:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#a2708d77882c2f1a9ef79efc58bdee6d4',1,'CPDFConversion']]],
+  ['startpdftoppt_3apassword_3aoutputpath_3aoptions_3a_17',['startPDFToPpt:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#a272b67890dc5b7d67de25561e57eaa5c',1,'CPDFConversion']]],
+  ['startpdftoppt_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_18',['startPDFToPpt:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#a198b85830ba2ff5e0cf5ef26ced2f54b',1,'CPDFConversion']]],
+  ['startpdftortf_3apassword_3aoutputpath_3aoptions_3a_19',['startPDFToRtf:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#af6fa4b6acbfa54642f645f6d83dcb010',1,'CPDFConversion']]],
+  ['startpdftortf_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_20',['startPDFToRtf:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#aa4f6783c7a027d9b8aa5fad70b0f4dac',1,'CPDFConversion']]],
+  ['startpdftosearchablepdf_3apassword_3aoutputpath_3aoptions_3a_21',['startPDFToSearchablePDF:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#aacf6eba2f35185431dff1b6c54875d0b',1,'CPDFConversion']]],
+  ['startpdftosearchablepdf_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_22',['startPDFToSearchablePDF:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#a418d52ae38bb46602273c90df9a66f86',1,'CPDFConversion']]],
+  ['startpdftotxt_3apassword_3aoutputpath_3aoptions_3a_23',['startPDFToTxt:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#a34f6cd51d6d8975d0bb5e0fc4ea8780c',1,'CPDFConversion']]],
+  ['startpdftotxt_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_24',['startPDFToTxt:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#a51922c41c8d46e5a4c043dcc392600eb',1,'CPDFConversion']]],
+  ['startpdftoword_3apassword_3aoutputpath_3aoptions_3a_25',['startPDFToWord:password:outputPath:options:',['../interface_c_p_d_f_conversion.html#a927dc246ff77b464da23dad31e5b1123',1,'CPDFConversion']]],
+  ['startpdftoword_3apassword_3aoutputpath_3aoptions_3aprogress_3acancel_3a_26',['startPDFToWord:password:outputPath:options:progress:cancel:',['../interface_c_p_d_f_conversion.html#a1ad295a25caf219b4a43be5c79ba5a47',1,'CPDFConversion']]]
 ];

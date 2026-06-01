@@ -93,7 +93,7 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#import &quot;base_type.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#import &quot;common.h&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>NS_ASSUME_NONNULL_BEGIN</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
@@ -105,74 +105,155 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                       options:(<a class="code hl_interface" href="interface_word_options.html">WordOptions</a> * _Nonnull)options;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#af6fa4b6acbfa54642f645f6d83dcb010">   36</a></span>+ (ErrorCode)startPDFToRtf:(NSString * _Nonnull)filePath</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                     password:(NSString * _Nonnull)password</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                   outputPath:(NSString * _Nonnull)outputPath</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                      options:(<a class="code hl_interface" href="interface_rtf_options.html">RtfOptions</a> * _Nonnull)options;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#ab0543351fb4324c9736d836a26018a45">   50</a></span>+ (ErrorCode)startPDFToExcel:(NSString * _Nonnull)filePath</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                      password:(NSString * _Nonnull)password</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                       options:(<a class="code hl_interface" href="interface_excel_options.html">ExcelOptions</a> * _Nonnull)options;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#abe9ffb9cf6c5be1dbb2eed9aa9539a74">   64</a></span>+ (ErrorCode)startPDFToHtml:(NSString * _Nonnull)filePath</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                      password:(NSString * _Nonnull)password</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                       options:(<a class="code hl_interface" href="interface_html_options.html">HtmlOptions</a> * _Nonnull)options;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a1e76b38fdb8255bb639679f565dc2d5f">   78</a></span>+ (ErrorCode)startPDFToImage:(NSString * _Nonnull)filePath</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                      password:(NSString * _Nonnull)password</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                       options:(<a class="code hl_interface" href="interface_image_options.html">ImageOptions</a> * _Nonnull)options;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a34f6cd51d6d8975d0bb5e0fc4ea8780c">   92</a></span>+ (ErrorCode)startPDFToTxt:(NSString * _Nonnull)filePath</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                      password:(NSString * _Nonnull)password</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                       options:(<a class="code hl_interface" href="interface_txt_options.html">TxtOptions</a> * _Nonnull)options;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#af3fe281f136135df7c7cf8fbb98a719e">  106</a></span>+ (ErrorCode)startPDFToJson:(NSString * _Nonnull)filePath</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                      password:(NSString * _Nonnull)password</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                       options:(<a class="code hl_interface" href="interface_json_options.html">JsonOptions</a> * _Nonnull)options;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a272b67890dc5b7d67de25561e57eaa5c">  120</a></span>+ (ErrorCode)startPDFToPpt:(NSString * _Nonnull)filePath</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                      password:(NSString * _Nonnull)password</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                       options:(<a class="code hl_interface" href="interface_ppt_options.html">PptOptions</a> * _Nonnull)options;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#aacf6eba2f35185431dff1b6c54875d0b">  134</a></span>+ (ErrorCode)startPDFToSearchablePDF:(NSString * _Nonnull)filePath</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                      password:(NSString * _Nonnull)password</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                       options:(<a class="code hl_interface" href="interface_searchable_pdf_options.html">SearchablePdfOptions</a> * _Nonnull)options;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a55235be8e3487f55e327d6e98c99bc50">  147</a></span>+ (ErrorCode)startPDFToMarkdown:(NSString * _Nonnull)filePath</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                       password:(NSString * _Nonnull)password</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                     outputPath:(NSString * _Nonnull)outputPath</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        options:(<a class="code hl_interface" href="interface_markdown_options.html">MarkdownOptions</a> * _Nonnull)options;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a6a82a0f730da248c6707003b9afcaf4e">  155</a></span>+ (void)<a class="code hl_function" href="interface_c_p_d_f_conversion.html#a6a82a0f730da248c6707003b9afcaf4e">cancel</a>;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="keyword">@end</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>NS_ASSUME_NONNULL_END</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a1ad295a25caf219b4a43be5c79ba5a47">   28</a></span>+ (ErrorCode)startPDFToWord:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                   password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                    options:(<a class="code hl_interface" href="interface_word_options.html">WordOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                   progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                     cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#af6fa4b6acbfa54642f645f6d83dcb010">   44</a></span>+ (ErrorCode)startPDFToRtf:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                     password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                   outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                      options:(<a class="code hl_interface" href="interface_rtf_options.html">RtfOptions</a> * _Nonnull)options;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#aa4f6783c7a027d9b8aa5fad70b0f4dac">   49</a></span>+ (ErrorCode)startPDFToRtf:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                  password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                   options:(<a class="code hl_interface" href="interface_rtf_options.html">RtfOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                  progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#ab0543351fb4324c9736d836a26018a45">   65</a></span>+ (ErrorCode)startPDFToExcel:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                      password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                       options:(<a class="code hl_interface" href="interface_excel_options.html">ExcelOptions</a> * _Nonnull)options;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a0ffbc59cf0a12883e3d166f587d0d8a1">   70</a></span>+ (ErrorCode)startPDFToExcel:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                  outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                     options:(<a class="code hl_interface" href="interface_excel_options.html">ExcelOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                      cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#abe9ffb9cf6c5be1dbb2eed9aa9539a74">   86</a></span>+ (ErrorCode)startPDFToHtml:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                      password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                       options:(<a class="code hl_interface" href="interface_html_options.html">HtmlOptions</a> * _Nonnull)options;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a5f06c7db6e58d2f147dbed014ca73cc2">   91</a></span>+ (ErrorCode)startPDFToHtml:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                   password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    options:(<a class="code hl_interface" href="interface_html_options.html">HtmlOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                   progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                     cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a1e76b38fdb8255bb639679f565dc2d5f">  107</a></span>+ (ErrorCode)startPDFToImage:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                      password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                       options:(<a class="code hl_interface" href="interface_image_options.html">ImageOptions</a> * _Nonnull)options;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a83ff41fd8b1bac6bb6eb69141dd742ad">  112</a></span>+ (ErrorCode)startPDFToImage:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                    password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                  outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                     options:(<a class="code hl_interface" href="interface_image_options.html">ImageOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                    progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                      cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a34f6cd51d6d8975d0bb5e0fc4ea8780c">  128</a></span>+ (ErrorCode)startPDFToTxt:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                      password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                       options:(<a class="code hl_interface" href="interface_txt_options.html">TxtOptions</a> * _Nonnull)options;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a51922c41c8d46e5a4c043dcc392600eb">  133</a></span>+ (ErrorCode)startPDFToTxt:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                   password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                    options:(<a class="code hl_interface" href="interface_txt_options.html">TxtOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                   progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                     cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#af3fe281f136135df7c7cf8fbb98a719e">  149</a></span>+ (ErrorCode)startPDFToJson:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                      password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                       options:(<a class="code hl_interface" href="interface_json_options.html">JsonOptions</a> * _Nonnull)options;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a574f64c0626e8d0827a203c56339dc46">  154</a></span>+ (ErrorCode)startPDFToJson:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                    password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                  outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                     options:(<a class="code hl_interface" href="interface_json_options.html">JsonOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                    progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                      cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a272b67890dc5b7d67de25561e57eaa5c">  170</a></span>+ (ErrorCode)startPDFToPpt:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                      password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                       options:(<a class="code hl_interface" href="interface_ppt_options.html">PptOptions</a> * _Nonnull)options;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a198b85830ba2ff5e0cf5ef26ced2f54b">  175</a></span>+ (ErrorCode)startPDFToPpt:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                   password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                    options:(<a class="code hl_interface" href="interface_ppt_options.html">PptOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                   progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                     cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#aacf6eba2f35185431dff1b6c54875d0b">  191</a></span>+ (ErrorCode)startPDFToSearchablePDF:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                      password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                    outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                       options:(<a class="code hl_interface" href="interface_searchable_pdf_options.html">SearchablePdfOptions</a> * _Nonnull)options;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a418d52ae38bb46602273c90df9a66f86">  196</a></span>+ (ErrorCode)startPDFToSearchablePDF:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                          password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                        outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                           options:(<a class="code hl_interface" href="interface_searchable_pdf_options.html">SearchablePdfOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                          progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                            cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a55235be8e3487f55e327d6e98c99bc50">  203</a></span>+ (ErrorCode)startPDFToMarkdown:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                       password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                     outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                        options:(<a class="code hl_interface" href="interface_markdown_options.html">MarkdownOptions</a> * _Nonnull)options;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a2fe1a6ea3c939d8b1c0ba12118ef81f6">  208</a></span>+ (ErrorCode)startPDFToMarkdown:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                       password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                     outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                        options:(<a class="code hl_interface" href="interface_markdown_options.html">MarkdownOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                       progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                         cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a85c0418f9c97044d4b3956bb34321924">  223</a></span>+ (ErrorCode)startPDFToOFD:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                   password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                    options:(<a class="code hl_interface" href="interface_ofd_options.html">OfdOptions</a> * _Nonnull)options;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a2708d77882c2f1a9ef79efc58bdee6d4">  228</a></span>+ (ErrorCode)startPDFToOFD:(NSString * _Nonnull)filePath</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                   password:(NSString * _Nonnull)password</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                    options:(<a class="code hl_interface" href="interface_ofd_options.html">OfdOptions</a> * _Nonnull)options</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                   progress:(COMProgressBlock _Nullable)progress</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                     cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>NS_ASSUME_NONNULL_END</div>
 <div class="ttc" id="ainterface_c_p_d_f_conversion_html"><div class="ttname"><a href="interface_c_p_d_f_conversion.html">CPDFConversion</a></div><div class="ttdoc">Provides functionalities to convert PDF files into various formats such as Word, Excel,...</div><div class="ttdef"><b>Definition</b> <a href="#l00011">conversion.h:12</a></div></div>
-<div class="ttc" id="ainterface_c_p_d_f_conversion_html_a6a82a0f730da248c6707003b9afcaf4e"><div class="ttname"><a href="interface_c_p_d_f_conversion.html#a6a82a0f730da248c6707003b9afcaf4e">+[CPDFConversion cancel]</a></div><div class="ttdeci">void cancel()</div><div class="ttdoc">Cancels any ongoing PDF conversion process.</div></div>
-<div class="ttc" id="ainterface_excel_options_html"><div class="ttname"><a href="interface_excel_options.html">ExcelOptions</a></div><div class="ttdoc">PDF to Excel conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00320">base_type.h:321</a></div></div>
-<div class="ttc" id="ainterface_html_options_html"><div class="ttname"><a href="interface_html_options.html">HtmlOptions</a></div><div class="ttdoc">PDF to Html conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00396">base_type.h:397</a></div></div>
-<div class="ttc" id="ainterface_image_options_html"><div class="ttname"><a href="interface_image_options.html">ImageOptions</a></div><div class="ttdoc">PDF to Image conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00466">base_type.h:467</a></div></div>
-<div class="ttc" id="ainterface_json_options_html"><div class="ttname"><a href="interface_json_options.html">JsonOptions</a></div><div class="ttdoc">PDF to Json conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00509">base_type.h:510</a></div></div>
-<div class="ttc" id="ainterface_markdown_options_html"><div class="ttname"><a href="interface_markdown_options.html">MarkdownOptions</a></div><div class="ttdoc">PDF to Markdown conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00564">base_type.h:565</a></div></div>
-<div class="ttc" id="ainterface_ppt_options_html"><div class="ttname"><a href="interface_ppt_options.html">PptOptions</a></div><div class="ttdoc">PDF to PPT conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00364">base_type.h:365</a></div></div>
-<div class="ttc" id="ainterface_rtf_options_html"><div class="ttname"><a href="interface_rtf_options.html">RtfOptions</a></div><div class="ttdoc">PDF to RTF conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00434">base_type.h:435</a></div></div>
-<div class="ttc" id="ainterface_searchable_pdf_options_html"><div class="ttname"><a href="interface_searchable_pdf_options.html">SearchablePdfOptions</a></div><div class="ttdoc">PDF to SearchablePdf conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00538">base_type.h:539</a></div></div>
-<div class="ttc" id="ainterface_txt_options_html"><div class="ttname"><a href="interface_txt_options.html">TxtOptions</a></div><div class="ttdoc">PDF to TXT conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00486">base_type.h:487</a></div></div>
-<div class="ttc" id="ainterface_word_options_html"><div class="ttname"><a href="interface_word_options.html">WordOptions</a></div><div class="ttdoc">PDF to Word conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00285">base_type.h:286</a></div></div>
+<div class="ttc" id="ainterface_excel_options_html"><div class="ttname"><a href="interface_excel_options.html">ExcelOptions</a></div><div class="ttdoc">PDF to Excel conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00348">base_type.h:349</a></div></div>
+<div class="ttc" id="ainterface_html_options_html"><div class="ttname"><a href="interface_html_options.html">HtmlOptions</a></div><div class="ttdoc">PDF to Html conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00442">base_type.h:443</a></div></div>
+<div class="ttc" id="ainterface_image_options_html"><div class="ttname"><a href="interface_image_options.html">ImageOptions</a></div><div class="ttdoc">PDF to Image conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00530">base_type.h:531</a></div></div>
+<div class="ttc" id="ainterface_json_options_html"><div class="ttname"><a href="interface_json_options.html">JsonOptions</a></div><div class="ttdoc">PDF to Json conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00582">base_type.h:583</a></div></div>
+<div class="ttc" id="ainterface_markdown_options_html"><div class="ttname"><a href="interface_markdown_options.html">MarkdownOptions</a></div><div class="ttdoc">PDF to Markdown conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00690">base_type.h:691</a></div></div>
+<div class="ttc" id="ainterface_ofd_options_html"><div class="ttname"><a href="interface_ofd_options.html">OfdOptions</a></div><div class="ttdoc">PDF to OFD conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00655">base_type.h:656</a></div></div>
+<div class="ttc" id="ainterface_ppt_options_html"><div class="ttname"><a href="interface_ppt_options.html">PptOptions</a></div><div class="ttdoc">PDF to PPT conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00401">base_type.h:402</a></div></div>
+<div class="ttc" id="ainterface_rtf_options_html"><div class="ttname"><a href="interface_rtf_options.html">RtfOptions</a></div><div class="ttdoc">PDF to RTF conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00489">base_type.h:490</a></div></div>
+<div class="ttc" id="ainterface_searchable_pdf_options_html"><div class="ttname"><a href="interface_searchable_pdf_options.html">SearchablePdfOptions</a></div><div class="ttdoc">PDF to SearchablePdf conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00620">base_type.h:621</a></div></div>
+<div class="ttc" id="ainterface_txt_options_html"><div class="ttname"><a href="interface_txt_options.html">TxtOptions</a></div><div class="ttdoc">PDF to TXT conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00550">base_type.h:551</a></div></div>
+<div class="ttc" id="ainterface_word_options_html"><div class="ttname"><a href="interface_word_options.html">WordOptions</a></div><div class="ttdoc">PDF to Word conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00304">base_type.h:305</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_6f9635d4fbfa321d4c00f29df5cd540c.html">samples</a></li><li class="navelem"><a href="dir_84d9e81c8d04196d7d2843ad9c0ea13f.html">demo</a></li><li class="navelem"><a href="dir_e785c32b38a53e12965e1d770cdf0702.html">Objective-C</a></li><li class="navelem"><a href="dir_cd18724fbdc2e22426fb51dd33fa4d1b.html">include</a></li><li class="navelem"><b>conversion.h</b></li>
+    <li class="navelem"><a href="dir_dbce44ccc2db0b41b93f36ea3be95e45.html">wrapper-dylib</a></li><li class="navelem"><a href="dir_c703cc628be7f3050e343e133bb7c960.html">include</a></li><li class="navelem"><b>conversion.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>
