@@ -16,7 +16,7 @@ As part of the KDAN ecosystem, ComPDF Conversion SDK empowers your macOS applica
 
 * Convert PDF to CSV (.csv)
 
-* Convert PDF to Image (.png, .jpg, .jpeg,.jpeg2000, .bmp, .tiff, .tga, .gif, .webp)
+* Convert PDF to Image (.png, .jpg, .jpeg, .jpeg2000, .bmp, .tiff, .tga, .gif, .webp)
 
 * Convert PDF to Plain Text (.txt)
 
