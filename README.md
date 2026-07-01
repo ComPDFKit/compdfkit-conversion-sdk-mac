@@ -2,7 +2,7 @@
 
 As part of the KDAN ecosystem, ComPDF Conversion SDK empowers your macOS applications to convert PDF files into editable Office documents, images, HTML, and more — with a native Objective-C API. Whether you're building a document editor, a file converter, or a productivity tool for Mac users, you can integrate high-quality PDF conversion that preserves layout, tables, and formatting.
 
-> If you find this library helpful, please consider giving us a ⭐ **Star** on GitHub! Have feedback or questions? Join the conversation in our [Discussions](https://github.com/orgs/ComPDFKit/discussions).
+> If you find this library helpful, please consider giving us a ⭐ **Star** on GitHub! Have feedback or questions? Join the conversation in our [Discussions](https://github.com/ComPDFKit/compdfkit-conversion-sdk-mac/discussions).
 
 **Supported Features**
 
